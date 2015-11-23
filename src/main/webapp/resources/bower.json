@@ -1,0 +1,24 @@
+{
+  "name": "tv-space",
+  "version": "0.0.1",
+  "authors": [
+    "Vlasov Artem <vlasovartem21@gmail.com>"
+  ],
+  "description": "Project for collection your personal tv series guide",
+  "main": "",
+  "moduleType": [],
+  "keywords": [
+    "java",
+    "spring"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
