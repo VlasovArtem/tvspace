@@ -11,12 +11,12 @@ import org.springframework.data.mongodb.repository.config.EnableMongoRepositorie
  * Created by artemvlasov on 20/11/15.
  */
 @Configuration
-@EnableMongoRepositories(basePackages = "com.vlasovartem.persistence.repository")
+@EnableMongoRepositories(basePackages = "com.vlasovartem.tvspace.persistence.repository")
 public class AppConfig extends AbstractMongoConfiguration {
 
     @Override
     protected String getDatabaseName() {
-        return "filmania";
+        return "tvspace";
     }
 
     @Override
@@ -26,6 +26,6 @@ public class AppConfig extends AbstractMongoConfiguration {
 
     @Override
     protected String getMappingBasePackage() {
-        return "com.vlasovartem";
+        return "com.vlasovartem.tvspace";
     }
 }

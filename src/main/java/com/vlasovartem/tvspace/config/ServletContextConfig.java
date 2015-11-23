@@ -16,10 +16,11 @@ import org.springframework.web.servlet.view.JstlView;
 @EnableWebMvc
 @ComponentScan({"com.vlasovartem.tvspace.controller"})
 public class ServletContextConfig extends WebMvcConfigurerAdapter {
+
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
         registry.addResourceHandler("/resources/**")
-                .addResourceLocations("/resources");
+                .addResourceLocations("/resources/");
     }
 
     @Bean
