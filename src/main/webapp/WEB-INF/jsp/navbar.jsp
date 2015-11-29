@@ -1,16 +1,22 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: artemvlasov
-  Date: 28/11/15
-  Time: 14:05
-  To change this template use File | Settings | File Templates.
---%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html>
-<head>
-    <title>Title</title>
-</head>
-<body>
-
-</body>
-</html>
+<nav class="navbar navbar-default tv-space-navbar navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#tv-space-navbar-collapse" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <div class="tv-space-additional navbar-brand">
+                <a href="/"><div class="icon"></div></a><a href="/" class="tv-header">TV Space</a>
+            </div>
+        </div>
+        <div class="tv-space-additional collapse navbar-collapse" id="tv-space-navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="/series">Series</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="padding-block"></div>

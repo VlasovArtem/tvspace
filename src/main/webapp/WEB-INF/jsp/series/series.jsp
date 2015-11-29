@@ -1,6 +1,8 @@
 <%@ page import="java.time.LocalDate" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ include file="../include.jsp"%>
+<%@ taglib prefix="qu" uri="myTags" %>
+<%@ include file="../navbar.jsp" %>
+<%@ include file="../include.jsp" %>
 <html>
 <head>
     <title>Series</title>
@@ -125,10 +127,18 @@
                             <c:forEach items="${ser.genres}" var="genre" varStatus="status">
                                 <c:choose>
                                     <c:when test="${status.last}">
-                                        <span>${genre}</span>
+                                        <span><a href="
+                                                <qu:queryFormat genre="${genre}"
+                                                                query="${pageContext.request.queryString}"
+                                                                initQuery="/series/search?"/>">
+                                                                ${genre}</a></span>
                                     </c:when>
                                     <c:otherwise>
-                                        <span>${genre}, </span>
+                                        <span><a href=
+                                                "<qu:queryFormat genre="${genre}"
+                                                                query="${pageContext.request.queryString}"
+                                                                initQuery="/series/search?"/>">
+                                                ${genre}</a>, </span>
                                     </c:otherwise>
                                 </c:choose>
                             </c:forEach>

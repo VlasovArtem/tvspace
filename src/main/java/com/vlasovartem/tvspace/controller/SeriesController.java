@@ -54,6 +54,7 @@ public class SeriesController {
                                 @RequestParam(required = false, defaultValue = "false") boolean hideFinished,
                                 @RequestParam(required = false, defaultValue = "Imdb Rating") String sort,
                                 @RequestParam(required = false, defaultValue = "DESC") String direction) {
+        updateSearch(search, genre, year, title, hideFinished, sort, direction);
         Sort documentSort = new Sort(Sort.Direction.fromString(direction), convertSortProperty(sort));
         Map<String, Object> modelMap = new HashMap<>();
         modelMap.put("genres", seriesGenres());
@@ -143,5 +144,16 @@ public class SeriesController {
         } else {
             return property.toLowerCase();
         }
+    }
+
+    private void updateSearch(Search search, String genre, Integer year,
+                              String title, boolean hideFinished, String sort,
+                              String direction) {
+        search.setDirection(direction);
+        search.setGenre(genre);
+        search.setHideFinished(hideFinished);
+        search.setSort(sort);
+        search.setTitle(title);
+        search.setYear(year);
     }
 }

@@ -11,6 +11,15 @@ public class Search {
     private String sort;
     private String direction;
 
+    public Search(String genre, Integer year, String title, boolean hideFinished, String sort, String direction) {
+        this.genre = genre;
+        this.year = year;
+        this.title = title;
+        this.hideFinished = hideFinished;
+        this.sort = sort;
+        this.direction = direction;
+    }
+
     public Search(String sort, String direction) {
         this.sort = sort;
         this.direction = direction;

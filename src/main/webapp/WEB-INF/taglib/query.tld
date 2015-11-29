@@ -14,10 +14,17 @@
         <attribute>
             <name>genre</name>
             <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
         </attribute>
         <attribute>
             <name>query</name>
             <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <name>initQuery</name>
+            <required>true</required>
+            <rtexprvalue>false</rtexprvalue>
         </attribute>
     </tag>
 </taglib>

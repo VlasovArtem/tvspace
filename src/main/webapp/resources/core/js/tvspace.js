@@ -16,7 +16,6 @@ function sayHello() {
 function searchByGenre(form) {
     var genre = $('#genres')[0].value;
     form.action = "/series/" + genre;
-    console.log(form.action);
 }
 
 function searchSeries() {
@@ -41,10 +40,10 @@ function stickyFunc() {
 function changeSort() {
     var ascOrder = "ASC";
     var descOrder = "DESC";
-    changeOrder();
     var direction = $('.direction');
     direction[0].innerText = direction[0].innerText == ascOrder ? descOrder : ascOrder;
     $('#direction')[0].value = direction[0].innerText;
+    changeOrder();
 }
 
 function init() {
@@ -62,3 +61,18 @@ function changeOrder () {
         $('.desc-img').show();
     }
 }
+
+$(function() {
+    $('a[href*=#]:not([href=#])').click(function() {
+        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+            var target = $(this.hash);
+            target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+            if (target.length) {
+                $('html,body').animate({
+                    scrollTop: target.offset().top
+                }, 1000);
+                return false;
+            }
+        }
+    });
+});

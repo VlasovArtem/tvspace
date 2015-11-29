@@ -12,6 +12,7 @@ import java.util.Objects;
 public class QueryTag extends SimpleTagSupport {
     private String query;
     private String genre;
+    private String initQuery;
 
     public void setQuery(String query) {
         this.query = query;
@@ -21,11 +22,39 @@ public class QueryTag extends SimpleTagSupport {
         this.genre = genre;
     }
 
+    public void setInitQuery(String initQuery) {
+        this.initQuery = initQuery;
+    }
+
     @Override
     public void doTag() throws JspException, IOException {
-        if (Objects.nonNull(query) && Objects.nonNull(genre) && query.matches(".*genre=\\w+.*")) {
-            JspWriter out = getJspContext().getOut();
-            out.print("/series/search?" + query.replaceFirst("genre=\\w+", "genre=" + genre));
+        JspWriter out = getJspContext().getOut();
+        out.print(queryBuilde(query.split("&")));
+    }
+
+    /**
+     * Create query from the list of url parameters
+     * @param queryParams converted query parameters
+     * @return Builded query
+     */
+    private String queryBuilde (String... queryParams) {
+        StringBuilder builder = new StringBuilder();
+        builder.append(initQuery);
+        boolean genreUpdate = false;
+        for (int i = 0; i < queryParams.length; i++) {
+            if(queryParams[i].matches("genre=\\w+") || "".equals(query)) {
+                builder.append("genre=").append(genre);
+                genreUpdate = true;
+            } else {
+                builder.append(queryParams[i]);
+            }
+            if(i != queryParams.length - 1) {
+                builder.append("&");
+            }
         }
+        if(!genreUpdate) {
+            builder.append("&").append("genre=").append(genre);
+        }
+        return builder.toString();
     }
 }
