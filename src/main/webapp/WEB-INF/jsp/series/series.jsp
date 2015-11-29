@@ -5,11 +5,61 @@
 <head>
     <title>Series</title>
 </head>
-<body>
-<section id="series" class="container-fluid">
-    <h1 class="center">Series</h1>
+<body onload="init()">
+<aside id="series-search" class="col-md-3">
+    <div class="col-md-offset-1 col-md-9 sticky">
+        <div class="center search-title col-md-12"><b>Search</b></div>
+        <form:form action="/series/search" modelAttribute="search" method="get" id="searchForm"
+                   cssClass="container-fluid col-md-12 tv-space-form">
+            <div class="form-group">
+                <form:select path="genre" id="searchGenre" cssClass="form-control tv-space-form-control">
+                    <form:option value="" disabled="true" selected="true">Select genre</form:option>
+                    <form:options items="${genres}"/>
+                </form:select>
+            </div>
+            <div class="form-group">
+                <form:select path="year" id="searchYear" cssClass="form-control tv-space-form-control">
+                    <form:option value="" disabled="true" selected="true">Select year</form:option>
+                    <form:options items="${years}"/>
+                </form:select>
+            </div>
+            <div class="form-group">
+                <form:input path="title" cssClass="form-control tv-space-form-control" placeholder="Input title"/>
+            </div>
+            <div class="form-group hide-finished center">
+                <label>Hide Finished</label>
+                <form:checkbox path="hideFinished"/>
+            </div>
+            <hr>
+            <div class="col-md-12 center search-title"><b>Sort</b></div>
+            <div class="form-group col-md-9 sort">
+                <form:select path="sort" cssClass="form-control tv-space-form-control">
+                    <form:option value="" disabled="true" selected="true">Select sort</form:option>
+                    <form:options items="${sortProperties}"/>
+                </form:select>
+            </div>
+            <div class="form-group col-md-3 direction-block" onclick="changeSort()">
+                <div class="images">
+                    <img src="${pageContext.request.contextPath}/resources/core/images/desc.png"
+                         class="desc-img">
+                    <img src="${pageContext.request.contextPath}/resources/core/images/asc.png"
+                         class="asc-img">
+                </div>
+                <small class="direction">${search.direction}</small>
+                <form:hidden path="direction" id="direction"/>
+            </div>
+            <div class="form-group buttons center">
+                <input type="button" value="Search" class="btn btn-success" onclick="searchSeries()">
+                <spring:url value="/series" var="main"/>
+                <a href="${main}"><input type="button" value="Reset" class="btn btn-danger"></a>
+            </div>
+        </form:form>
+    </div>
+</aside>
+<section id="series" class="col-md-9">
+    <h1 class="hide">Series</h1>
     <c:forEach var="ser" items="${series}">
-        <div class="col-md-3">
+        <div class="col-md-4">
             <div class="series-block center">
                 <div class="series-img-block">
                     <div class="finished-block ${ser.finished ? '' : 'hide'}">Finished</div>

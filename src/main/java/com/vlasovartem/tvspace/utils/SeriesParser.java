@@ -50,8 +50,8 @@ public class SeriesParser {
         }
     }
 
-    public static void main(String[] args) throws IOException {
-        File file = new File("parsedSeries.txt");
+    public static void parseFromFile(String filePath) throws IOException {
+        File file = new File(Objects.nonNull(filePath) ? filePath : "parsedSeries.txt");
         if(file.exists()) {
             FileUtils.readLines(file)
                     .stream()

@@ -28,4 +28,5 @@ public class AppConfig extends AbstractMongoConfiguration {
     protected String getMappingBasePackage() {
         return "com.vlasovartem.tvspace";
     }
+
 }

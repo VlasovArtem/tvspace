@@ -1,5 +1,7 @@
 package com.vlasovartem.tvspace.config;
 
+import com.vlasovartem.tvspace.config.filter.LogFilter;
+import org.springframework.boot.logging.LogFile;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -30,5 +32,10 @@ public class ServletContextConfig extends WebMvcConfigurerAdapter {
         viewResolver.setPrefix("/WEB-INF/jsp/");
         viewResolver.setSuffix(".jsp");
         return viewResolver;
+    }
+
+    @Bean
+    public LogFilter logFilter() {
+        return new LogFilter();
     }
 }

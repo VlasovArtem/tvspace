@@ -130,6 +130,11 @@
         <version>2.6</version>
         <configuration>
           <failOnMissingWebXml>false</failOnMissingWebXml>
+            <archive>
+              <manifest>
+                <mainClass>com.vlasovartem.tvspace.Application</mainClass>
+              </manifest>
+            </archive>
         </configuration>
       </plugin>
     </plugins>
