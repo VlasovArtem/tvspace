@@ -22,7 +22,7 @@ public class SeriesServiceImpl implements SeriesService {
 
     @Qualifier("seriesRepository")
     @Autowired
-    private SeriesRepository repository;
+    private SeriesRepository seriesRepository;
 
     /**
      * Find series by passed parameters
@@ -41,46 +41,51 @@ public class SeriesServiceImpl implements SeriesService {
             yearEnd = LocalDate.of(year, Month.DECEMBER, 31);
         }
         if (Objects.isNull(genre) && Objects.isNull(year) && Objects.isNull(title) && hideFinished) {
-            return repository.findByFinishedIsFalse(sort);
+            return seriesRepository.findByFinishedIsFalse(sort);
         } else if (Objects.nonNull(genre) && Objects.nonNull(year) && year != 0 && Objects.nonNull(title)) {
-            if (hideFinished) return repository.findByGenresAndSeriesStartBetweenAndTitleLikeIgnoreCaseAndFinishedIsFalse
+            if (hideFinished) return seriesRepository.findByGenresAndSeriesStartBetweenAndTitleLikeIgnoreCaseAndFinishedIsFalse
                     (genre, yearStart, yearEnd, title, sort);
-            else return repository.findByGenresAndSeriesStartBetweenAndTitleLikeIgnoreCase(genre, yearStart, yearEnd, title, sort);
+            else return seriesRepository.findByGenresAndSeriesStartBetweenAndTitleLikeIgnoreCase(genre, yearStart, yearEnd, title, sort);
         } else if (Objects.nonNull(genre) && Objects.nonNull(year)) {
-            if (hideFinished) return repository.findByGenresAndSeriesStartBetweenAndFinishedIsFalse(genre, yearStart, yearEnd, sort);
-            else return repository.findByGenresAndSeriesStartBetween(genre, yearStart, yearEnd, sort);
+            if (hideFinished) return seriesRepository.findByGenresAndSeriesStartBetweenAndFinishedIsFalse(genre, yearStart, yearEnd, sort);
+            else return seriesRepository.findByGenresAndSeriesStartBetween(genre, yearStart, yearEnd, sort);
         } else if (Objects.nonNull(genre) && Objects.nonNull(title)) {
-            if (hideFinished) return repository.findByGenresAndTitleLikeIgnoreCaseAndFinishedIsFalse (genre, title, sort);
-            else return repository.findByGenresAndTitleLikeIgnoreCase (genre, title, sort);
+            if (hideFinished) return seriesRepository.findByGenresAndTitleLikeIgnoreCaseAndFinishedIsFalse (genre, title, sort);
+            else return seriesRepository.findByGenresAndTitleLikeIgnoreCase (genre, title, sort);
         } else if (Objects.nonNull(year) && Objects.nonNull(title)) {
-            if (hideFinished) return repository.findBySeriesStartBetweenAndTitleLikeIgnoreCaseAndFinishedIsFalse(yearStart, yearEnd, title, sort);
-            else return repository.findBySeriesStartBetweenAndTitleLikeIgnoreCase(yearStart, yearEnd, title, sort);
+            if (hideFinished) return seriesRepository.findBySeriesStartBetweenAndTitleLikeIgnoreCaseAndFinishedIsFalse(yearStart, yearEnd, title, sort);
+            else return seriesRepository.findBySeriesStartBetweenAndTitleLikeIgnoreCase(yearStart, yearEnd, title, sort);
         } else if (Objects.isNull(year) && Objects.isNull(genre)) {
-            if (hideFinished) return repository.findByTitleLikeIgnoreCaseAndFinishedIsFalse(title, sort);
-            else return repository.findByTitleLikeIgnoreCase(title, sort);
+            if (hideFinished) return seriesRepository.findByTitleLikeIgnoreCaseAndFinishedIsFalse(title, sort);
+            else return seriesRepository.findByTitleLikeIgnoreCase(title, sort);
         } else {
-            if (hideFinished) return repository.findByGenresOrSeriesStartBetweenAndFinishedIsFalse(genre, yearStart, yearEnd, sort);
-            else return repository.findByGenresOrSeriesStartBetween(genre, yearStart, yearEnd, sort);
+            if (hideFinished) return seriesRepository.findByGenresOrSeriesStartBetweenAndFinishedIsFalse(genre, yearStart, yearEnd, sort);
+            else return seriesRepository.findByGenresOrSeriesStartBetween(genre, yearStart, yearEnd, sort);
         }
     }
 
     @Override
     public Set<String> findSeriesGenres() {
-        return repository.getSeriesGenres();
+        return seriesRepository.getSeriesGenres();
     }
 
     @Override
     public Set<Integer> findSeriesYears() {
-        return repository.getSeriesYears();
+        return seriesRepository.getSeriesYears();
     }
 
     @Override
     public List<Series> findAll(Sort sort) {
-        return repository.findAll(sort);
+        return seriesRepository.findAll(sort);
     }
 
     @Override
     public List<Series> findFinished(Sort sort) {
-        return repository.findByFinishedIsFalse(sort);
+        return seriesRepository.findByFinishedIsFalse(sort);
+    }
+
+    @Override
+    public List<Series> findNextEpisodes(Sort sort) {
+        return seriesRepository.findNextEpisode (LocalDate.now(), sort);
     }
 }

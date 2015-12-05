@@ -49,6 +49,7 @@ function changeSort() {
 function init() {
     stickyFunc();
     changeOrder();
+    sortChange();
 }
 
 function changeOrder () {
@@ -59,6 +60,15 @@ function changeOrder () {
     } else {
         $('.asc-img').hide();
         $('.desc-img').show();
+    }
+}
+
+function sortChange () {
+    var sort = $('#sort')[0].value;
+    if(_.isEqual(sort, "Next Episode")) {
+        $('.sort-info').show()
+    } else {
+        $('.sort-info').hide()
     }
 }
 

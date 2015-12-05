@@ -1,10 +1,9 @@
-package com.vlasovartem.tvspace.utils.tag;
+package com.vlasovartem.tvspace.utils.jsp.tag;
 
 import javax.servlet.jsp.JspException;
 import javax.servlet.jsp.JspWriter;
 import javax.servlet.jsp.tagext.SimpleTagSupport;
 import java.io.IOException;
-import java.util.Objects;
 
 /**
  * Created by artemvlasov on 26/11/15.

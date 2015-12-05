@@ -9,7 +9,7 @@
     <uri>myTags</uri>
     <tag>
         <name>queryFormat</name>
-        <tag-class>com.vlasovartem.tvspace.utils.tag.QueryTag</tag-class>
+        <tag-class>com.vlasovartem.tvspace.utils.jsp.tag.QueryTag</tag-class>
         <body-content>empty</body-content>
         <attribute>
             <name>genre</name>

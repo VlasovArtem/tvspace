@@ -1,6 +1,6 @@
 package com.vlasovartem.tvspace.persistence.repository.custom.impl;
 
-import com.vlasovartem.tvspace.entity.SearchInfo;
+import com.vlasovartem.tvspace.controller.model.SearchInfo;
 import com.vlasovartem.tvspace.entity.Series;
 import com.vlasovartem.tvspace.persistence.repository.custom.SeriesRepositoryCustom;
 import org.springframework.beans.factory.annotation.Autowired;

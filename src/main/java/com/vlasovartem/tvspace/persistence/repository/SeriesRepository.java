@@ -2,8 +2,10 @@ package com.vlasovartem.tvspace.persistence.repository;
 
 import com.vlasovartem.tvspace.entity.Series;
 import com.vlasovartem.tvspace.persistence.repository.custom.SeriesRepositoryCustom;
+import org.springframework.cglib.core.Local;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.mongodb.repository.MongoRepository;
+import org.springframework.data.mongodb.repository.Query;
 import org.springframework.stereotype.Repository;
 
 import java.time.LocalDate;
@@ -48,4 +50,7 @@ public interface SeriesRepository extends MongoRepository<Series, String>, Serie
     List<Series> findByTitleLikeIgnoreCase (String title, Sort sort);
 
     List<Series> findByFinishedIsFalse (Sort sort);
+
+    @Query(value = "{$and : [{'nextEpisode.episodeDate' : {$exists : true}}, {'nextEpisode.episodeDate' : {$gt : ?0}}]}")
+    List<Series> findNextEpisode(LocalDate today, Sort sort);
 }
