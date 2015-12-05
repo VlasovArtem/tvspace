@@ -1,25 +1,17 @@
 package com.vlasovartem.tvspace.entity;
 
-import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
-import com.vlasovartem.tvspace.utils.json.EpisodeImdbRatingDeserializer;
-import com.vlasovartem.tvspace.utils.json.EpisodeReleasedDeserializer;
-import org.springframework.format.annotation.DateTimeFormat;
 
 import java.time.LocalDate;
 
 /**
  * Created by artemvlasov on 23/11/15.
  */
-@JsonAutoDetect
 public class Episode {
 
     private String title;
-    @JsonDeserialize(using = EpisodeReleasedDeserializer.class)
     private LocalDate released;
     private int episode;
-    @JsonDeserialize(using = EpisodeImdbRatingDeserializer.class)
     private double imdbRating;
     private String imdbID;
 

@@ -16,7 +16,7 @@ public class AppConfig extends AbstractMongoConfiguration {
 
     @Override
     protected String getDatabaseName() {
-        return "tvspace";
+        return "pmdb";
     }
 
     @Override

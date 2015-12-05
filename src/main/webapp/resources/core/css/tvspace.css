@@ -270,6 +270,9 @@ html, body {
 }
 
 /* Navbar */
+#additional-section-header {
+    height: 100px;
+}
 .tv-space-navbar {
     min-height: 100px;
     background-color: white;
@@ -301,24 +304,8 @@ html, body {
     transition: all 1s;
 }
 .tv-space-navbar > div {
-    padding-top: 5px;
+    padding-left: 30px;
 }
-/*.tv-space-navbar .navbar-nav li .line {*/
-    /*width: 0;*/
-    /*height: 4px;*/
-    /*background-color: rgba(51, 142, 163, 1);*/
-    /*opacity: 0;*/
-    /*display: block;*/
-    /*margin-top: 5px;*/
-    /*margin-left: 50%;*/
-    /*transition: width 1s, margin-left 1s, opacity 2s;*/
-/*}*/
-/*.tv-space-navbar .navbar-nav li a:hover .line {*/
-    /*width: 100%;*/
-    /*margin-left: 0;*/
-    /*opacity: 1;*/
-    /*transition: width 1s, margin-left 1s, opacity .5s;*/
-/*}*/
 
 /* Main */
 .padding-block {

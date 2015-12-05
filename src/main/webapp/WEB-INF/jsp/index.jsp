@@ -2,7 +2,7 @@
 <%@ include file="include.jsp"%>
 <html>
 <head>
-    <title>Title</title>
+    <title>Tv-Space</title>
 </head>
 <body>
 <header id="info-section" class="container-fluid block">

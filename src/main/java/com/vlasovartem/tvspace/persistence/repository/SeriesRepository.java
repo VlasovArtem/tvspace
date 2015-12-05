@@ -6,6 +6,7 @@ import org.springframework.data.domain.Sort;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;
 
+import java.time.LocalDate;
 import java.util.List;
 
 /**
@@ -14,25 +15,33 @@ import java.util.List;
 @Repository
 public interface SeriesRepository extends MongoRepository<Series, String>, SeriesRepositoryCustom {
 
-    List<Series> findByGenresOrYearStartAndFinishedIsFalse (String genre, int year, Sort sort);
+    List<Series> findByGenresOrSeriesStartBetweenAndFinishedIsFalse(String genre, LocalDate yearStart, LocalDate
+            yearEnd, Sort sort);
 
-    List<Series> findByGenresOrYearStart (String genre, int year, Sort sort);
+    List<Series> findByGenresOrSeriesStartBetween(String genre, LocalDate yearStart, LocalDate
+            yearEnd, Sort sort);
 
-    List<Series> findByGenresAndYearStartAndFinishedIsFalse (String genre, Integer year, Sort sort);
+    List<Series> findByGenresAndSeriesStartBetweenAndFinishedIsFalse(String genre, LocalDate yearStart, LocalDate
+            yearEnd, Sort sort);
 
-    List<Series> findByGenresAndYearStart (String genre, Integer year, Sort sort);
+    List<Series> findByGenresAndSeriesStartBetween(String genre, LocalDate yearStart, LocalDate
+            yearEnd, Sort sort);
 
-    List<Series> findByGenresAndYearStartAndTitleLikeIgnoreCaseAndFinishedIsFalse (String genre, Integer year, String title, Sort sort);
+    List<Series> findByGenresAndSeriesStartBetweenAndTitleLikeIgnoreCaseAndFinishedIsFalse(String genre, LocalDate yearStart, LocalDate
+            yearEnd, String title, Sort sort);
 
-    List<Series> findByGenresAndYearStartAndTitleLikeIgnoreCase (String genre, Integer year, String title, Sort sort);
+    List<Series> findByGenresAndSeriesStartBetweenAndTitleLikeIgnoreCase(String genre, LocalDate yearStart, LocalDate
+            yearEnd, String title, Sort sort);
 
     List<Series> findByGenresAndTitleLikeIgnoreCaseAndFinishedIsFalse (String genre, String title, Sort sort);
 
     List<Series> findByGenresAndTitleLikeIgnoreCase (String genre, String title, Sort sort);
 
-    List<Series> findByYearStartAndTitleLikeIgnoreCaseAndFinishedIsFalse (Integer year, String title, Sort sort);
+    List<Series> findBySeriesStartBetweenAndTitleLikeIgnoreCaseAndFinishedIsFalse(LocalDate yearStart, LocalDate
+            yearEnd, String title, Sort sort);
 
-    List<Series> findByYearStartAndTitleLikeIgnoreCase (Integer year, String title, Sort sort);
+    List<Series> findBySeriesStartBetweenAndTitleLikeIgnoreCase(LocalDate yearStart, LocalDate
+            yearEnd, String title, Sort sort);
 
     List<Series> findByTitleLikeIgnoreCaseAndFinishedIsFalse(String title, Sort sort);
 
