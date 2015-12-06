@@ -16,12 +16,12 @@ public class AppConfig extends AbstractMongoConfiguration {
 
     @Override
     protected String getDatabaseName() {
-        return "pmdb";
+        return "heroku_r183c426";
     }
 
     @Override
     public Mongo mongo() throws Exception {
-        return new MongoClient(new MongoClientURI("mongodb://localhost"));
+        return new MongoClient(new MongoClientURI("mongodb://heroku_r183c426:qjempqqji3ukn89v4f6icj8k3a@ds059644.mongolab.com:59644/heroku_r183c426"));
     }
 
     @Override
