@@ -13,6 +13,7 @@ public class SeriesFunctions {
         return strings.stream().collect(Collectors.joining(", "));
     }
     public static boolean checkNextEpisode(LocalDate episodeDate) {
-        return Objects.nonNull(episodeDate) && episodeDate.isAfter(LocalDate.now());
+        return Objects.nonNull(episodeDate) &&
+                (episodeDate.isAfter(LocalDate.now()) || episodeDate.isEqual(LocalDate.now()));
     }
 }
