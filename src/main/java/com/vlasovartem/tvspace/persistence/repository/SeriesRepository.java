@@ -2,7 +2,6 @@ package com.vlasovartem.tvspace.persistence.repository;
 
 import com.vlasovartem.tvspace.entity.Series;
 import com.vlasovartem.tvspace.persistence.repository.custom.SeriesRepositoryCustom;
-import org.springframework.cglib.core.Local;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.data.mongodb.repository.Query;

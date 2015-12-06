@@ -1,9 +1,6 @@
 package com.vlasovartem.tvspace.config;
 
-import com.vlasovartem.tvspace.config.filter.LogFilter;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
-
-import javax.servlet.Filter;
 
 /**
  * Created by artemvlasov on 20/11/15.

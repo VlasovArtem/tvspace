@@ -1,6 +1,5 @@
 package com.vlasovartem.tvspace.service;
 
-import com.vlasovartem.tvspace.controller.model.Search;
 import com.vlasovartem.tvspace.entity.Series;
 import org.springframework.data.domain.Sort;
 

@@ -1,7 +1,5 @@
 package com.vlasovartem.tvspace.entity;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-
 import java.time.LocalDate;
 
 /**

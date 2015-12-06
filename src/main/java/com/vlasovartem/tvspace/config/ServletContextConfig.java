@@ -3,7 +3,6 @@ package com.vlasovartem.tvspace.config;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.vlasovartem.tvspace.config.filter.LogFilter;
 import com.vlasovartem.tvspace.utils.serializer.LocalDateSerializer;
-import org.springframework.boot.logging.LogFile;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
