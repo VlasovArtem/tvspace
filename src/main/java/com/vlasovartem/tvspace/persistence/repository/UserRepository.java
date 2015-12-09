@@ -9,7 +9,7 @@ import org.springframework.data.mongodb.repository.Query;
  */
 public interface UserRepository extends MongoRepository<User, String> {
 
-    @Query("{$and : [{$or : [{email : ?0}, {login : ?9}]}, {finished : false}]}")
+    @Query("{$and : [{$or : [{email : ?0}, {username : ?0}]}, {deleted : false}]}")
     User loginUser (String loginData);
 
     int countByUsernameIgnoreCase(String username);

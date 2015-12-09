@@ -7,6 +7,8 @@ import com.vlasovartem.tvspace.utils.exception.UserRegistrationException;
 import com.vlasovartem.tvspace.utils.validation.UserSpringValidator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.Validator;
 import org.springframework.validation.annotation.Validated;
@@ -41,6 +43,11 @@ public class UserController {
     public void login(@RequestParam String loginData,
                       @RequestParam String password,
                       @RequestParam(required = false) boolean rememberMe) {}
+
+    @RequestMapping(value = "/login", method = RequestMethod.GET)
+    public String login() {
+        return "login";
+    }
 
     @RequestMapping(value = "/logout")
     public void logout() {}

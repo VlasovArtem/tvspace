@@ -71,8 +71,7 @@ html, body {
 .tv-space > ul.nav > li {
     border: 2px solid white;
     border-radius: 30px;
-    margin-top: auto;
-    margin-bottom: auto;
+    margin: auto 10px;
 }
 .tv-space > ul.nav > li a {
     padding: 10px;
@@ -239,6 +238,34 @@ html, body {
     color: grey;
 }
 
+/* Tracking block */
+.tracking-series-block {
+    position: absolute;
+    bottom: 15px;
+    left: 30px;
+}
+.tracking-series-block > span.glyphicon{
+    cursor: pointer;
+    font-size: 30px;
+}
+.tracking-series-block > span.glyphicon.not-watching {
+    color: grey;
+    transition: color .5s;
+}
+.tracking-series-block > span.glyphicon.not-watching:hover {
+    color: #4cae4c;
+    transition: color .5s;
+}
+.tracking-series-block > span.glyphicon.watching {
+    color: #4cae4c;
+    transition: color .5s;
+}
+.tracking-series-block > span.glyphicon.watching:hover {
+    color: grey;
+    transition: color .5s;
+}
+
+
 /* Series search */
 #series-search {
     height: 100%;
@@ -304,8 +331,7 @@ html, body {
 .tv-space-additional > ul.nav > li {
     border: 2px solid #1b6d85;
     border-radius: 30px;
-    margin-top: auto;
-    margin-bottom: auto;
+    margin: auto 10px;
 }
 .tv-space-additional > ul.nav > li a {
     padding: 10px;
@@ -349,4 +375,14 @@ html, body {
     padding-top: 10px;
     font-size: 16px;
     color: #761c19;
+}
+
+/* Login form */
+.login-block > form {
+    margin: 20px 20px 14px 20px;
+}
+.login-block > form .form-group {
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 15px;
 }

@@ -88,5 +88,24 @@ $(function() {
 });
 
 function login() {
-    $.post
+    var form = $('#login-form');
+    var loginObject = {
+        loginData : form.find('#loginData')[0].value,
+        password: form.find('#password')[0].value
+    };
+    if(form.find('#rememberMe')[0].checked) {
+        loginObject.rememberMe = true;
+    }
+    $.post("/login", loginObject)
+        .done(function() {
+            location.assign("/")
+        })
+        .error(function() {
+            var error = $('.login-block .error');
+            if(!_.isNull(error)) {
+                error.addClass("form-error-info");
+                error.html("User with provided email, username or password does not exists");
+                form.find('#password')[0].value = null;
+            }
+        })
 }

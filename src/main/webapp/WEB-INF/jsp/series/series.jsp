@@ -1,13 +1,13 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="qu" uri="myTags" %>
 <%@ taglib prefix="sfn" uri="series-functions" %>
-<%@ include file="../navbar.jsp" %>
 <%@ include file="../include.jsp" %>
 <html>
 <head>
     <title>Series</title>
 </head>
 <body onload="init()">
+<%@ include file="../navbar.jsp" %>
 <aside id="series-search" class="col-md-3">
     <div class="col-md-offset-1 col-md-9 sticky">
         <div class="center search-title col-md-12"><b>Search</b></div>
@@ -72,7 +72,7 @@
                 <article class="main-info-block">
                     <div class="series-header">
                         <h3>${ser.title}</h3><small class="season">(Season ${ser.nextEpisode != null ? ser
-                        .nextEpisode.seasonNumber : fn:length(ser.seasons)})</small>
+                            .nextEpisode.seasonNumber : fn:length(ser.seasons)})</small>
                         <div class="year">${ser.seriesStart.year} -
                             <c:if test="${ser.seriesEnd.year > 0}">${ser.seriesEnd.year}</c:if></div>
                     </div>
@@ -127,6 +127,12 @@
                         <span>${ser.plot}</span>
                     </div>
                 </article>
+                <sec:authorize access="isAuthenticated()">
+                    <article class="tracking-series-block">
+                        <span class="glyphicon glyphicon-eye-open watching"></span>
+                        <span class="glyphicon glyphicon-eye-open not-watching"></span>
+                    </article>
+                </sec:authorize>
             </div>
         </div>
     </c:forEach>

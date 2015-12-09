@@ -3,7 +3,7 @@
 <head>
     <title>Sign up</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.14.0/jquery.validate.js"></script>
-    <spring:url value="/resources/core/js/validation.js" var="validation"/>
+    <spring:url value="/resources/core/js/regValidation.js" var="validation"/>
     <script src="${validation}"></script>
 </head>
 <body>
