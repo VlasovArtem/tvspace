@@ -86,3 +86,7 @@ $(function() {
         }
     });
 });
+
+function login() {
+    $.post
+}

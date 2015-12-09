@@ -11,6 +11,11 @@ import java.util.Set;
  * Created by artemvlasov on 05/12/15.
  */
 public interface SeriesService {
+
+    String INIT_SORT_NAME = "Imdb Rating";
+    String INIT_SORT_DIRECTION = "DESC";
+    String NEXT_EPISODE_DATE_PROPERTY = "nextEpisode.episodeDate";
+
     List<Series> findSeries (String genre, Integer year, String title, boolean hideFinished, Sort sort);
     Set<String> findSeriesGenres ();
     Set<Integer> findSeriesYears ();

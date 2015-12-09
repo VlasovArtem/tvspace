@@ -1,24 +1,23 @@
 package com.vlasovartem.tvspace.controller;
 
 import com.fasterxml.jackson.annotation.JsonView;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import com.vlasovartem.tvspace.controller.model.Search;
 import com.vlasovartem.tvspace.entity.Series;
-import com.vlasovartem.tvspace.persistence.repository.SeriesRepository;
 import com.vlasovartem.tvspace.service.SeriesService;
 import com.vlasovartem.tvspace.utils.view.SeriesView;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.util.*;
-import java.util.stream.Collectors;
 
-import static org.springframework.web.bind.annotation.RequestMethod.*;
+import static com.vlasovartem.tvspace.service.SeriesService.*;
+import static org.springframework.web.bind.annotation.RequestMethod.GET;
 
 /**
  * Created by artemvlasov on 23/11/15.
@@ -29,9 +28,6 @@ public class SeriesController {
 
     private SeriesService seriesService;
     private final List<String> sortProperties;
-    private final String initSortName = "Imdb Rating";
-    private final String initSortDirection = "DESC";
-    public final static String NEXT_EPISODE_DATE_PROPERTY = "nextEpisode.episodeDate";
 
     @Autowired
     public SeriesController (SeriesService seriesService) {
@@ -42,11 +38,11 @@ public class SeriesController {
     @RequestMapping
     @JsonView(SeriesView.ShortInfoView.class)
     public ModelAndView getAll () {
-        String initSortProperty = convertSortProperty(initSortName);
+        String initSortProperty = convertSortProperty(INIT_SORT_NAME);
         return new ModelAndView("/series/series",
                 prepareModelMap(
-                        new Search(initSortName, initSortDirection),
-                        seriesService.findAll(new Sort(Sort.Direction.valueOf(initSortDirection), initSortProperty))));
+                        new Search(INIT_SORT_NAME, INIT_SORT_DIRECTION),
+                        seriesService.findAll(new Sort(Sort.Direction.valueOf(INIT_SORT_DIRECTION), initSortProperty))));
     }
 
     @RequestMapping(path = "/search", method = GET)
@@ -63,15 +59,15 @@ public class SeriesController {
         Sort documentSort = new Sort(Sort.Direction.fromString(direction), NEXT_EPISODE_DATE_PROPERTY
                 .equals(sort) ? sort : convertSortProperty(sort));
         List<Series> series;
-        if (Objects.isNull(genre) && Objects.isNull(year) && Objects.isNull(title) && !hideFinished && initSortName
-                .equals(sort) && initSortDirection.equals(direction)) {
+        if (Objects.isNull(genre) && Objects.isNull(year) && Objects.isNull(title) && !hideFinished && INIT_SORT_NAME
+                .equals(sort) && INIT_SORT_DIRECTION.equals(direction)) {
             return new ModelAndView("redirect:/series");
         } else if(NEXT_EPISODE_DATE_PROPERTY.equals(sort)) {
             series = seriesService.findNextEpisodes(documentSort);
         } else if (Objects.isNull(genre) &&
                 Objects.isNull(year) &&
                 Objects.isNull(title) &&
-                (!initSortName.equals(sort) || !initSortDirection.equals(direction))) {
+                (!INIT_SORT_NAME.equals(sort) || !INIT_SORT_DIRECTION.equals(direction))) {
             series = hideFinished ? seriesService.findFinished(documentSort) : seriesService.findAll(documentSort);
         } else {
             series = seriesService.findSeries(genre, year, title, hideFinished, documentSort);

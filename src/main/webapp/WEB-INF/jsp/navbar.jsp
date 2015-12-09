@@ -17,6 +17,11 @@
                 <ul class="nav navbar-nav">
                     <li><a href="/series">Series</a></li>
                 </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/signup">Sign Up</a>
+                    </li>
+                </ul>
             </div>
         </div>
     </nav>

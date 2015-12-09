@@ -291,6 +291,7 @@ html, body {
     min-height: 100px;
     background-color: white;
     border-bottom: 1px solid gray;
+    /*padding: 0 20px 0 0;*/
 }
 .tv-space-additional.navbar-brand > a {
     cursor: hand;
@@ -319,6 +320,7 @@ html, body {
 }
 .tv-space-navbar > div {
     padding-left: 30px;
+    padding-right: 50px;
 }
 
 /* Main */
@@ -326,3 +328,25 @@ html, body {
     padding-top: 20px;
 }
 
+/* Registration form */
+.reg-form {
+    border-radius: 10px;
+    border: 1px solid #c9c9c9;
+}
+.reg-form > form {
+    margin: 20px 20px 14px 20px;
+}
+.reg-form > form > .form-group {
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 15px;
+}
+.reg-form label.error {
+    color: #761c19;
+    font-size: 12px;
+}
+.form-error-info {
+    padding-top: 10px;
+    font-size: 16px;
+    color: #761c19;
+}

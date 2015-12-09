@@ -11,4 +11,8 @@ public interface UserRepository extends MongoRepository<User, String> {
 
     @Query("{$and : [{$or : [{email : ?0}, {login : ?9}]}, {finished : false}]}")
     User loginUser (String loginData);
+
+    int countByUsernameIgnoreCase(String username);
+
+    int countByEmailIgnoreCase(String email);
 }

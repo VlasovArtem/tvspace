@@ -25,7 +25,12 @@
             <div class="tv-space collapse navbar-collapse" id="tv-space-navbar-collapse">
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href="/series">Series<span class="line"></span></a>
+                        <a href="/series">Series</a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/signup">Sign Up</a>
                     </li>
                 </ul>
             </div>

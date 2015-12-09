@@ -38,6 +38,6 @@ public class TvSpaceUserDetailsService implements UserDetailsService {
         } else {
             throw new UsernameNotFoundException("User with login data is not exists");
         }
-        return new TvSpaceUserDetails(user.get().getLogin(), user.get().getPassword(), authorities, user.get().getId());
+        return new TvSpaceUserDetails(user.get().getUsername(), user.get().getPassword(), authorities, user.get().getId());
     }
 }

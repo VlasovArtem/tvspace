@@ -11,6 +11,7 @@ import org.springframework.security.authentication.ProviderManager;
 import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
+import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.builders.WebSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
@@ -66,12 +67,31 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Bean
     public PersistentTokenRepository persistentTokenRepository() {
-        MongoTokenRepositoryImpl db = new MongoTokenRepositoryImpl(mongoTemplate);
-        return db;
+        return new MongoTokenRepositoryImpl(mongoTemplate);
     }
 
     @Override
     public void configure(WebSecurity web) throws Exception {
         web.ignoring().antMatchers("/resources/**", "/jsp/**", "/taglib/**");
+    }
+
+    @Override
+    protected void configure(HttpSecurity http) throws Exception {
+        http
+                .httpBasic().authenticationEntryPoint(entryPoint)
+                .and()
+                .csrf().disable()
+                .authorizeRequests()
+                .antMatchers("/series", "/series/search", "/", "/signup")
+                .permitAll()
+                .and()
+                    .formLogin().loginPage("/").loginProcessingUrl("/login")
+                    .failureHandler(new SimpleUrlAuthenticationFailureHandler()).passwordParameter("password")
+                    .usernameParameter("loginData").permitAll()
+                .and()
+                    .logout().logoutUrl("/logout").logoutSuccessUrl("/")
+                .and()
+                    .rememberMe().tokenValiditySeconds(604800).rememberMeParameter("rememberMe")
+                    .userDetailsService(userDetailsService()).tokenRepository(persistentTokenRepository());
     }
 }

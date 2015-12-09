@@ -3,6 +3,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 <spring:url value="/resources/bower_components/bootstrap/dist/js/bootstrap.js" var="bootstrapJs"/>
 <spring:url value="/resources/bower_components/jquery/dist/jquery.js" var="jqueryJs"/>
 <spring:url value="/resources/core/js/tvspace.js" var="tvspaceJs"/>
