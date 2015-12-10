@@ -3,12 +3,15 @@ package com.vlasovartem.tvspace.controller;
 import com.fasterxml.jackson.annotation.JsonView;
 import com.vlasovartem.tvspace.controller.model.Search;
 import com.vlasovartem.tvspace.entity.Series;
+import com.vlasovartem.tvspace.entity.UserSeries;
 import com.vlasovartem.tvspace.service.SeriesService;
+import com.vlasovartem.tvspace.service.UserService;
 import com.vlasovartem.tvspace.utils.view.SeriesView;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -27,21 +30,43 @@ import static org.springframework.web.bind.annotation.RequestMethod.GET;
 public class SeriesController {
 
     private SeriesService seriesService;
+    private UserService userService;
     private final List<String> sortProperties;
 
     @Autowired
-    public SeriesController (SeriesService seriesService) {
+    public SeriesController (SeriesService seriesService, UserService userService) {
         this.seriesService = seriesService;
+        this.userService = userService;
         sortProperties = Arrays.asList("Year Start", "Year End", "Imdb Rating", "Finished", "Title", "Next Episode");
     }
+
+    @ModelAttribute("genres")
+    public Set<String> getGenres() {
+        return seriesService.findSeriesGenres();
+    }
+
+    @ModelAttribute("years")
+    public Set<Integer> getYears () {
+        return seriesService.findSeriesYears();
+    }
+
+    @ModelAttribute("sortProperties")
+    public List<String> getSortProperties () {
+        return sortProperties;
+    }
+
+    @ModelAttribute("userSeries")
+    public List<UserSeries> getUserSeries() {
+        return userService.getUserSeries();
+    }
+
 
     @RequestMapping
     @JsonView(SeriesView.ShortInfoView.class)
     public ModelAndView getAll () {
         String initSortProperty = convertSortProperty(INIT_SORT_NAME);
         return new ModelAndView("/series/series",
-                prepareModelMap(
-                        new Search(INIT_SORT_NAME, INIT_SORT_DIRECTION),
+                prepareModelMap(new Search(INIT_SORT_NAME, INIT_SORT_DIRECTION),
                         seriesService.findAll(new Sort(Sort.Direction.valueOf(INIT_SORT_DIRECTION), initSortProperty))));
     }
 
@@ -52,29 +77,29 @@ public class SeriesController {
                                 @RequestParam(required = false) Integer year,
                                 @RequestParam(required = false) String title,
                                 @RequestParam(required = false, defaultValue = "false") boolean hideFinished,
+                                @RequestParam(required = false, defaultValue = "false") boolean showUserSeries,
                                 @RequestParam(required = false, defaultValue = "Imdb Rating") String sort,
                                 @RequestParam(required = false, defaultValue = "DESC") String direction) {
-        updateSearch(search, genre, year, title, hideFinished, sort, direction);
-        sort = "Next Episode".equals(sort) ? NEXT_EPISODE_DATE_PROPERTY : sort;
-        Sort documentSort = new Sort(Sort.Direction.fromString(direction), NEXT_EPISODE_DATE_PROPERTY
+        sort = "Next Episode".equals(search.getSort()) ? NEXT_EPISODE_DATE_PROPERTY : search.getSort();
+        Sort documentSort = new Sort(Sort.Direction.fromString(search.getDirection()), NEXT_EPISODE_DATE_PROPERTY
                 .equals(sort) ? sort : convertSortProperty(sort));
-        List<Series> series;
+        Map<String, Object> modelMap;
         if (Objects.isNull(genre) && Objects.isNull(year) && Objects.isNull(title) && !hideFinished && INIT_SORT_NAME
                 .equals(sort) && INIT_SORT_DIRECTION.equals(direction)) {
             return new ModelAndView("redirect:/series");
         } else if(NEXT_EPISODE_DATE_PROPERTY.equals(sort)) {
-            series = seriesService.findNextEpisodes(documentSort);
+            modelMap = prepareModelMap(search, seriesService.findNextEpisodes(documentSort));
         } else if (Objects.isNull(genre) &&
                 Objects.isNull(year) &&
                 Objects.isNull(title) &&
                 (!INIT_SORT_NAME.equals(sort) || !INIT_SORT_DIRECTION.equals(direction))) {
-            series = hideFinished ? seriesService.findFinished(documentSort) : seriesService.findAll(documentSort);
+            modelMap = prepareModelMap(search, hideFinished ? seriesService.findFinished(documentSort) : seriesService
+                    .findAll(documentSort));
         } else {
-            series = seriesService.findSeries(genre, year, title, hideFinished, documentSort);
+            modelMap = prepareModelMap(search, seriesService.findSeries(genre, year, title, hideFinished,
+                    documentSort));
         }
-        return new ModelAndView("/series/series",
-                prepareModelMap(
-                        search, series));
+        return new ModelAndView("/series/series", modelMap);
     }
 
     public String convertSortProperty (String property) {
@@ -94,25 +119,10 @@ public class SeriesController {
         }
     }
 
-    private void updateSearch(Search search, String genre, Integer year,
-                              String title, boolean hideFinished, String sort,
-                              String direction) {
-        search.setDirection(direction);
-        search.setGenre(genre);
-        search.setHideFinished(hideFinished);
-        search.setSort(sort);
-        search.setTitle(title);
-        search.setYear(year);
-    }
-
     private Map<String, Object> prepareModelMap (Search search, List<Series> series) {
         Map<String, Object> modelMap = new HashMap<>();
-        modelMap.put("genres", seriesService.findSeriesGenres());
         modelMap.put("search", search);
-        modelMap.put("years", seriesService.findSeriesYears());
-        modelMap.put("sortProperties", sortProperties);
         modelMap.put("series", series);
         return modelMap;
     }
-
 }

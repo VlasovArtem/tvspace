@@ -15,4 +15,5 @@ public interface UserRepository extends MongoRepository<User, String> {
     int countByUsernameIgnoreCase(String username);
 
     int countByEmailIgnoreCase(String email);
+    int countByUserSeriesSeriesIdAndId(String seriesId, String userId);
 }

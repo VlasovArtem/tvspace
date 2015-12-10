@@ -14,6 +14,15 @@ public class UserSeries {
     private int watchedSeason;
     private int watchedEpisode;
 
+    public UserSeries() {
+    }
+
+    public UserSeries(String seriesId, int watchedSeason, int watchedEpisode) {
+        this.seriesId = seriesId;
+        this.watchedSeason = watchedSeason;
+        this.watchedEpisode = watchedEpisode;
+    }
+
     public String getSeriesId() {
         return seriesId;
     }

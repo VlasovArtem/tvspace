@@ -40,27 +40,34 @@ public class SeriesServiceImpl implements SeriesService {
             yearStart = LocalDate.of(year, Month.JANUARY, 1);
             yearEnd = LocalDate.of(year, Month.DECEMBER, 31);
         }
-        if (Objects.isNull(genre) && Objects.isNull(year) && Objects.isNull(title) && hideFinished) {
-            return seriesRepository.findByFinishedIsFalse(sort);
-        } else if (Objects.nonNull(genre) && Objects.nonNull(year) && year != 0 && Objects.nonNull(title)) {
-            if (hideFinished) return seriesRepository.findByGenresAndSeriesStartBetweenAndTitleLikeIgnoreCaseAndFinishedIsFalse
-                    (genre, yearStart, yearEnd, title, sort);
-            else return seriesRepository.findByGenresAndSeriesStartBetweenAndTitleLikeIgnoreCase(genre, yearStart, yearEnd, title, sort);
-        } else if (Objects.nonNull(genre) && Objects.nonNull(year)) {
-            if (hideFinished) return seriesRepository.findByGenresAndSeriesStartBetweenAndFinishedIsFalse(genre, yearStart, yearEnd, sort);
-            else return seriesRepository.findByGenresAndSeriesStartBetween(genre, yearStart, yearEnd, sort);
-        } else if (Objects.nonNull(genre) && Objects.nonNull(title)) {
-            if (hideFinished) return seriesRepository.findByGenresAndTitleLikeIgnoreCaseAndFinishedIsFalse (genre, title, sort);
-            else return seriesRepository.findByGenresAndTitleLikeIgnoreCase (genre, title, sort);
-        } else if (Objects.nonNull(year) && Objects.nonNull(title)) {
-            if (hideFinished) return seriesRepository.findBySeriesStartBetweenAndTitleLikeIgnoreCaseAndFinishedIsFalse(yearStart, yearEnd, title, sort);
-            else return seriesRepository.findBySeriesStartBetweenAndTitleLikeIgnoreCase(yearStart, yearEnd, title, sort);
-        } else if (Objects.isNull(year) && Objects.isNull(genre)) {
-            if (hideFinished) return seriesRepository.findByTitleLikeIgnoreCaseAndFinishedIsFalse(title, sort);
-            else return seriesRepository.findByTitleLikeIgnoreCase(title, sort);
-        } else {
-            if (hideFinished) return seriesRepository.findByGenresOrSeriesStartBetweenAndFinishedIsFalse(genre, yearStart, yearEnd, sort);
-            else return seriesRepository.findByGenresOrSeriesStartBetween(genre, yearStart, yearEnd, sort);
+        switch (findSearchProperties(genre, year, title, hideFinished)) {
+            case ALL_EXF:
+                return seriesRepository.findByFinishedIsFalse(sort);
+            case GENRE_TITLE_YEAR_EXF:
+                return seriesRepository.findByGenresAndSeriesStartBetweenAndTitleLikeIgnoreCaseAndFinishedIsFalse
+                        (genre, yearStart, yearEnd, title, sort);
+            case GENRE_TITLE_YEAR:
+                return seriesRepository.findByGenresAndSeriesStartBetweenAndTitleLikeIgnoreCase(genre, yearStart, yearEnd, title, sort);
+            case GENRE_YEAR_EXF:
+                return seriesRepository.findByGenresAndSeriesStartBetweenAndFinishedIsFalse(genre, yearStart, yearEnd, sort);
+            case GENRE_YEAR:
+                return seriesRepository.findByGenresAndSeriesStartBetween(genre, yearStart, yearEnd, sort);
+            case GENRE_TITLE_EXF:
+                return seriesRepository.findByGenresAndTitleLikeIgnoreCaseAndFinishedIsFalse (genre, title, sort);
+            case GENRE_TITLE:
+                return seriesRepository.findByGenresAndTitleLikeIgnoreCase (genre, title, sort);
+            case YEAR_TITLE_EXF:
+                return seriesRepository.findBySeriesStartBetweenAndTitleLikeIgnoreCaseAndFinishedIsFalse(yearStart, yearEnd, title, sort);
+            case YEAR_TITLE:
+                return seriesRepository.findBySeriesStartBetweenAndTitleLikeIgnoreCase(yearStart, yearEnd, title, sort);
+            case TITLE_EXF:
+                return seriesRepository.findByTitleLikeIgnoreCaseAndFinishedIsFalse(title, sort);
+            case TITLE:
+                return seriesRepository.findByTitleLikeIgnoreCase(title, sort);
+            case GENRE_OR_YEAR_EXF:
+                return seriesRepository.findByGenresOrSeriesStartBetweenAndFinishedIsFalse(genre, yearStart, yearEnd, sort);
+            default:
+                return seriesRepository.findByGenresOrSeriesStartBetween(genre, yearStart, yearEnd, sort);
         }
     }
 
@@ -87,5 +94,43 @@ public class SeriesServiceImpl implements SeriesService {
     @Override
     public List<Series> findNextEpisodes(Sort sort) {
         return seriesRepository.findNextEpisode (LocalDate.now(), sort);
+    }
+
+    @Override
+    public List<Series> findUserSeries(Sort sort) {
+        return null;
+    }
+
+    private SearchProperty findSearchProperties(String genre, Integer year, String title, boolean hideFinished) {
+        if (Objects.isNull(genre) && Objects.isNull(year) && Objects.isNull(title) && hideFinished) {
+            return SearchProperty.ALL_EXF;
+        } else if (Objects.nonNull(genre) && Objects.nonNull(year) && year != 0 && Objects.nonNull(title)) {
+            if (hideFinished) return SearchProperty.GENRE_TITLE_YEAR_EXF;
+            return SearchProperty.GENRE_TITLE_YEAR;
+        } else if (Objects.nonNull(genre) && Objects.nonNull(year)) {
+            if(hideFinished) return SearchProperty.GENRE_YEAR_EXF;
+            return SearchProperty.GENRE_YEAR;
+        } else if (Objects.nonNull(genre) && Objects.nonNull(title)) {
+            if(hideFinished) return SearchProperty.GENRE_TITLE_EXF;
+            return SearchProperty.GENRE_TITLE;
+        } else if (Objects.nonNull(year) && Objects.nonNull(title)) {
+            if(hideFinished) return SearchProperty.YEAR_TITLE_EXF;
+            return SearchProperty.YEAR_TITLE;
+        } else if (Objects.isNull(year) && Objects.isNull(genre)) {
+            if(hideFinished) return SearchProperty.TITLE_EXF;
+            return SearchProperty.TITLE;
+        } else {
+            if(hideFinished) return SearchProperty.GENRE_OR_YEAR_EXF;
+            return SearchProperty.GENRE_OR_YEAR;
+        }
+    }
+
+    /**
+     * Enum for search format. EXF - exclude finished. All properties is divided by and GENRE_YEAR - means
+     * GENRE_AND_YEAR
+     */
+    private enum SearchProperty {
+        ALL, ALL_EXF, GENRE_YEAR, GENRE_YEAR_EXF, YEAR_TITLE, YEAR_TITLE_EXF, GENRE_TITLE,
+        GENRE_TITLE_EXF, TITLE, TITLE_EXF, GENRE_TITLE_YEAR, GENRE_TITLE_YEAR_EXF, GENRE_OR_YEAR, GENRE_OR_YEAR_EXF
     }
 }

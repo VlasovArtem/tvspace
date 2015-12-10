@@ -17,6 +17,10 @@ import java.util.List;
 @Repository
 public interface SeriesRepository extends MongoRepository<Series, String>, SeriesRepositoryCustom {
 
+    Series findByTitleIgnoreCase (String title);
+
+    long countById(String id);
+
     List<Series> findByGenresOrSeriesStartBetweenAndFinishedIsFalse(String genre, LocalDate yearStart, LocalDate
             yearEnd, Sort sort);
 
@@ -53,4 +57,23 @@ public interface SeriesRepository extends MongoRepository<Series, String>, Serie
 
     @Query(value = "{$and : [{'nextEpisode.episodeDate' : {$exists : true}}, {'nextEpisode.episodeDate' : {$gt : ?0}}]}")
     List<Series> findNextEpisode(LocalDate today, Sort sort);
+
+    List<Series> findByIdIn (List<String> seriesId, Sort sort);
+
+    List<Series> findByGenresAndSeriesStartBetweenAndTitleLikeIgnoreCase(String genre, LocalDate yearStart, LocalDate
+            yearEnd, String title);
+
+    List<Series> findByGenresOrSeriesStartBetweenOrTitleLikeIgnoreCase(String genre, LocalDate yearStart, LocalDate
+            yearEnd, String title);
+
+    List<Series> findByGenresOrSeriesStartBetweenAndTitleLikeIgnoreCase(String genre, LocalDate yearStart, LocalDate
+            yearEnd, String title);
+
+    List<Series> findByGenresAndSeriesStartBetweenOrTitleLikeIgnoreCase(String genre, LocalDate yearStart, LocalDate
+            yearEnd, String title);
+
+    List<Series> findByGenresAndTitleLikeIgnoreCaseOrSeriesStartBetween(String genre, String title, LocalDate
+            yearStart, LocalDate
+            yearEnd);
+
 }

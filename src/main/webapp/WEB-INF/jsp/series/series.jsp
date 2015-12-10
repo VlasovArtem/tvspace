@@ -5,6 +5,8 @@
 <html>
 <head>
     <title>Series</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.js"></script>
 </head>
 <body onload="init()">
 <%@ include file="../navbar.jsp" %>
@@ -128,9 +130,67 @@
                     </div>
                 </article>
                 <sec:authorize access="isAuthenticated()">
-                    <article class="tracking-series-block">
-                        <span class="glyphicon glyphicon-eye-open watching"></span>
-                        <span class="glyphicon glyphicon-eye-open not-watching"></span>
+                    <article class="tracking-series-block" id="${ser.id}">
+                        <span title="Not Watch" class="glyphicon glyphicon-eye-open watching
+                        ${sfn:checkUserSeries(ser.id, userSeries) ? 'show' : 'hide'}"
+                                      onclick="notWatching(${ser.id})"></span>
+                        <span title="Watching" class="glyphicon glyphicon-eye-open not-watching
+                        ${sfn:checkUserSeries(ser.id, userSeries) ? 'hide' : 'show'}"
+                                      onclick="watching(${ser.id})"></span>
+                        <article
+                                class="choose-series-info
+                                ${sfn:checkUserSeries(ser.id, userSeries) ? 'show' : 'hide'}">
+                            <c:set value="${sfn:findUserSeries(ser.id, userSeries)}" var="userSer"/>
+                            <c:set value="${sfn:findSeasonToSelect(ser, userSeries)}" var="seasonNumber"/>
+                            <c:set value="${sfn:findSeasonEpisodeToSelect(ser, seasonNumber, userSeries)}"
+                                   var="episodeNumber"/>
+                            <div class="overlay-choose-series"></div>
+                            <form class="form-inline">
+                                <fieldset>
+                                    <div class="form-group">
+                                        <label for="season">Season:</label>
+                                        <select name="season" id="season"
+                                                class="tv-space-form-control form-control"
+                                                onchange='changeSeason(${sfn:seriesSeasonMap(ser)}, ${ser.id})'>
+                                            <c:forEach begin="1" end="${fn:length(ser.seasons)}" var="season"
+                                                       varStatus="status">
+                                                <c:choose>
+                                                    <c:when
+                                                            test="${status.current == seasonNumber}">
+                                                        <option value="${season}"
+                                                                selected="selected">${season}</option>
+                                                    </c:when>
+                                                    <c:otherwise>
+                                                        <option value="${season}">${season}</option>
+                                                    </c:otherwise>
+                                                </c:choose>
+                                            </c:forEach>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="episode">Episode:</label>
+                                        <select name="episode" id="episode" class="tv-space-form-control form-control">
+                                            <c:forEach begin="1" end="${sfn:findSeasonEpisodeLength(ser,
+                                            seasonNumber)}" var="episode" varStatus="status">
+                                                <c:choose>
+                                                    <c:when test="${status.current == episodeNumber}">
+                                                        <option value="${episode}"
+                                                                selected="selected">${episode}</option>
+                                                    </c:when>
+                                                    <c:otherwise>
+                                                        <option value="${episode}">${episode}</option>
+                                                    </c:otherwise>
+                                                </c:choose>
+                                            </c:forEach>
+                                        </select>
+                                    </div>
+                                    <div class="form-group watch-button">
+                                        <input type="button" class="btn btn-sm btn-success" value="Watch"
+                                               onclick="markWatching(${ser.id})">
+                                    </div>
+                                </fieldset>
+                            </form>
+                        </article>
                     </article>
                 </sec:authorize>
             </div>

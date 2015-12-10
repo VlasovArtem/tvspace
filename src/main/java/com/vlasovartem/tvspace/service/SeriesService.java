@@ -2,6 +2,7 @@ package com.vlasovartem.tvspace.service;
 
 import com.vlasovartem.tvspace.controller.model.Search;
 import com.vlasovartem.tvspace.entity.Series;
+import com.vlasovartem.tvspace.entity.UserSeries;
 import org.springframework.data.domain.Sort;
 
 import java.util.List;
@@ -17,9 +18,16 @@ public interface SeriesService {
     String NEXT_EPISODE_DATE_PROPERTY = "nextEpisode.episodeDate";
 
     List<Series> findSeries (String genre, Integer year, String title, boolean hideFinished, Sort sort);
+
     Set<String> findSeriesGenres ();
+
     Set<Integer> findSeriesYears ();
+
     List<Series> findAll(Sort sort);
+
     List<Series> findFinished(Sort sort);
+
     List<Series> findNextEpisodes(Sort sort);
+
+    List<Series> findUserSeries(Sort sort);
 }
