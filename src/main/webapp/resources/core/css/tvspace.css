@@ -71,8 +71,7 @@ html, body {
 .tv-space > ul.nav > li {
     border: 2px solid white;
     border-radius: 30px;
-    margin-top: auto;
-    margin-bottom: auto;
+    margin: auto 10px;
 }
 .tv-space > ul.nav > li a {
     padding: 10px;
@@ -238,6 +237,73 @@ html, body {
     font-size: smaller;
     color: grey;
 }
+#series .empty-result {
+    margin-left: 25%;
+}
+
+/* Tracking block */
+.tracking-series-block {
+    position: absolute;
+    bottom: 15px;
+    width: 80%;
+    left: 30px;
+    text-align: left;
+    display: inline-flex;
+}
+.tracking-series-block  > .choose-series-info {
+    padding-left: 10px;
+}
+.tracking-series-block > span.glyphicon{
+    cursor: pointer;
+    font-size: 30px;
+    height: 34px;
+}
+.tracking-series-block .watch-button {
+    padding-left: 20px;
+}
+.tracking-series-block .watch-button > input {
+    border-radius: 0;
+
+}
+.tracking-series-block > span.glyphicon.not-watching {
+    color: grey;
+    transition: color .5s;
+}
+.tracking-series-block > span.glyphicon.not-watching:hover {
+    color: #4cae4c;
+    transition: color .5s;
+}
+.tracking-series-block > span.glyphicon.watching {
+    color: #4cae4c;
+    transition: color .5s;
+}
+.tracking-series-block > span.glyphicon.watching:hover {
+    color: grey;
+    transition: color .5s;
+}
+.tracking-series-block  > .choose-series-info > form {
+    margin-bottom: 0;
+}
+.choose-series-info {
+    position: relative;
+}
+.choose-series-info .tv-space-form-control {
+    background-color: transparent;
+}
+.overlay-choose-series {
+    background-color: rgb(222, 242, 241);
+    height: 34px;
+    position: absolute;
+}
+.hide > .overlay-choose-series {
+    width: 100%;
+    transition: color 1s;
+}
+.show > .overlay-choose-series {
+    width: 0;
+    transition: 1s;
+
+}
 
 /* Series search */
 #series-search {
@@ -260,7 +326,23 @@ html, body {
     font-size: larger;
 }
 .hide-finished {
+    position: relative;
     padding-top: 10px;
+}
+.hide-finished > table {
+    width: 100%;
+}
+.hide-finished > table td {
+    vertical-align: middle;
+}
+.hide-finished > table tr > td:first-child {
+    width: 60%;
+}
+.hide-finished > table tr > td:last-child {
+    float: left;
+}
+.hide-finished > table td > input[type=checkbox] {
+    margin-top: 0;
 }
 .sort {
     padding-left: 0;
@@ -291,6 +373,7 @@ html, body {
     min-height: 100px;
     background-color: white;
     border-bottom: 1px solid gray;
+    /*padding: 0 20px 0 0;*/
 }
 .tv-space-additional.navbar-brand > a {
     cursor: hand;
@@ -303,8 +386,7 @@ html, body {
 .tv-space-additional > ul.nav > li {
     border: 2px solid #1b6d85;
     border-radius: 30px;
-    margin-top: auto;
-    margin-bottom: auto;
+    margin: auto 10px;
 }
 .tv-space-additional > ul.nav > li a {
     padding: 10px;
@@ -319,6 +401,7 @@ html, body {
 }
 .tv-space-navbar > div {
     padding-left: 30px;
+    padding-right: 50px;
 }
 
 /* Main */
@@ -326,3 +409,35 @@ html, body {
     padding-top: 20px;
 }
 
+/* Registration form */
+.reg-form {
+    border-radius: 10px;
+    border: 1px solid #c9c9c9;
+}
+.reg-form > form {
+    margin: 20px 20px 14px 20px;
+}
+.reg-form > form > .form-group {
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 15px;
+}
+.reg-form label.error {
+    color: #761c19;
+    font-size: 12px;
+}
+.form-error-info {
+    padding-top: 10px;
+    font-size: 16px;
+    color: #761c19;
+}
+
+/* Login form */
+.login-block > form {
+    margin: 20px 20px 14px 20px;
+}
+.login-block > form .form-group {
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 15px;
+}

@@ -25,9 +25,26 @@
             <div class="tv-space collapse navbar-collapse" id="tv-space-navbar-collapse">
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href="/series">Series<span class="line"></span></a>
+                        <a href="/series">Series</a>
                     </li>
                 </ul>
+                <sec:authorize access="isAnonymous()">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="/signup">Sign Up</a>
+                        </li>
+                        <li>
+                            <a href="/login">Login</a>
+                        </li>
+                    </ul>
+                </sec:authorize>
+                <sec:authorize access="isAuthenticated()">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="/logout">Logout</a>
+                        </li>
+                    </ul>
+                </sec:authorize>
             </div>
         </div>
     </nav>

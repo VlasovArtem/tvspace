@@ -10,6 +10,7 @@ public class Search {
     private boolean hideFinished;
     private String sort;
     private String direction;
+    private boolean showUserSeries;
 
     public Search(String genre, Integer year, String title, boolean hideFinished, String sort, String direction) {
         this.genre = genre;
@@ -74,5 +75,13 @@ public class Search {
 
     public void setDirection(String direction) {
         this.direction = direction;
+    }
+
+    public boolean isShowUserSeries() {
+        return showUserSeries;
+    }
+
+    public void setShowUserSeries(boolean showUserSeries) {
+        this.showUserSeries = showUserSeries;
     }
 }

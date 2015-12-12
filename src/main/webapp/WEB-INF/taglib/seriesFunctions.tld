@@ -25,4 +25,52 @@
         <function-class>com.vlasovartem.tvspace.utils.jsp.functions.SeriesFunctions</function-class>
         <function-signature>boolean checkNextEpisode(java.time.LocalDate)</function-signature>
     </function>
+    <function>
+        <description>
+            Check if passed series id is contains in User series
+        </description>
+        <name>checkUserSeries</name>
+        <function-class>com.vlasovartem.tvspace.utils.jsp.functions.SeriesFunctions</function-class>
+        <function-signature>boolean checkUserSeries(java.lang.String,java.util.List)</function-signature>
+    </function>
+    <function>
+        <description>
+            Find user series by provided series id
+        </description>
+        <name>findUserSeries</name>
+        <function-class>com.vlasovartem.tvspace.utils.jsp.functions.SeriesFunctions</function-class>
+        <function-signature>com.vlasovartem.tvspace.entity.UserSeries findUserSeries(java.lang.String,java.util.List)</function-signature>
+    </function>
+    <function>
+        <description>
+            Find current user series season number
+        </description>
+        <name>findSeasonToSelect</name>
+        <function-class>com.vlasovartem.tvspace.utils.jsp.functions.SeriesFunctions</function-class>
+        <function-signature>int findSeasonToSelect(com.vlasovartem.tvspace.entity.Series,java.util.List)</function-signature>
+    </function>
+    <function>
+        <description>
+            Find current user series season episode number or find next episode number
+        </description>
+        <name>findSeasonEpisodeToSelect</name>
+        <function-class>com.vlasovartem.tvspace.utils.jsp.functions.SeriesFunctions</function-class>
+        <function-signature>int findSeasonEpisodeToSelect(com.vlasovartem.tvspace.entity.Series,int,java.util.List)</function-signature>
+    </function>
+    <function>
+        <description>
+            Amount of episodes in particular season
+        </description>
+        <name>findSeasonEpisodeLength</name>
+        <function-class>com.vlasovartem.tvspace.utils.jsp.functions.SeriesFunctions</function-class>
+        <function-signature>int findSeasonEpisodeLength(com.vlasovartem.tvspace.entity.Series,int)</function-signature>
+    </function>
+    <function>
+        <description>
+            Convert series seasons to map with season number is the key and the season amount of episodes as value
+        </description>
+        <name>seriesSeasonMap</name>
+        <function-class>com.vlasovartem.tvspace.utils.jsp.functions.SeriesFunctions</function-class>
+        <function-signature>com.fasterxml.jackson.databind.node.ObjectNode seriesSeasonMap(com.vlasovartem.tvspace.entity.Series)</function-signature>
+    </function>
 </taglib>

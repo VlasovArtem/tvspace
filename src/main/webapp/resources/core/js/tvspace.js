@@ -4,15 +4,6 @@
 var ascOrder = "ASC";
 var descOrder = "DESC";
 
-function sayHello() {
-    console.log($('input[type=date]').val());
-    var data = $('form').serializeArray();
-    for(var i = 0; i < data.length; i++) {
-        console.log(data[i].value);
-    }
-
-}
-
 function searchByGenre(form) {
     var genre = $('#genres')[0].value;
     form.action = "/series/" + genre;
@@ -24,6 +15,7 @@ function searchSeries() {
         title.attr("disabled", true);
     }
     $('input[name=_hideFinished]').attr("disabled", true);
+    $('input[name=_showUserSeries]').attr("disabled", true);
     $('#searchForm').submit();
 }
 
@@ -47,6 +39,7 @@ function changeSort() {
 }
 
 function init() {
+    $(document).tooltip();
     stickyFunc();
     changeOrder();
     sortChange();
@@ -86,3 +79,91 @@ $(function() {
         }
     });
 });
+
+function login() {
+    var form = $('#login-form');
+    var loginObject = {
+        loginData : form.find('#loginData')[0].value,
+        password: form.find('#password')[0].value
+    };
+    if(form.find('#rememberMe')[0].checked) {
+        loginObject.rememberMe = true;
+    }
+    $.post("/login", loginObject)
+        .done(function() {
+            location.assign("/")
+        })
+        .error(function() {
+            var error = $('.login-block .error');
+            if(!_.isNull(error)) {
+                error.addClass("form-error-info");
+                error.html("User with provided email, username or password does not exists");
+                form.find('#password')[0].value = null;
+            }
+        })
+}
+
+function watching(id) {
+    var trackingBlock = $(id);
+    trackingBlock.find('.watching').removeClass("hide").addClass("show");
+    trackingBlock.find('.not-watching').removeClass("show").addClass("hide");
+    trackingBlock.find('.choose-series-info').removeClass('hide').addClass('show');
+
+}
+
+function notWatching(id) {
+    var trackingBlock = $(id);
+    $.post("/series/notwatching", {id : trackingBlock[0].id})
+        .done(function() {
+            _.each(trackingBlock.find("#episode option"), function(episode) {
+                if(episode.value != 1) {
+                    $(episode).removeAttr("selected");
+                } else {
+                    $(episode).attr("selected", "selected");
+                }
+            });
+            trackingBlock.find('.watching').removeClass("show").addClass("hide");
+            trackingBlock.find('.not-watching').removeClass("hide").addClass("show");
+            trackingBlock.find('.choose-series-info').removeClass('show').addClass('hide');
+        });
+
+}
+
+function markWatching(id) {
+    var trackingBlock = $(id);
+    var selectedSeason = trackingBlock.find("#season")[0].value;
+    var selectedEpisode = trackingBlock.find("#episode")[0].value;
+    var watchingObject = {
+        id : trackingBlock[0].id,
+        season : selectedSeason,
+        episode : selectedEpisode
+    };
+    $.post("/series/watching", watchingObject)
+        .done(function() {
+            location.reload();
+        })
+}
+
+function changeSeason(seriesSeasonMap, seriesId) {
+    console.log(seriesSeasonMap);
+    var selectedSeason = $(seriesId).find("#season")[0].value;
+    var episodeSelector = $(seriesId).find("#episode");
+    var listOfOptions = episodeSelector.find("option");
+    var episodeLength = listOfOptions.length;
+    if(seriesSeasonMap[selectedSeason] > episodeLength) {
+        console.log("New season is longer that previous");
+        for(var i = episodeLength; i <= seriesSeasonMap[selectedSeason]; i++) {
+            episodeSelector.append($("<option></option>")
+                .attr("value", i)
+                .text(i));
+        }
+    } else if (seriesSeasonMap[selectedSeason] < episodeLength) {
+        console.log("New season is shorter that previous");
+        for(var i = episodeLength; i > seriesSeasonMap[selectedSeason]; i--) {
+            episodeSelector.find("option[value=" + i + "]").remove()
+        }
+    }
+    episodeSelector.find("option[value=1]").attr("selected", "selected");
+    console.log(episodeSelector);
+
+}
