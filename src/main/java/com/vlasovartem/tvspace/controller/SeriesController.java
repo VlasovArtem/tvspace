@@ -6,13 +6,11 @@ import com.vlasovartem.tvspace.entity.Series;
 import com.vlasovartem.tvspace.entity.UserSeries;
 import com.vlasovartem.tvspace.service.SeriesService;
 import com.vlasovartem.tvspace.service.UserService;
-import com.vlasovartem.tvspace.utils.security.AuthenticatedUserPrincipalUtil;
 import com.vlasovartem.tvspace.utils.view.SeriesView;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -21,7 +19,6 @@ import org.springframework.web.servlet.ModelAndView;
 import java.util.*;
 
 import static com.vlasovartem.tvspace.service.SeriesService.*;
-import static com.vlasovartem.tvspace.utils.security.AuthenticatedUserPrincipalUtil.*;
 import static org.springframework.web.bind.annotation.RequestMethod.GET;
 
 /**

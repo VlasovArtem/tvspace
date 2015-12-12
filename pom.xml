@@ -157,21 +157,13 @@
     </dependency>
     <dependency>
       <groupId>com.lordofthejars</groupId>
-      <artifactId>nosqlunit</artifactId>
-      <version>${nosqlunit.version}</version>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>com.lordofthejars</groupId>
       <artifactId>nosqlunit-core</artifactId>
       <version>${nosqlunit.version}</version>
-      <scope>test</scope>
     </dependency>
     <dependency>
       <groupId>com.lordofthejars</groupId>
       <artifactId>nosqlunit-mongodb</artifactId>
       <version>${nosqlunit.version}</version>
-      <scope>test</scope>
     </dependency>
     <dependency>
       <groupId>org.easymock</groupId>

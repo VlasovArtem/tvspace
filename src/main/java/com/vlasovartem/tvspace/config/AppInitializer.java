@@ -1,5 +1,6 @@
 package com.vlasovartem.tvspace.config;
 
+import com.vlasovartem.tvspace.config.security.SecurityConfig;
 import org.springframework.core.env.ConfigurableEnvironment;
 import org.springframework.web.context.WebApplicationContext;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
@@ -10,7 +11,7 @@ import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatche
 public class AppInitializer extends AbstractAnnotationConfigDispatcherServletInitializer {
     @Override
     protected Class<?>[] getRootConfigClasses() {
-        return new Class<?>[]{ AppConfig.class };
+        return new Class<?>[]{ AppConfig.class, SecurityConfig.class};
     }
 
     @Override
