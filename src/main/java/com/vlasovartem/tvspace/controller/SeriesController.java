@@ -6,6 +6,7 @@ import com.vlasovartem.tvspace.entity.Series;
 import com.vlasovartem.tvspace.entity.UserSeries;
 import com.vlasovartem.tvspace.service.SeriesService;
 import com.vlasovartem.tvspace.service.UserService;
+import com.vlasovartem.tvspace.utils.security.AuthenticatedUserPrincipalUtil;
 import com.vlasovartem.tvspace.utils.view.SeriesView;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,6 +21,7 @@ import org.springframework.web.servlet.ModelAndView;
 import java.util.*;
 
 import static com.vlasovartem.tvspace.service.SeriesService.*;
+import static com.vlasovartem.tvspace.utils.security.AuthenticatedUserPrincipalUtil.*;
 import static org.springframework.web.bind.annotation.RequestMethod.GET;
 
 /**
@@ -80,26 +82,13 @@ public class SeriesController {
                                 @RequestParam(required = false, defaultValue = "false") boolean showUserSeries,
                                 @RequestParam(required = false, defaultValue = "Imdb Rating") String sort,
                                 @RequestParam(required = false, defaultValue = "DESC") String direction) {
-        sort = "Next Episode".equals(search.getSort()) ? NEXT_EPISODE_DATE_PROPERTY : search.getSort();
-        Sort documentSort = new Sort(Sort.Direction.fromString(search.getDirection()), NEXT_EPISODE_DATE_PROPERTY
-                .equals(sort) ? sort : convertSortProperty(sort));
-        Map<String, Object> modelMap;
+        sort = "Next Episode".equals(sort) ? NEXT_EPISODE_DATE_PROPERTY : convertSortProperty(sort);
         if (Objects.isNull(genre) && Objects.isNull(year) && Objects.isNull(title) && !hideFinished && INIT_SORT_NAME
                 .equals(sort) && INIT_SORT_DIRECTION.equals(direction)) {
             return new ModelAndView("redirect:/series");
-        } else if(NEXT_EPISODE_DATE_PROPERTY.equals(sort)) {
-            modelMap = prepareModelMap(search, seriesService.findNextEpisodes(documentSort));
-        } else if (Objects.isNull(genre) &&
-                Objects.isNull(year) &&
-                Objects.isNull(title) &&
-                (!INIT_SORT_NAME.equals(sort) || !INIT_SORT_DIRECTION.equals(direction))) {
-            modelMap = prepareModelMap(search, hideFinished ? seriesService.findFinished(documentSort) : seriesService
-                    .findAll(documentSort));
-        } else {
-            modelMap = prepareModelMap(search, seriesService.findSeries(genre, year, title, hideFinished,
-                    documentSort));
         }
-        return new ModelAndView("/series/series", modelMap);
+        return new ModelAndView("/series/series", prepareModelMap(search, seriesService.findSeries(genre, year, title, hideFinished,
+                    showUserSeries, sort, direction)));
     }
 
     public String convertSortProperty (String property) {

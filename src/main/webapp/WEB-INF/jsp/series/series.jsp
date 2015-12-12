@@ -30,9 +30,19 @@
             <div class="form-group">
                 <form:input path="title" cssClass="form-control tv-space-form-control" placeholder="Input title"/>
             </div>
-            <div class="form-group hide-finished center">
-                <label>Hide Finished</label>
-                <form:checkbox path="hideFinished"/>
+            <div class="form-group hide-finished">
+                <table>
+                    <tr>
+                        <td><label>Hide Finished</label></td>
+                        <td><form:checkbox path="hideFinished"/></td>
+                    </tr>
+                    <sec:authorize access="isAuthenticated()">
+                        <tr>
+                            <td><label>Show my Series</label></td>
+                            <td><form:checkbox path="showUserSeries"/></td>
+                        </tr>
+                    </sec:authorize>
+                </table>
             </div>
             <hr>
             <div class="col-md-12 center search-title"><b>Sort</b></div>
@@ -62,6 +72,9 @@
     </div>
 </aside>
 <section id="series" class="col-md-9">
+    <c:if test="${series == null || fn:length(series) == 0}">
+        <h2 class="empty-result">Oops... We did not find matches.</h2>
+    </c:if>
     <h1 class="hide">Series</h1>
     <c:forEach var="ser" items="${series}">
         <div class="col-md-4">
@@ -133,10 +146,10 @@
                     <article class="tracking-series-block" id="${ser.id}">
                         <span title="Not Watch" class="glyphicon glyphicon-eye-open watching
                         ${sfn:checkUserSeries(ser.id, userSeries) ? 'show' : 'hide'}"
-                                      onclick="notWatching(${ser.id})"></span>
+                              onclick="notWatching(${ser.id})"></span>
                         <span title="Watching" class="glyphicon glyphicon-eye-open not-watching
                         ${sfn:checkUserSeries(ser.id, userSeries) ? 'hide' : 'show'}"
-                                      onclick="watching(${ser.id})"></span>
+                              onclick="watching(${ser.id})"></span>
                         <article
                                 class="choose-series-info
                                 ${sfn:checkUserSeries(ser.id, userSeries) ? 'show' : 'hide'}">

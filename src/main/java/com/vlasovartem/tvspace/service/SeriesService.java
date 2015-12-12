@@ -17,17 +17,13 @@ public interface SeriesService {
     String INIT_SORT_DIRECTION = "DESC";
     String NEXT_EPISODE_DATE_PROPERTY = "nextEpisode.episodeDate";
 
-    List<Series> findSeries (String genre, Integer year, String title, boolean hideFinished, Sort sort);
+    List<Series> findSeries (String genre, Integer year, String title,
+                             boolean hideFinished, boolean showUserSeries,
+                             String sort, String direction);
 
     Set<String> findSeriesGenres ();
 
     Set<Integer> findSeriesYears ();
 
     List<Series> findAll(Sort sort);
-
-    List<Series> findFinished(Sort sort);
-
-    List<Series> findNextEpisodes(Sort sort);
-
-    List<Series> findUserSeries(Sort sort);
 }

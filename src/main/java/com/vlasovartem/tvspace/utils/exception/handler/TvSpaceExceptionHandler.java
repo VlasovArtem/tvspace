@@ -28,6 +28,7 @@ public class TvSpaceExceptionHandler {
 
     @ExceptionHandler(Exception.class)
     public ResponseEntity exceptionHandler(Exception ex) {
+        ex.printStackTrace();
         return ResponseEntity.status(FORBIDDEN).body(JsonNodeFactory.instance.objectNode().put("error", ex
                 .getMessage()));
     }

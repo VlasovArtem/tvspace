@@ -9,16 +9,15 @@ import org.springframework.data.mongodb.config.AbstractMongoConfiguration;
 import org.springframework.data.mongodb.repository.config.EnableMongoRepositories;
 
 /**
- * Created by artemvlasov on 20/11/15.
+ * Created by artemvlasov on 10/12/15.
  */
 @Configuration
 @EnableMongoRepositories(basePackages = "com.vlasovartem.tvspace.persistence.repository")
-@Profile("development")
-public class AppConfig extends AbstractMongoConfiguration {
-
+@Profile("test")
+public class TestAppConfig extends AbstractMongoConfiguration {
     @Override
     protected String getDatabaseName() {
-        return "pmdb";
+        return "testpmdb";
     }
 
     @Override
@@ -30,5 +29,4 @@ public class AppConfig extends AbstractMongoConfiguration {
     protected String getMappingBasePackage() {
         return "com.vlasovartem.tvspace";
     }
-
 }

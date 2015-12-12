@@ -4,15 +4,6 @@
 var ascOrder = "ASC";
 var descOrder = "DESC";
 
-function sayHello() {
-    console.log($('input[type=date]').val());
-    var data = $('form').serializeArray();
-    for(var i = 0; i < data.length; i++) {
-        console.log(data[i].value);
-    }
-
-}
-
 function searchByGenre(form) {
     var genre = $('#genres')[0].value;
     form.action = "/series/" + genre;
@@ -24,6 +15,7 @@ function searchSeries() {
         title.attr("disabled", true);
     }
     $('input[name=_hideFinished]').attr("disabled", true);
+    $('input[name=_showUserSeries]').attr("disabled", true);
     $('#searchForm').submit();
 }
 

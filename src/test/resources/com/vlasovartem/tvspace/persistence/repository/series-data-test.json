@@ -1,0 +1,2322 @@
+{
+  "users": [
+    {
+      "_class": "com.vlasovartem.tvspace.entity.User",
+      "_id": {
+        "$oid": "566725ab0364e7312e89b6b3"
+      },
+      "deleted": false,
+      "email": "vlasovartem21@gmail.com",
+      "name": "Vlasov Artem",
+      "password": "$2a$10$JiEPsoPJydTBtVqB15hQc.eiNOeH5kzDREjRJmJRbS97GBkpy6l8S",
+      "role": "USER",
+      "userSeries": [
+        {
+          "seriesId": "tt2193021",
+          "watchedEpisode": 22,
+          "watchedSeason": 4
+        },
+        {
+          "seriesId": "tt0944947",
+          "watchedEpisode": 1,
+          "watchedSeason": 6
+        }
+      ],
+      "username": "vlasovartem"
+    }
+  ],
+  "series": [
+    {
+      "_class": "com.vlasovartem.pmdb.entity.Series",
+      "_id": "tt2193021",
+      "actors": [
+        "Stephen Amell",
+        "Katie Cassidy",
+        "David Ramsey"
+      ],
+      "creators": [
+        "Greg Berlanti",
+        "Andrew Kreisberg",
+        "Marc Guggenheim"
+      ],
+      "finished": false,
+      "genres": [
+        "Action",
+        "Adventure",
+        "Crime"
+      ],
+      "imdbRating": 8.1,
+      "imdbUrl": "http://www.imdb.com/title/tt2193021/?ref_=fn_tv_tt_1",
+      "nextEpisode": {
+        "episodeDate": {
+          "$date": "2016-03-08T22:00:00.000Z"
+        },
+        "episodeNumber": 23,
+        "seasonNumber": 4,
+        "title": "Episode #4.23",
+        "url": "http://www.imdb.com/title/tt4862554/?ref_=ttep_ep23"
+      },
+      "plot": "Spoiled billionaire playboy Oliver Queen is missing and presumed dead when his yacht is lost at sea. He returns five years later a changed man, determined to clean up the city as a hooded vigilante armed with a bow.",
+      "posterUrl": "http://ia.media-imdb.com/images/M/MV5BMTg3OTc0NzkyOV5BMl5BanBnXkFtZTgwMDMwMTM3MjE@._V1_SX214_AL_.jpg",
+      "seasons": [
+        {
+          "episodes": [
+            {
+              "episodeDate": {
+                "$date": "2012-10-09T21:00:00.000Z"
+              },
+              "episodeNumber": 1,
+              "imdbRating": 8.5,
+              "seasonNumber": 1,
+              "summary": "Billionaire playboy, Oliver Queen, has been considered dead for five years. Now, he has returned. But something, during those five years, has changed him into a mysterious green hooded archer.",
+              "title": "Pilot",
+              "url": "http://www.imdb.com/title/tt2340185/?ref_=ttep_ep1"
+            },
+            {
+              "episodeDate": {
+                "$date": "2012-10-16T21:00:00.000Z"
+              },
+              "episodeNumber": 2,
+              "imdbRating": 8.3,
+              "seasonNumber": 1,
+              "summary": "Arrow moves further along his father's list while battling family issues with his mother, Moira, and especially with his sister. He also makes amends for past difficulties with Laurel.",
+              "title": "Honor Thy Father",
+              "url": "http://www.imdb.com/title/tt2310910/?ref_=ttep_ep2"
+            },
+            {
+              "episodeDate": {
+                "$date": "2012-10-23T21:00:00.000Z"
+              },
+              "episodeNumber": 3,
+              "imdbRating": 8.5,
+              "seasonNumber": 1,
+              "summary": "A mysterious sniper called Deadshot is taking out bidders at an auction for an industry company. The bidders include Oliver's stepfather, Walter Steele.",
+              "title": "Lone Gunmen",
+              "url": "http://www.imdb.com/title/tt2310914/?ref_=ttep_ep3"
+            },
+            {
+              "episodeDate": {
+                "$date": "2012-10-30T22:00:00.000Z"
+              },
+              "episodeNumber": 4,
+              "imdbRating": 8.5,
+              "seasonNumber": 1,
+              "summary": "Peter Declan has been charged with murdering his wife, and only Oliver believes he's innocent. Arrow asks Laurel to look into Declan's case. Meanwhile, Walter investigates a warehouse that Moira mysteriously bought with the company's money.",
+              "title": "An Innocent Man",
+              "url": "http://www.imdb.com/title/tt2319602/?ref_=ttep_ep4"
+            },
+            {
+              "episodeDate": {
+                "$date": "2012-11-06T22:00:00.000Z"
+              },
+              "episodeNumber": 5,
+              "imdbRating": 8.7,
+              "seasonNumber": 1,
+              "summary": "Oliver is accused of being the hooded archer and is put under house arrest. Also, he thinks back to his time on the island, where he first met Edward Fyers and Deathstroke.",
+              "title": "Damaged",
+              "url": "http://www.imdb.com/title/tt2338426/?ref_=ttep_ep5"
+            },
+            {
+              "episodeDate": {
+                "$date": "2012-11-13T22:00:00.000Z"
+              },
+              "episodeNumber": 6,
+              "imdbRating": 8.1,
+              "seasonNumber": 1,
+              "summary": "Oliver's next target is Scott Morgan, a power executive who jacks up prices for electricity when people most need it.",
+              "title": "Legacies",
+              "url": "http://www.imdb.com/title/tt2377368/?ref_=ttep_ep6"
+            },
+            {
+              "episodeDate": {
+                "$date": "2012-11-27T22:00:00.000Z"
+              },
+              "episodeNumber": 7,
+              "imdbRating": 8.4,
+              "seasonNumber": 1,
+              "summary": "A new vigilante is killing off the people that work for mob boss, Frank Bertinelli.",
+              "title": "Muse of Fire",
+              "url": "http://www.imdb.com/title/tt2395358/?ref_=ttep_ep7"
+            },
+            {
+              "episodeDate": {
+                "$date": "2012-12-04T22:00:00.000Z"
+              },
+              "episodeNumber": 8,
+              "imdbRating": 8.3,
+              "seasonNumber": 1,
+              "summary": "Oliver Queen attempts to train Helena Bertinelli in the hopes that she will join him in his fight for justice. Meanwhile, Walter Steele delves deeper into his wife's secrets.",
+              "title": "Vendetta",
+              "url": "http://www.imdb.com/title/tt2423266/?ref_=ttep_ep8"
+            },
+            {
+              "episodeDate": {
+                "$date": "2012-12-11T22:00:00.000Z"
+              },
+              "episodeNumber": 9,
+              "imdbRating": 8.4,
+              "seasonNumber": 1,
+              "summary": "Oliver Queen attempts to track down a mysterious copycat vigilante who is killing people on the list.",
+              "title": "Year's End",
+              "url": "http://www.imdb.com/title/tt2448164/?ref_=ttep_ep9"
+            },
+            {
+              "episodeDate": {
+                "$date": "2013-01-15T22:00:00.000Z"
+              },
+              "episodeNumber": 10,
+              "imdbRating": 8.0,
+              "seasonNumber": 1,
+              "summary": "Oliver's confidence is shaken after being beaten by the Dark Archer and he takes a break from being Arrow.",
+              "title": "Burned",
+              "url": "http://www.imdb.com/title/tt2467064/?ref_=ttep_ep10"
+            },
+            {
+              "episodeDate": {
+                "$date": "2013-01-22T22:00:00.000Z"
+              },
+              "episodeNumber": 11,
+              "imdbRating": 8.3,
+              "seasonNumber": 1,
+              "summary": "After a string of violent armored car robberies, Oliver suspects that Ted Gaynor of Black Hawk Security is the mastermind. His name is also on the list.",
+              "title": "Trust But Verify",
+              "url": "http://www.imdb.com/title/tt2496078/?ref_=ttep_ep11"
+            },
+            {
+              "episodeDate": {
+                "$date": "2013-01-29T22:00:00.000Z"
+              },
+              "episodeNumber": 12,
+              "imdbRating": 8.6,
+              "seasonNumber": 1,
+              "summary": "Thea is about to go to trial for being under the influence but she doesn't care because she is convinced that her mother was unfaithful to her father.",
+              "title": "Vertigo",
+              "url": "http://www.imdb.com/title/tt2519404/?ref_=ttep_ep12"
+            },
+            {
+              "episodeDate": {
+                "$date": "2013-02-05T22:00:00.000Z"
+              },
+              "episodeNumber": 13,
+              "imdbRating": 8.7,
+              "seasonNumber": 1,
+              "summary": "Quentin Lance's ongoing attempt to capture the vigilante is put to a halt when a recently released criminal kidnaps his daughter to get to Arrow. Meanwhile, John Diggle insists on spying on Moira Queen to learn her secrets.",
+              "title": "Betrayal",
+              "url": "http://www.imdb.com/title/tt2527342/?ref_=ttep_ep13"
+            },
+            {
+              "episodeDate": {
+                "$date": "2013-02-12T22:00:00.000Z"
+              },
+              "episodeNumber": 14,
+              "imdbRating": 8.9,
+              "seasonNumber": 1,
+              "summary": "Oliver's heavy-handed approach to getting information from his mother backfires and she manages to shoot him in the shoulder.",
+              "title": "The Odyssey",
+              "url": "http://www.imdb.com/title/tt2561472/?ref_=ttep_ep14"
+            },
+            {
+              "episodeDate": {
+                "$date": "2013-02-19T22:00:00.000Z"
+              },
+              "episodeNumber": 15,
+              "imdbRating": 8.2,
+              "seasonNumber": 1,
+              "summary": "A jewel thief known as the Dodger who coerces people to steal for him by strapping an explosive to them, is in town. So Oliver decides to use his family's jewels as bait to lure him.",
+              "title": "Dodger",
+              "url": "http://www.imdb.com/title/tt2605292/?ref_=ttep_ep15"
+            },
+            {
+              "episodeDate": {
+                "$date": "2013-02-26T22:00:00.000Z"
+              },
+              "episodeNumber": 16,
+              "imdbRating": 8.8,
+              "seasonNumber": 1,
+              "summary": "The plan to kill Malcolm Merlyn goes into operation. Arrow kills one assassin who has just arrived in the city and retrieves his cellphone.",
+              "title": "Dead to Rights",
+              "url": "http://www.imdb.com/title/tt2633630/?ref_=ttep_ep16"
+            },
+            {
+              "episodeDate": {
+                "$date": "2013-03-19T22:00:00.000Z"
+              },
+              "episodeNumber": 17,
+              "imdbRating": 8.3,
+              "seasonNumber": 1,
+              "summary": "Helena is back to seek vengeance, but Oliver still has feeling toward her. The Arrow must stop and kill her, but at what costs? Now that several of his closest friends know about his true identity, no one is safe.",
+              "title": "The Huntress Returns",
+              "url": "http://www.imdb.com/title/tt2654070/?ref_=ttep_ep17"
+            },
+            {
+              "episodeDate": {
+                "$date": "2013-03-26T22:00:00.000Z"
+              },
+              "episodeNumber": 18,
+              "imdbRating": 8.5,
+              "seasonNumber": 1,
+              "summary": "After a major fire, Oliver decides it's time to eliminate real estate developer and slumlord John Nicol, another person on his father's list.",
+              "title": "Salvation",
+              "url": "http://www.imdb.com/title/tt2698256/?ref_=ttep_ep18"
+            },
+            {
+              "episodeDate": {
+                "$date": "2013-04-02T21:00:00.000Z"
+              },
+              "episodeNumber": 19,
+              "imdbRating": 8.4,
+              "seasonNumber": 1,
+              "summary": "Vertigo is again appearing on the market even though The Count, who created the drug, is still in a psychiatric hospital.",
+              "title": "Unfinished Business",
+              "url": "http://www.imdb.com/title/tt2712930/?ref_=ttep_ep19"
+            },
+            {
+              "episodeDate": {
+                "$date": "2013-04-23T21:00:00.000Z"
+              },
+              "episodeNumber": 20,
+              "imdbRating": 8.6,
+              "seasonNumber": 1,
+              "summary": "Oliver decides that his next target is going to be someone on Digg's list: Deadshot. They set a trap for him and Digg's spy friends get involved as well.",
+              "title": "Home Invasion",
+              "url": "http://www.imdb.com/title/tt2761432/?ref_=ttep_ep20"
+            },
+            {
+              "episodeDate": {
+                "$date": "2013-04-30T21:00:00.000Z"
+              },
+              "episodeNumber": 21,
+              "imdbRating": 8.9,
+              "seasonNumber": 1,
+              "summary": "After taking a mob accountant's laptop, Oliver plans to return the money to its rightful owners.",
+              "title": "The Undertaking",
+              "url": "http://www.imdb.com/title/tt2761428/?ref_=ttep_ep21"
+            },
+            {
+              "episodeDate": {
+                "$date": "2013-05-07T21:00:00.000Z"
+              },
+              "episodeNumber": 22,
+              "imdbRating": 9.0,
+              "seasonNumber": 1,
+              "summary": "The time is fast approaching for the Undertaking to occur and Malcolm Merlyn begins to tidy up the loose ends, beginning with the scientists at UNIDAC.",
+              "title": "Darkness on the Edge of Town",
+              "url": "http://www.imdb.com/title/tt2761434/?ref_=ttep_ep22"
+            },
+            {
+              "episodeDate": {
+                "$date": "2013-05-14T21:00:00.000Z"
+              },
+              "episodeNumber": 23,
+              "imdbRating": 9.0,
+              "seasonNumber": 1,
+              "summary": "Oliver awakens to find himself Malcolm Merlyn's prisoner. He manages to escape and away with help from Digg. Malcolm accelerates his timetable as a result. Felicity is questioned by Det.",
+              "title": "Sacrifice",
+              "url": "http://www.imdb.com/title/tt2761440/?ref_=ttep_ep23"
+            }
+          ],
+          "seasonEnd": {
+            "$date": "2013-05-14T21:00:00.000Z"
+          },
+          "seasonNumber": 1,
+          "seasonStart": {
+            "$date": "2012-10-09T21:00:00.000Z"
+          },
+          "url": "http://www.imdb.com/title/tt2193021/episodes?season=1\u0026ref_=tt_eps_sn_1"
+        },
+        {
+          "episodes": [
+            {
+              "episodeDate": {
+                "$date": "2013-10-08T21:00:00.000Z"
+              },
+              "episodeNumber": 1,
+              "imdbRating": 8.9,
+              "seasonNumber": 2,
+              "summary": "Diggle and Felicity return to island to convince Oliver to return as the Arrow.",
+              "title": "City of Heroes",
+              "url": "http://www.imdb.com/title/tt2702698/?ref_=ttep_ep1"
+            },
+            {
+              "episodeDate": {
+                "$date": "2013-10-15T21:00:00.000Z"
+              },
+              "episodeNumber": 2,
+              "imdbRating": 8.7,
+              "seasonNumber": 2,
+              "summary": "Now that Oliver no longer has the list to work from, he's not sure what's next. Roy continues doing his own vigilantism and has to be bailed out of jail by Thea.",
+              "title": "Identity",
+              "url": "http://www.imdb.com/title/tt3077106/?ref_=ttep_ep2"
+            },
+            {
+              "episodeDate": {
+                "$date": "2013-10-22T21:00:00.000Z"
+              },
+              "episodeNumber": 3,
+              "imdbRating": 8.9,
+              "seasonNumber": 2,
+              "summary": "When a dangerous criminal from Lance's past (MICHAEL EKLUND) escapes from prison, Felicity offers herself up as bait so Arrow, Diggle and Lance can capture him@but plans go awry.",
+              "title": "Broken Dolls",
+              "url": "http://www.imdb.com/title/tt3126166/?ref_=ttep_ep3"
+            },
+            {
+              "episodeDate": {
+                "$date": "2013-10-29T22:00:00.000Z"
+              },
+              "episodeNumber": 4,
+              "imdbRating": 8.8,
+              "seasonNumber": 2,
+              "summary": "Oliver discovers a man who goes by the name \"The Mayor\" is bringing illegal guns in to The Glades, so Oliver sponsors a \"Cash for Guns\" event to help clean up the city.",
+              "title": "Crucible",
+              "url": "http://www.imdb.com/title/tt3126168/?ref_=ttep_ep4"
+            },
+            {
+              "episodeDate": {
+                "$date": "2013-11-05T22:00:00.000Z"
+              },
+              "episodeNumber": 5,
+              "imdbRating": 8.9,
+              "seasonNumber": 2,
+              "summary": "While Oliver tends to the Canary's wounds, he tries to get her to talk about where she came from but she refuses.",
+              "title": "League of Assassins",
+              "url": "http://www.imdb.com/title/tt3128398/?ref_=ttep_ep5"
+            },
+            {
+              "episodeDate": {
+                "$date": "2013-11-12T22:00:00.000Z"
+              },
+              "episodeNumber": 6,
+              "imdbRating": 8.6,
+              "seasonNumber": 2,
+              "summary": "Amanda Waller sends A.R.G.U.S. agents to kidnap Diggle. Waller informs Diggle that Lyla has gone missing after following a lead on Deadshot in Moscow.",
+              "title": "Keep Your Enemies Closer",
+              "url": "http://www.imdb.com/title/tt3213782/?ref_=ttep_ep6"
+            },
+            {
+              "episodeDate": {
+                "$date": "2013-11-19T22:00:00.000Z"
+              },
+              "episodeNumber": 7,
+              "imdbRating": 8.7,
+              "seasonNumber": 2,
+              "summary": "Oliver is concerned when a mysterious illness sweeps the city, infecting hundreds of people, including Diggle.",
+              "title": "State vs Queen",
+              "url": "http://www.imdb.com/title/tt3213864/?ref_=ttep_ep7"
+            },
+            {
+              "episodeDate": {
+                "$date": "2013-12-03T22:00:00.000Z"
+              },
+              "episodeNumber": 8,
+              "imdbRating": 9.0,
+              "seasonNumber": 2,
+              "summary": "A seemingly impossible robbery at Queen Consolidated's Applied Sciences Division brings Central City police scientist Barry Allen to town.",
+              "title": "The Scientist",
+              "url": "http://www.imdb.com/title/tt3229412/?ref_=ttep_ep8"
+            },
+            {
+              "episodeDate": {
+                "$date": "2013-12-10T22:00:00.000Z"
+              },
+              "episodeNumber": 9,
+              "imdbRating": 9.0,
+              "seasonNumber": 2,
+              "summary": "After a fight with Cyrus Gold AKA the Acolyte, Oliver is drugged and left for dead. Determined to cure him, Felicity makes a risky decision.",
+              "title": "Three Ghosts",
+              "url": "http://www.imdb.com/title/tt3229414/?ref_=ttep_ep9"
+            },
+            {
+              "episodeDate": {
+                "$date": "2014-01-14T22:00:00.000Z"
+              },
+              "episodeNumber": 10,
+              "imdbRating": 8.5,
+              "seasonNumber": 2,
+              "summary": "Oliver must tackle a new threat to the city when bombs start to go off in Starling City.",
+              "title": "Blast Radius",
+              "url": "http://www.imdb.com/title/tt3229416/?ref_=ttep_ep10"
+            },
+            {
+              "episodeDate": {
+                "$date": "2014-01-21T22:00:00.000Z"
+              },
+              "episodeNumber": 11,
+              "imdbRating": 8.8,
+              "seasonNumber": 2,
+              "summary": "Oliver is conflicted after Laurel reaches out to the Arrow asking him to investigate Sebastian Blood.",
+              "title": "Blind Spot",
+              "url": "http://www.imdb.com/title/tt3263826/?ref_=ttep_ep11"
+            },
+            {
+              "episodeDate": {
+                "$date": "2014-01-28T22:00:00.000Z"
+              },
+              "episodeNumber": 12,
+              "imdbRating": 8.8,
+              "seasonNumber": 2,
+              "summary": "Arrow offers to train Roy so he can learn to control his newfound super-strength.",
+              "title": "Tremors",
+              "url": "http://www.imdb.com/title/tt3263824/?ref_=ttep_ep12"
+            },
+            {
+              "episodeDate": {
+                "$date": "2014-02-04T22:00:00.000Z"
+              },
+              "episodeNumber": 13,
+              "imdbRating": 8.8,
+              "seasonNumber": 2,
+              "summary": "Laurel continues to unravel, Oliver and Lance try to convince Sara to stay in Starling City and finally reunite with Laurel and Dinah.",
+              "title": "Heir to the Demon",
+              "url": "http://www.imdb.com/title/tt3263832/?ref_=ttep_ep13"
+            },
+            {
+              "episodeDate": {
+                "$date": "2014-02-25T22:00:00.000Z"
+              },
+              "episodeNumber": 14,
+              "imdbRating": 8.9,
+              "seasonNumber": 2,
+              "summary": "Oliver brings Sara into the Arrow team. Watching Oliver and Diggle spar with Sara and talk old scars, Felicity starts to feel left out.",
+              "title": "Time of Death",
+              "url": "http://www.imdb.com/title/tt3337656/?ref_=ttep_ep14"
+            },
+            {
+              "episodeDate": {
+                "$date": "2014-03-04T22:00:00.000Z"
+              },
+              "episodeNumber": 15,
+              "imdbRating": 9.0,
+              "seasonNumber": 2,
+              "summary": "Oliver is shocked when he learns that Slade has come to Starling City.",
+              "title": "The Promise",
+              "url": "http://www.imdb.com/title/tt3337658/?ref_=ttep_ep15"
+            },
+            {
+              "episodeDate": {
+                "$date": "2014-03-18T22:00:00.000Z"
+              },
+              "episodeNumber": 16,
+              "imdbRating": 8.7,
+              "seasonNumber": 2,
+              "summary": "Lyla asks Diggle to go on a mission alongside the Suicide Squad, a team assembled by Amanda Waller to undertake high-risk missions, even though the team includes Diggle's nemesis, Deadshot, and Oliver's enemy, Bronze Tiger.",
+              "title": "Suicide Squad",
+              "url": "http://www.imdb.com/title/tt3337660/?ref_=ttep_ep16"
+            },
+            {
+              "episodeDate": {
+                "$date": "2014-03-25T22:00:00.000Z"
+              },
+              "episodeNumber": 17,
+              "imdbRating": 8.4,
+              "seasonNumber": 2,
+              "summary": "When Frank Bertinelli is arrested, Oliver knows it's only a matter of time before his daughter, Helena, AKA The Huntress, returns to town.",
+              "title": "Birds of Prey",
+              "url": "http://www.imdb.com/title/tt3337662/?ref_=ttep_ep17"
+            },
+            {
+              "episodeDate": {
+                "$date": "2014-04-01T21:00:00.000Z"
+              },
+              "episodeNumber": 18,
+              "imdbRating": 9.0,
+              "seasonNumber": 2,
+              "summary": "After taking a ride home from Slade, Thea becomes his prisoner. Can Oliver and his friends save her? Also, someone close to Oliver is working for Slade, since his return from the Island after Tommy's death.",
+              "title": "Deathstroke",
+              "url": "http://www.imdb.com/title/tt3535114/?ref_=ttep_ep18"
+            },
+            {
+              "episodeDate": {
+                "$date": "2014-04-15T21:00:00.000Z"
+              },
+              "episodeNumber": 19,
+              "imdbRating": 9.0,
+              "seasonNumber": 2,
+              "summary": "Oliver, Canary, Diggle, and Felicity return to the lair and find Slade waiting for them. An epic battle breaks out and one member of Team Arrow is sent to the hospital.",
+              "title": "The Man Under the Hood",
+              "url": "http://www.imdb.com/title/tt3337666/?ref_=ttep_ep19"
+            },
+            {
+              "episodeDate": {
+                "$date": "2014-04-22T21:00:00.000Z"
+              },
+              "episodeNumber": 20,
+              "imdbRating": 9.0,
+              "seasonNumber": 2,
+              "summary": "The mirakuru sends Roy into a rage rampage across the city. Sara thinks that the only way to stop him is to kill him but Oliver thinks he can still save him. Meanwhile, Slade is continuing his plan to make Oliver pay.",
+              "title": "Seeing Red",
+              "url": "http://www.imdb.com/title/tt3337668/?ref_=ttep_ep20"
+            },
+            {
+              "episodeDate": {
+                "$date": "2014-04-29T21:00:00.000Z"
+              },
+              "episodeNumber": 21,
+              "imdbRating": 9.0,
+              "seasonNumber": 2,
+              "summary": "After Slade threatens to take everything Oliver loves away, Oliver decides the fastest way to stop further bloodshed is to surrender to his enemy.",
+              "title": "City of Blood",
+              "url": "http://www.imdb.com/title/tt3337670/?ref_=ttep_ep21"
+            },
+            {
+              "episodeDate": {
+                "$date": "2014-05-06T21:00:00.000Z"
+              },
+              "episodeNumber": 22,
+              "imdbRating": 9.0,
+              "seasonNumber": 2,
+              "summary": "Oliver rallies his team as Slade's soldiers attack the city. Felicity gets a call from S.T.A.R. Labs with game-changing news and Thea comes face-to-face with her father.",
+              "title": "Streets of Fire",
+              "url": "http://www.imdb.com/title/tt3337672/?ref_=ttep_ep22"
+            },
+            {
+              "episodeDate": {
+                "$date": "2014-05-13T21:00:00.000Z"
+              },
+              "episodeNumber": 23,
+              "imdbRating": 9.0,
+              "seasonNumber": 2,
+              "summary": "As Oliver's face off with Slade escalates, his resolve to the no-kill rule is tested. Especially as Slade targets the woman Oliver loves.",
+              "title": "Unthinkable",
+              "url": "http://www.imdb.com/title/tt3337674/?ref_=ttep_ep23"
+            }
+          ],
+          "seasonEnd": {
+            "$date": "2014-05-13T21:00:00.000Z"
+          },
+          "seasonNumber": 2,
+          "seasonStart": {
+            "$date": "2013-10-08T21:00:00.000Z"
+          },
+          "url": "http://www.imdb.com/title/tt2193021/episodes?season=2\u0026ref_=tt_eps_sn_2"
+        },
+        {
+          "episodes": [
+            {
+              "episodeDate": {
+                "$date": "2014-10-07T21:00:00.000Z"
+              },
+              "episodeNumber": 1,
+              "imdbRating": 9.0,
+              "seasonNumber": 3,
+              "summary": "As a new enemy emerges seven months after Slade's attack upon Starling City, Oliver battles with the help of his teammate Roy. However, with the Arrow's presence elsewhere someone he had loved dearly is hurt.",
+              "title": "The Calm",
+              "url": "http://www.imdb.com/title/tt3532626/?ref_=ttep_ep1"
+            },
+            {
+              "episodeDate": {
+                "$date": "2014-10-14T21:00:00.000Z"
+              },
+              "episodeNumber": 2,
+              "imdbRating": 8.7,
+              "seasonNumber": 3,
+              "summary": "Team Arrow is in pursuit of a new villain who poses a threat to Starling City. Meanwhile, Oliver is worried about not having heard from Thea.",
+              "title": "Sara",
+              "url": "http://www.imdb.com/title/tt3856758/?ref_=ttep_ep2"
+            },
+            {
+              "episodeDate": {
+                "$date": "2014-10-21T21:00:00.000Z"
+              },
+              "episodeNumber": 3,
+              "imdbRating": 8.5,
+              "seasonNumber": 3,
+              "summary": "Oliver decides it's time for Thea to come back to Starling City, so he packs for Corto Maltese, where Felicity has traced Thea's whereabouts.",
+              "title": "Corto Maltese",
+              "url": "http://www.imdb.com/title/tt3879318/?ref_=ttep_ep3"
+            },
+            {
+              "episodeDate": {
+                "$date": "2014-10-28T22:00:00.000Z"
+              },
+              "episodeNumber": 4,
+              "imdbRating": 8.7,
+              "seasonNumber": 3,
+              "summary": "Nyssa and Oliver join forces to go after the Dark archer.",
+              "title": "The Magician",
+              "url": "http://www.imdb.com/title/tt3919146/?ref_=ttep_ep4"
+            },
+            {
+              "episodeDate": {
+                "$date": "2014-11-04T22:00:00.000Z"
+              },
+              "episodeNumber": 5,
+              "imdbRating": 8.7,
+              "seasonNumber": 3,
+              "summary": "Felicity's family and backstory come to the fore. Felicity tries to find common ground with her mother but it is clear the two are very different.",
+              "title": "The Secret Origin of Felicity Smoak",
+              "url": "http://www.imdb.com/title/tt3956512/?ref_=ttep_ep5"
+            },
+            {
+              "episodeDate": {
+                "$date": "2014-11-11T22:00:00.000Z"
+              },
+              "episodeNumber": 6,
+              "imdbRating": 8.5,
+              "seasonNumber": 3,
+              "summary": "Ted Grant becomes the primary suspect when a body is found in the Wildcat gym and Roy shares a secret with Felicity.",
+              "title": "Guilty",
+              "url": "http://www.imdb.com/title/tt4006586/?ref_=ttep_ep6"
+            },
+            {
+              "episodeDate": {
+                "$date": "2014-11-18T22:00:00.000Z"
+              },
+              "episodeNumber": 7,
+              "imdbRating": 8.4,
+              "seasonNumber": 3,
+              "summary": "Oliver must stop an Arrow-obsessed serial killer, Carrie Cutter, who is convinced that The Arrow is her one true love and will stop at nothing to get his attention.",
+              "title": "Draw Back Your Bow",
+              "url": "http://www.imdb.com/title/tt4006576/?ref_=ttep_ep7"
+            },
+            {
+              "episodeDate": {
+                "$date": "2014-12-02T22:00:00.000Z"
+              },
+              "episodeNumber": 8,
+              "imdbRating": 9.0,
+              "seasonNumber": 3,
+              "summary": "As Oliver, Arsenal, and Diggle pursue a killer named Digger Harkness, they encounter an ARGUS team; Oliver and the Flash team up to try and stop Harkness.",
+              "title": "The Brave and the Bold",
+              "url": "http://www.imdb.com/title/tt4006578/?ref_=ttep_ep8"
+            },
+            {
+              "episodeDate": {
+                "$date": "2014-12-09T22:00:00.000Z"
+              },
+              "episodeNumber": 9,
+              "imdbRating": 9.0,
+              "seasonNumber": 3,
+              "summary": "The League of Assassins give Oliver 48 hours to find Sara's killer, or Starling City citizens will die. Oliver then has an epic confrontation with Ra's al Ghul.",
+              "title": "The Climb",
+              "url": "http://www.imdb.com/title/tt4006548/?ref_=ttep_ep9"
+            },
+            {
+              "episodeDate": {
+                "$date": "2015-01-20T22:00:00.000Z"
+              },
+              "episodeNumber": 10,
+              "imdbRating": 8.7,
+              "seasonNumber": 3,
+              "summary": "The Team's worst fears are realized when Meryln informs them of Oliver's death. Meanwhile Ray Palmer tests part of his ATOM suit out and Laurel Lance decides to pursue justice outside of the law by taking up the mantle of the Black Canary.",
+              "title": "Left Behind",
+              "url": "http://www.imdb.com/title/tt4006582/?ref_=ttep_ep10"
+            },
+            {
+              "episodeDate": {
+                "$date": "2015-01-27T22:00:00.000Z"
+              },
+              "episodeNumber": 11,
+              "imdbRating": 8.3,
+              "seasonNumber": 3,
+              "summary": "Arsenal and Diggle confront Laurel about trying to step into her sister's shoes and warn her to stop before she gets herself killed.",
+              "title": "Midnight City",
+              "url": "http://www.imdb.com/title/tt4006570/?ref_=ttep_ep11"
+            },
+            {
+              "episodeDate": {
+                "$date": "2015-02-03T22:00:00.000Z"
+              },
+              "episodeNumber": 12,
+              "imdbRating": 8.7,
+              "seasonNumber": 3,
+              "summary": "Still operating without Oliver and desperate to stop Brick, Team Arrow is forced to consider Malcolm's offer to help shut Brick down as Malcolm has a personal score to settle with the felon",
+              "title": "Uprising",
+              "url": "http://www.imdb.com/title/tt4006574/?ref_=ttep_ep12"
+            },
+            {
+              "episodeDate": {
+                "$date": "2015-02-10T22:00:00.000Z"
+              },
+              "episodeNumber": 13,
+              "imdbRating": 8.7,
+              "seasonNumber": 3,
+              "summary": "Oliver struggles to adjust to the changes that have taken place within Team Arrow; Laurel ignores Oliver and pursues Vertigo - who injects her with the drug; Thea receives a surprise visitor.",
+              "title": "Canaries",
+              "url": "http://www.imdb.com/title/tt4006572/?ref_=ttep_ep13"
+            },
+            {
+              "episodeDate": {
+                "$date": "2015-02-17T22:00:00.000Z"
+              },
+              "episodeNumber": 14,
+              "imdbRating": 8.5,
+              "seasonNumber": 3,
+              "summary": "Malcolm puts Oliver and Thea in a dangerous situation that lands them on Lian Yu with Oliver's former enemy, Deathstroke.",
+              "title": "The Return",
+              "url": "http://www.imdb.com/title/tt4006600/?ref_=ttep_ep14"
+            },
+            {
+              "episodeDate": {
+                "$date": "2015-02-24T22:00:00.000Z"
+              },
+              "episodeNumber": 15,
+              "imdbRating": 9.0,
+              "seasonNumber": 3,
+              "summary": "Malcolm is captured by Ra's al Ghul and taken to Nanda Parbat. Because of his love for Thea, Oliver considers saving Merlyn.",
+              "title": "Nanda Parbat",
+              "url": "http://www.imdb.com/title/tt4006588/?ref_=ttep_ep15"
+            },
+            {
+              "episodeDate": {
+                "$date": "2015-03-17T22:00:00.000Z"
+              },
+              "episodeNumber": 16,
+              "imdbRating": 8.6,
+              "seasonNumber": 3,
+              "summary": "Oliver thinks about the offer Ra's Al Ghul gave him, but to do so theres a catch.",
+              "title": "The Offer",
+              "url": "http://www.imdb.com/title/tt4006594/?ref_=ttep_ep16"
+            },
+            {
+              "episodeDate": {
+                "$date": "2015-03-24T22:00:00.000Z"
+              },
+              "episodeNumber": 17,
+              "imdbRating": 8.7,
+              "seasonNumber": 3,
+              "summary": "It's celebration time as Diggle and Lyla get married.",
+              "title": "Suicidal Tendencies",
+              "url": "http://www.imdb.com/title/tt4006606/?ref_=ttep_ep17"
+            },
+            {
+              "episodeDate": {
+                "$date": "2015-03-31T21:00:00.000Z"
+              },
+              "episodeNumber": 18,
+              "imdbRating": 9.0,
+              "seasonNumber": 3,
+              "summary": "During an attack on the mayor's office, Ray is critically injured. Felicity is pleasantly surprised when her mother, Donna Smoak, shows up at the hospital to offer her support.",
+              "title": "Public Enemy",
+              "url": "http://www.imdb.com/title/tt4006596/?ref_=ttep_ep18"
+            },
+            {
+              "episodeDate": {
+                "$date": "2015-04-14T21:00:00.000Z"
+              },
+              "episodeNumber": 19,
+              "imdbRating": 9.0,
+              "seasonNumber": 3,
+              "summary": "Jake Simmons, a metahuman from Central City, terrorizes the Starling City. Quentin Lance's mission bounds Oliver Queen to ask Ray (Atom) for help.",
+              "title": "Broken Arrow",
+              "url": "http://www.imdb.com/title/tt4006602/?ref_=ttep_ep19"
+            },
+            {
+              "episodeDate": {
+                "$date": "2015-04-21T21:00:00.000Z"
+              },
+              "episodeNumber": 20,
+              "imdbRating": 8.9,
+              "seasonNumber": 3,
+              "summary": "Ra's al Ghul finally makes Oliver an offer he can't refuse. The team joins Oliver on his journey to Nanda Parbat where a heartbroken Felicity decides to take matters into her own hands.",
+              "title": "The Fallen",
+              "url": "http://www.imdb.com/title/tt4006584/?ref_=ttep_ep20"
+            },
+            {
+              "episodeDate": {
+                "$date": "2015-04-28T21:00:00.000Z"
+              },
+              "episodeNumber": 21,
+              "imdbRating": 8.7,
+              "seasonNumber": 3,
+              "summary": "Oliver goes through a transformation; Laurel asks Felicity and Diggle to help Nyssa face the League of Assassins.",
+              "title": "Al Sah-Him",
+              "url": "http://www.imdb.com/title/tt4006598/?ref_=ttep_ep21"
+            },
+            {
+              "episodeDate": {
+                "$date": "2015-05-05T21:00:00.000Z"
+              },
+              "episodeNumber": 22,
+              "imdbRating": 9.0,
+              "seasonNumber": 3,
+              "summary": "Oliver must complete two final tasks before becoming the next Ra's al Ghul; Nyssa is threatened; Malcolm makes an offer to the team; Thea visits Roy.",
+              "title": "This Is Your Sword",
+              "url": "http://www.imdb.com/title/tt4006590/?ref_=ttep_ep22"
+            },
+            {
+              "episodeDate": {
+                "$date": "2015-05-12T21:00:00.000Z"
+              },
+              "episodeNumber": 23,
+              "imdbRating": 8.4,
+              "seasonNumber": 3,
+              "summary": "Ra's al Ghul sets his plan in motion, putting everyone in danger; Oliver must decide if he is strong enough to handle his new role - and what it will mean for his team and his soul.",
+              "title": "My Name Is Oliver Queen",
+              "url": "http://www.imdb.com/title/tt4006604/?ref_=ttep_ep23"
+            }
+          ],
+          "seasonEnd": {
+            "$date": "2015-05-12T21:00:00.000Z"
+          },
+          "seasonNumber": 3,
+          "seasonStart": {
+            "$date": "2014-10-07T21:00:00.000Z"
+          },
+          "url": "http://www.imdb.com/title/tt2193021/episodes?season=3\u0026ref_=tt_eps_sn_3"
+        },
+        {
+          "episodes": [
+            {
+              "episodeDate": {
+                "$date": "2015-10-06T21:00:00.000Z"
+              },
+              "episodeNumber": 1,
+              "imdbRating": 8.7,
+              "seasonNumber": 4,
+              "summary": "A new enemy lures Oliver Queen back to Starling City and forces him to put on the hood once more.",
+              "title": "Green Arrow",
+              "url": "http://www.imdb.com/title/tt4345922/?ref_=ttep_ep1"
+            },
+            {
+              "episodeDate": {
+                "$date": "2015-10-13T21:00:00.000Z"
+              },
+              "episodeNumber": 2,
+              "imdbRating": 8.4,
+              "seasonNumber": 4,
+              "summary": "Oliver and Thea are concerned when a family friend plans to run for mayor; Thea starts to exhibit side effects from the Lazarus Pit; Felicity asks an employee for help with a business decision.",
+              "title": "The Candidate",
+              "url": "http://www.imdb.com/title/tt4765782/?ref_=ttep_ep2"
+            },
+            {
+              "episodeDate": {
+                "$date": "2015-10-20T21:00:00.000Z"
+              },
+              "episodeNumber": 3,
+              "imdbRating": 8.5,
+              "seasonNumber": 4,
+              "summary": "The growing tension between Oliver and Diggle puts both their lives at risk when they go after Damien Darhk and a H.I.V.E. deployed meta-human.",
+              "title": "Restoration",
+              "url": "http://www.imdb.com/title/tt4846212/?ref_=ttep_ep3"
+            },
+            {
+              "episodeDate": {
+                "$date": "2015-10-27T22:00:00.000Z"
+              },
+              "episodeNumber": 4,
+              "imdbRating": 8.7,
+              "seasonNumber": 4,
+              "summary": "Laurel must deal with the repercussions of taking Sara to Nanda Parbat. Meanwhile, Oliver asks Captain Lance for a favor and while he's not surprised at the response, he is surprised at what he finds out next.",
+              "title": "Beyond Redemption",
+              "url": "http://www.imdb.com/title/tt4854000/?ref_=ttep_ep4"
+            },
+            {
+              "episodeDate": {
+                "$date": "2015-11-03T22:00:00.000Z"
+              },
+              "episodeNumber": 5,
+              "imdbRating": 9.1,
+              "seasonNumber": 4,
+              "summary": "Oliver calls in a favor from old friend John Constantine when Sara takes a turn for the worse.",
+              "title": "Haunted",
+              "url": "http://www.imdb.com/title/tt4859064/?ref_=ttep_ep5"
+            },
+            {
+              "episodeDate": {
+                "$date": "2015-11-10T22:00:00.000Z"
+              },
+              "episodeNumber": 6,
+              "imdbRating": 8.4,
+              "seasonNumber": 4,
+              "summary": "Felicity is frantic when she learns that Ray is alive and being held by Damien Darhk. Felicity's guilt over not finding Ray sooner causes tension between her and Oliver.",
+              "title": "Lost Souls",
+              "url": "http://www.imdb.com/title/tt4859298/?ref_=ttep_ep6"
+            },
+            {
+              "episodeDate": {
+                "$date": "2015-11-17T22:00:00.000Z"
+              },
+              "episodeNumber": 7,
+              "imdbRating": 8.5,
+              "seasonNumber": 4,
+              "summary": "A shocking revelation complicates the battle between Team Arrow and Damien Darhk; Thea loses control in front of Alex.",
+              "title": "Brotherhood",
+              "url": "http://www.imdb.com/title/tt4859296/?ref_=ttep_ep7"
+            },
+            {
+              "episodeDate": {
+                "$date": "2015-12-01T22:00:00.000Z"
+              },
+              "episodeNumber": 8,
+              "imdbRating": 9.4,
+              "seasonNumber": 4,
+              "summary": "Oliver and Barry hide Kendra and Carter in a remote location while they try to figure out how to defeat Vandal Savage; Felicity, Thea, Diggle and Laurel work to come up with a weapon to destroy Vandal.",
+              "title": "Legends of Yesterday",
+              "url": "http://www.imdb.com/title/tt4859300/?ref_=ttep_ep8"
+            },
+            {
+              "episodeDate": {
+                "$date": "2015-12-08T22:00:00.000Z"
+              },
+              "episodeNumber": 9,
+              "seasonNumber": 4,
+              "title": "Dark Waters",
+              "url": "http://www.imdb.com/title/tt4859302/?ref_=ttep_ep9"
+            },
+            {
+              "episodeDate": {
+                "$date": "2016-01-26T22:00:00.000Z"
+              },
+              "episodeNumber": 10,
+              "seasonNumber": 4,
+              "title": "Blood Debts",
+              "url": "http://www.imdb.com/title/tt4862532/?ref_=ttep_ep10"
+            },
+            {
+              "episodeDate": {
+                "$date": "2016-02-02T22:00:00.000Z"
+              },
+              "episodeNumber": 11,
+              "seasonNumber": 4,
+              "title": "A.W.O.L.",
+              "url": "http://www.imdb.com/title/tt4862534/?ref_=ttep_ep11"
+            },
+            {
+              "episodeDate": {
+                "$date": "2016-02-02T22:00:00.000Z"
+              },
+              "episodeNumber": 12,
+              "seasonNumber": 4,
+              "title": "Unchained",
+              "url": "http://www.imdb.com/title/tt4862538/?ref_=ttep_ep12"
+            },
+            {
+              "episodeDate": {
+                "$date": "2016-02-09T22:00:00.000Z"
+              },
+              "episodeNumber": 13,
+              "seasonNumber": 4,
+              "title": "Episode #4.13",
+              "url": "http://www.imdb.com/title/tt4862536/?ref_=ttep_ep13"
+            },
+            {
+              "episodeDate": {
+                "$date": "2016-01-05T22:00:00.000Z"
+              },
+              "episodeNumber": 14,
+              "seasonNumber": 4,
+              "title": "Episode #4.14",
+              "url": "http://www.imdb.com/title/tt4862542/?ref_=ttep_ep14"
+            },
+            {
+              "episodeDate": {
+                "$date": "2016-01-12T22:00:00.000Z"
+              },
+              "episodeNumber": 15,
+              "seasonNumber": 4,
+              "title": "Episode #4.15",
+              "url": "http://www.imdb.com/title/tt4862540/?ref_=ttep_ep15"
+            },
+            {
+              "episodeDate": {
+                "$date": "2016-01-19T22:00:00.000Z"
+              },
+              "episodeNumber": 16,
+              "seasonNumber": 4,
+              "title": "Episode #4.16",
+              "url": "http://www.imdb.com/title/tt4862544/?ref_=ttep_ep16"
+            },
+            {
+              "episodeDate": {
+                "$date": "2016-01-26T22:00:00.000Z"
+              },
+              "episodeNumber": 17,
+              "seasonNumber": 4,
+              "title": "Episode #4.17",
+              "url": "http://www.imdb.com/title/tt4862546/?ref_=ttep_ep17"
+            },
+            {
+              "episodeDate": {
+                "$date": "2016-02-02T22:00:00.000Z"
+              },
+              "episodeNumber": 18,
+              "seasonNumber": 4,
+              "title": "Episode #4.18",
+              "url": "http://www.imdb.com/title/tt4862552/?ref_=ttep_ep18"
+            },
+            {
+              "episodeDate": {
+                "$date": "2016-02-09T22:00:00.000Z"
+              },
+              "episodeNumber": 19,
+              "seasonNumber": 4,
+              "title": "Episode #4.19",
+              "url": "http://www.imdb.com/title/tt4862550/?ref_=ttep_ep19"
+            },
+            {
+              "episodeDate": {
+                "$date": "2016-02-16T22:00:00.000Z"
+              },
+              "episodeNumber": 20,
+              "seasonNumber": 4,
+              "title": "Episode #4.20",
+              "url": "http://www.imdb.com/title/tt4862548/?ref_=ttep_ep20"
+            },
+            {
+              "episodeDate": {
+                "$date": "2016-02-23T22:00:00.000Z"
+              },
+              "episodeNumber": 21,
+              "seasonNumber": 4,
+              "title": "Episode #4.21",
+              "url": "http://www.imdb.com/title/tt4862556/?ref_=ttep_ep21"
+            },
+            {
+              "episodeDate": {
+                "$date": "2016-03-01T22:00:00.000Z"
+              },
+              "episodeNumber": 22,
+              "seasonNumber": 4,
+              "title": "Episode #4.22",
+              "url": "http://www.imdb.com/title/tt4862558/?ref_=ttep_ep22"
+            },
+            {
+              "episodeDate": {
+                "$date": "2016-03-08T22:00:00.000Z"
+              },
+              "episodeNumber": 23,
+              "seasonNumber": 4,
+              "title": "Episode #4.23",
+              "url": "http://www.imdb.com/title/tt4862554/?ref_=ttep_ep23"
+            }
+          ],
+          "seasonEnd": {
+            "$date": "2016-03-08T22:00:00.000Z"
+          },
+          "seasonNumber": 4,
+          "seasonStart": {
+            "$date": "2015-10-06T21:00:00.000Z"
+          },
+          "url": "http://www.imdb.com/title/tt2193021/episodes?season=4\u0026ref_=tt_eps_sn_4"
+        }
+      ],
+      "seriesEnd": {
+        "$date": "2016-03-08T22:00:00.000Z"
+      },
+      "seriesStart": {
+        "$date": "2012-10-09T21:00:00.000Z"
+      },
+      "title": "Arrow"
+    },
+    {
+      "_class": "com.vlasovartem.pmdb.entity.Series",
+      "_id": "tt0944947",
+      "actors": [
+        "Emilia Clarke",
+        "Peter Dinklage",
+        "Kit Harington"
+      ],
+      "creators": [
+        "David Benioff",
+        "D.B. Weiss"
+      ],
+      "finished": false,
+      "genres": [
+        "Adventure",
+        "Drama",
+        "Fantasy"
+      ],
+      "imdbRating": 9.5,
+      "imdbUrl": "http://www.imdb.com/title/tt0944947/?ref_=fn_tv_tt_1",
+      "plot": "Several noble families fight for control of the mythical land of Westeros.",
+      "posterUrl": "http://ia.media-imdb.com/images/M/MV5BMTYwOTEzMDMzMl5BMl5BanBnXkFtZTgwNzExODIzNzE@._V1_SX214_AL_.jpg",
+      "seasons": [
+        {
+          "episodes": [
+            {
+              "episodeDate": {
+                "$date": "2011-04-16T21:00:00.000Z"
+              },
+              "episodeNumber": 1,
+              "imdbRating": 8.1,
+              "seasonNumber": 1,
+              "summary": "Jon Arryn, the Hand of the King, is dead. King Robert Baratheon plans to ask his oldest friend, Eddard Stark, to take Jon's place. Across the sea, Viserys Targaryen plans to wed his sister to a nomadic warlord in exchange for an army.",
+              "title": "Winter Is Coming",
+              "url": "http://www.imdb.com/title/tt1480055/?ref_=ttep_ep1"
+            },
+            {
+              "episodeDate": {
+                "$date": "2011-04-23T21:00:00.000Z"
+              },
+              "episodeNumber": 2,
+              "imdbRating": 7.8,
+              "seasonNumber": 1,
+              "summary": "While Bran recovers from his fall, Ned takes only his daughters to Kings Landing. Jon Snow goes with his uncle Benjen to The Wall. Tyrion joins them.",
+              "title": "The Kingsroad",
+              "url": "http://www.imdb.com/title/tt1668746/?ref_=ttep_ep2"
+            },
+            {
+              "episodeDate": {
+                "$date": "2011-04-30T21:00:00.000Z"
+              },
+              "episodeNumber": 3,
+              "imdbRating": 7.6,
+              "seasonNumber": 1,
+              "summary": "Lord Stark and his daughters arrive at King's Landing to discover the intrigues of the king's realm.",
+              "title": "Lord Snow",
+              "url": "http://www.imdb.com/title/tt1829962/?ref_=ttep_ep3"
+            },
+            {
+              "episodeDate": {
+                "$date": "2011-05-07T21:00:00.000Z"
+              },
+              "episodeNumber": 4,
+              "imdbRating": 7.7,
+              "seasonNumber": 1,
+              "summary": "Eddard investigates Jon Arryn's murder. Jon befriends Samwell Tarly, a coward who has come to join the Night's Watch.",
+              "title": "Cripples, Bastards, and Broken Things",
+              "url": "http://www.imdb.com/title/tt1829963/?ref_=ttep_ep4"
+            },
+            {
+              "episodeDate": {
+                "$date": "2011-05-14T21:00:00.000Z"
+              },
+              "episodeNumber": 5,
+              "imdbRating": 8.0,
+              "seasonNumber": 1,
+              "summary": "Catelyn has captured Tyrion and plans to bring him to her sister, Lysa Arryn, at The Vale, to be tried for his, supposed, crimes against Bran. Robert plans to have Daenerys killed, but Eddard refuses to be a part of it and quits.",
+              "title": "The Wolf and the Lion",
+              "url": "http://www.imdb.com/title/tt1829964/?ref_=ttep_ep5"
+            },
+            {
+              "episodeDate": {
+                "$date": "2011-05-21T21:00:00.000Z"
+              },
+              "episodeNumber": 6,
+              "imdbRating": 8.0,
+              "seasonNumber": 1,
+              "summary": "While recovering from his battle with Jamie, Eddard is forced to run the kingdom while Robert goes hunting. Tyrion demands a trial by combat for his freedom. Viserys is losing his patience with Drogo.",
+              "title": "A Golden Crown",
+              "url": "http://www.imdb.com/title/tt1837862/?ref_=ttep_ep6"
+            },
+            {
+              "episodeDate": {
+                "$date": "2011-05-28T21:00:00.000Z"
+              },
+              "episodeNumber": 7,
+              "imdbRating": 8.1,
+              "seasonNumber": 1,
+              "summary": "Robert has been injured while hunting and is dying. Jon and the others finally take their vows to the Night's Watch. A man, sent by Robert, is captured for trying to poison Daenerys. Furious, Drogo vows to attack the Seven Kingdoms.",
+              "title": "You Win or You Die",
+              "url": "http://www.imdb.com/title/tt1837863/?ref_=ttep_ep7"
+            },
+            {
+              "episodeDate": {
+                "$date": "2011-06-04T21:00:00.000Z"
+              },
+              "episodeNumber": 8,
+              "imdbRating": 7.9,
+              "seasonNumber": 1,
+              "summary": "Eddard and his men are betrayed and captured by the Lannisters. When word reaches Robb, he plans to go to war to rescue them. The White Walkers attack The Wall. Tyrion returns to his father with some new friends.",
+              "title": "The Pointy End",
+              "url": "http://www.imdb.com/title/tt1837864/?ref_=ttep_ep8"
+            },
+            {
+              "episodeDate": {
+                "$date": "2011-06-11T21:00:00.000Z"
+              },
+              "episodeNumber": 9,
+              "imdbRating": 8.5,
+              "seasonNumber": 1,
+              "summary": "Robb goes to war against the Lannisters. Jon finds himself struggling on deciding if his place is with Robb or the Night's Watch. Drogo has fallen ill from a fresh battle wound. Daenerys is desperate to save him.",
+              "title": "Baelor",
+              "url": "http://www.imdb.com/title/tt1851398/?ref_=ttep_ep9"
+            },
+            {
+              "episodeDate": {
+                "$date": "2011-06-18T21:00:00.000Z"
+              },
+              "episodeNumber": 10,
+              "imdbRating": 8.4,
+              "seasonNumber": 1,
+              "summary": "With Ned dead, Robb vows to get revenge on the Lannisters. Jon must officially decide if his place is with Robb or the Night's Watch. Daenerys says her final goodbye to Drogo.",
+              "title": "Fire and Blood",
+              "url": "http://www.imdb.com/title/tt1851397/?ref_=ttep_ep10"
+            }
+          ],
+          "seasonEnd": {
+            "$date": "2011-06-18T21:00:00.000Z"
+          },
+          "seasonNumber": 1,
+          "seasonStart": {
+            "$date": "2011-04-16T21:00:00.000Z"
+          },
+          "url": "http://www.imdb.com/title/tt0944947/episodes?season=1\u0026ref_=tt_eps_sn_1"
+        },
+        {
+          "episodes": [
+            {
+              "episodeDate": {
+                "$date": "2012-03-31T21:00:00.000Z"
+              },
+              "episodeNumber": 1,
+              "imdbRating": 7.7,
+              "seasonNumber": 2,
+              "summary": "Tyrion arrives at Kings Landing to take his father's place as Hand of the King. Stannis Baratheon plans to take the Iron Throne for his own. Robb tries to decide his next move in the war. The Night's Watch arrive at the house of Craster.",
+              "title": "The North Remembers",
+              "url": "http://www.imdb.com/title/tt1971833/?ref_=ttep_ep1"
+            },
+            {
+              "episodeDate": {
+                "$date": "2012-04-07T21:00:00.000Z"
+              },
+              "episodeNumber": 2,
+              "imdbRating": 7.3,
+              "seasonNumber": 2,
+              "summary": "Arya makes friends with Gendry. Tyrion tries to take control of the small council. Theon arrives at his home, Pyke, in order to persuade his father into helping Robb with the war. Jon tries to investigate Craster's secret.",
+              "title": "The Night Lands",
+              "url": "http://www.imdb.com/title/tt2069318/?ref_=ttep_ep2"
+            },
+            {
+              "episodeDate": {
+                "$date": "2012-04-14T21:00:00.000Z"
+              },
+              "episodeNumber": 3,
+              "imdbRating": 7.6,
+              "seasonNumber": 2,
+              "summary": "Tyrion tries to see who he can trust in the small council. Catelyn visits Renly to try and persuade him to join Robb in the war. Theon must decide if his loyalties lie with his own family or with Robb.",
+              "title": "What Is Dead May Never Die",
+              "url": "http://www.imdb.com/title/tt2070135/?ref_=ttep_ep3"
+            },
+            {
+              "episodeDate": {
+                "$date": "2012-04-21T21:00:00.000Z"
+              },
+              "episodeNumber": 4,
+              "imdbRating": 7.5,
+              "seasonNumber": 2,
+              "summary": "Lord Baelish arrives at Renly's camp just before he faces off against Stannis. Daenerys and her company are welcomed into the city of Qarth. Arya, Gendry, and Hot Pie find themselves imprisoned at Harrenhal.",
+              "title": "Garden of Bones",
+              "url": "http://www.imdb.com/title/tt2069319/?ref_=ttep_ep4"
+            },
+            {
+              "episodeDate": {
+                "$date": "2012-04-28T21:00:00.000Z"
+              },
+              "episodeNumber": 5,
+              "imdbRating": 7.6,
+              "seasonNumber": 2,
+              "summary": "Tyrion investigates a secret weapon that King Joffrey plans to use against Stannis. Meanwhile, as a token for saving his life, Jaqen H'ghar offers to kill three people that Arya chooses.",
+              "title": "The Ghost of Harrenhal",
+              "url": "http://www.imdb.com/title/tt2074658/?ref_=ttep_ep5"
+            },
+            {
+              "episodeDate": {
+                "$date": "2012-05-05T21:00:00.000Z"
+              },
+              "episodeNumber": 6,
+              "imdbRating": 7.8,
+              "seasonNumber": 2,
+              "summary": "Theon seizes control of Winterfell. Jon captures a wildling, named Ygritte. The people of King's Landing begin to turn against King Joffrey. Daenerys looks to buy ships to sail for the Seven Kingdoms.",
+              "title": "The Old Gods and the New",
+              "url": "http://www.imdb.com/title/tt2085238/?ref_=ttep_ep6"
+            },
+            {
+              "episodeDate": {
+                "$date": "2012-05-12T21:00:00.000Z"
+              },
+              "episodeNumber": 7,
+              "imdbRating": 7.6,
+              "seasonNumber": 2,
+              "summary": "Bran and Rickon have escaped Winterfell. Theon tries to hunt them down. Daenerys' dragons have been stolen. Jon travels through the wilderness with Ygritte as his prisoner. Sansa has bled and is now ready to have Joffrey's children.",
+              "title": "A Man Without Honor",
+              "url": "http://www.imdb.com/title/tt2085239/?ref_=ttep_ep7"
+            },
+            {
+              "episodeDate": {
+                "$date": "2012-05-19T21:00:00.000Z"
+              },
+              "episodeNumber": 8,
+              "imdbRating": 7.5,
+              "seasonNumber": 2,
+              "summary": "Stannis is just days from King's Landing. Tyrion prepares for his arrival. Jon and Qhorin are taken prisoner by the wildlings. Catelyn is arrested for releasing Jamie. Arya, Gendry, and Hot Pie plan to escape from Harrenhal.",
+              "title": "The Prince of Winterfell",
+              "url": "http://www.imdb.com/title/tt2085240/?ref_=ttep_ep8"
+            },
+            {
+              "episodeDate": {
+                "$date": "2012-05-26T21:00:00.000Z"
+              },
+              "episodeNumber": 9,
+              "imdbRating": 8.9,
+              "seasonNumber": 2,
+              "summary": "Stannis Baratheon's fleet and army arrive at King's Landing and the battle for the city begins. Cersei plans for her and her children's future.",
+              "title": "Blackwater",
+              "url": "http://www.imdb.com/title/tt2084342/?ref_=ttep_ep9"
+            },
+            {
+              "episodeDate": {
+                "$date": "2012-06-02T21:00:00.000Z"
+              },
+              "episodeNumber": 10,
+              "imdbRating": 8.3,
+              "seasonNumber": 2,
+              "summary": "Joffrey puts Sansa aside for Margaery Tyrell. Robb marries Talisa Maegyr. Jon prepares to meet Mance Rayder. Arya says farewell to Jaqen H'ghar. Daenerys tries to rescue her dragons.",
+              "title": "Valar Morghulis",
+              "url": "http://www.imdb.com/title/tt2112510/?ref_=ttep_ep10"
+            }
+          ],
+          "seasonEnd": {
+            "$date": "2012-06-02T21:00:00.000Z"
+          },
+          "seasonNumber": 2,
+          "seasonStart": {
+            "$date": "2012-03-31T21:00:00.000Z"
+          },
+          "url": "http://www.imdb.com/title/tt0944947/episodes?season=2\u0026ref_=tt_eps_sn_2"
+        },
+        {
+          "episodes": [
+            {
+              "episodeDate": {
+                "$date": "2013-03-30T22:00:00.000Z"
+              },
+              "episodeNumber": 1,
+              "imdbRating": 7.7,
+              "seasonNumber": 3,
+              "summary": "Jon is brought before Mance Rayder, the King Beyond the Wall, while the Night's Watch survivors retreat south. In King's Landing, Tyrion asks for his reward. Littlefinger offers Sansa a way out.",
+              "title": "Valar Dohaeris",
+              "url": "http://www.imdb.com/title/tt2178782/?ref_=ttep_ep1"
+            },
+            {
+              "episodeDate": {
+                "$date": "2013-04-06T21:00:00.000Z"
+              },
+              "episodeNumber": 2,
+              "imdbRating": 7.4,
+              "seasonNumber": 3,
+              "summary": "Bran and company meet Jojen and Meera Reed. Arya, Gendry, and Hot Pie meet the Brotherhood. Jaime travels through the wilderness with Brienne. Sansa confesses her true feelings about Joffery to Margaery.",
+              "title": "Dark Wings, Dark Words",
+              "url": "http://www.imdb.com/title/tt2178772/?ref_=ttep_ep2"
+            },
+            {
+              "episodeDate": {
+                "$date": "2013-04-13T21:00:00.000Z"
+              },
+              "episodeNumber": 3,
+              "imdbRating": 7.6,
+              "seasonNumber": 3,
+              "summary": "Robb and Catelyn arrive at Riverrun for Lord Hoster Tully's funeral. Tywin names Tyrion the new Master of Coin. Arya says goodbye to Hot Pie. The Night's Watch returns to Craster's. Brienne and Jamie are taken prisoner.",
+              "title": "Walk of Punishment",
+              "url": "http://www.imdb.com/title/tt2178802/?ref_=ttep_ep3"
+            },
+            {
+              "episodeDate": {
+                "$date": "2013-04-20T21:00:00.000Z"
+              },
+              "episodeNumber": 4,
+              "imdbRating": 8.5,
+              "seasonNumber": 3,
+              "summary": "Jamie mopes over his lost hand. Cersei is growing uncomfortable with the Tyrells. The Night's Watch is growing impatient with Craster. Daenerys buys the Unsullied.",
+              "title": "And Now His Watch Is Ended",
+              "url": "http://www.imdb.com/title/tt2178798/?ref_=ttep_ep4"
+            },
+            {
+              "episodeDate": {
+                "$date": "2013-04-27T21:00:00.000Z"
+              },
+              "episodeNumber": 5,
+              "imdbRating": 7.7,
+              "seasonNumber": 3,
+              "summary": "Robb's army is falling apart. Jamie reveals a story, to Brienne, that he has never told anyone. Jon breaks his vows. The Hound is granted his freedom. The Lannisters hatch a new plan.",
+              "title": "Kissed by Fire",
+              "url": "http://www.imdb.com/title/tt2178788/?ref_=ttep_ep5"
+            },
+            {
+              "episodeDate": {
+                "$date": "2013-05-04T21:00:00.000Z"
+              },
+              "episodeNumber": 6,
+              "imdbRating": 7.5,
+              "seasonNumber": 3,
+              "summary": "Jon and the wildlings scale The Wall. The Brotherhood sells Gendry to Melisandre. Robb does what he can to win back the Freys. Tyrion tells Sansa about their engagement.",
+              "title": "The Climb",
+              "url": "http://www.imdb.com/title/tt2178812/?ref_=ttep_ep6"
+            },
+            {
+              "episodeDate": {
+                "$date": "2013-05-11T21:00:00.000Z"
+              },
+              "episodeNumber": 7,
+              "imdbRating": 7.4,
+              "seasonNumber": 3,
+              "summary": "Jon and the wildlings travel south of The Wall. Talisa tells Robb that she's pregnant. Arya runs away from the Brotherhood. Daenerys arrives at Yunkai. Jamie leaves Brienne behind at Harrenhal.",
+              "title": "The Bear and the Maiden Fair",
+              "url": "http://www.imdb.com/title/tt2178814/?ref_=ttep_ep7"
+            },
+            {
+              "episodeDate": {
+                "$date": "2013-05-18T21:00:00.000Z"
+              },
+              "episodeNumber": 8,
+              "imdbRating": 7.7,
+              "seasonNumber": 3,
+              "summary": "Daenerys tries to persuade the Second Sons to join her against Yunkai. Stannis releases Davos from the dungeons. Sam and Gilly are attacked by a White Walker. Sansa and Tyrion wed.",
+              "title": "Second Sons",
+              "url": "http://www.imdb.com/title/tt2178806/?ref_=ttep_ep8"
+            },
+            {
+              "episodeDate": {
+                "$date": "2013-06-01T21:00:00.000Z"
+              },
+              "episodeNumber": 9,
+              "imdbRating": 9.5,
+              "seasonNumber": 3,
+              "summary": "Robb and Catelyn arrive at the Twins for the wedding. Jon is put to the test to see where his loyalties truly lie. Bran's group decides to split up. Daenerys plans an invasion of Yunkai.",
+              "title": "The Rains of Castamere",
+              "url": "http://www.imdb.com/title/tt2178784/?ref_=ttep_ep9"
+            },
+            {
+              "episodeDate": {
+                "$date": "2013-06-08T21:00:00.000Z"
+              },
+              "episodeNumber": 10,
+              "imdbRating": 7.9,
+              "seasonNumber": 3,
+              "summary": "Bran and company travel beyond The Wall. Sam returns to Castle Black. Jon says good bye to Ygritte. Jamie returns to King's Landing. The Night's Watch asks for help from Stannis.",
+              "title": "Mhysa",
+              "url": "http://www.imdb.com/title/tt2178796/?ref_=ttep_ep10"
+            }
+          ],
+          "seasonEnd": {
+            "$date": "2013-06-08T21:00:00.000Z"
+          },
+          "seasonNumber": 3,
+          "seasonStart": {
+            "$date": "2013-03-30T22:00:00.000Z"
+          },
+          "url": "http://www.imdb.com/title/tt0944947/episodes?season=3\u0026ref_=tt_eps_sn_3"
+        },
+        {
+          "episodes": [
+            {
+              "episodeDate": {
+                "$date": "2014-04-05T21:00:00.000Z"
+              },
+              "episodeNumber": 1,
+              "imdbRating": 8.2,
+              "seasonNumber": 4,
+              "summary": "Tyrion welcomes a guest to King's Landing. At Castle Black, Jon stands trial. Daenerys is pointed to Meereen, the mother of all slave cities. Arya runs into an old enemy.",
+              "title": "Two Swords",
+              "url": "http://www.imdb.com/title/tt2816136/?ref_=ttep_ep1"
+            },
+            {
+              "episodeDate": {
+                "$date": "2014-04-12T21:00:00.000Z"
+              },
+              "episodeNumber": 2,
+              "imdbRating": 9.1,
+              "seasonNumber": 4,
+              "summary": "Joffrey and Margaery's wedding has come. Tyrion breaks up with Shae. Ramsay tries to prove his worth to his father. Bran and company find a Weirwood tree.",
+              "title": "The Lion and the Rose",
+              "url": "http://www.imdb.com/title/tt2832378/?ref_=ttep_ep2"
+            },
+            {
+              "episodeDate": {
+                "$date": "2014-04-19T21:00:00.000Z"
+              },
+              "episodeNumber": 3,
+              "imdbRating": 7.8,
+              "seasonNumber": 4,
+              "summary": "Tyrion is arrested for the murder of Joffery and awaits trial. Sansa escapes King's Landing. Sam sends Gilly to Mole's Town as the Night's Watch finds itself in a tight spot. Meereen challenges Daenerys.",
+              "title": "Breaker of Chains",
+              "url": "http://www.imdb.com/title/tt2972426/?ref_=ttep_ep3"
+            },
+            {
+              "episodeDate": {
+                "$date": "2014-04-26T21:00:00.000Z"
+              },
+              "episodeNumber": 4,
+              "imdbRating": 7.6,
+              "seasonNumber": 4,
+              "summary": "Jaime entrusts a task to Brienne. Daenerys frees Meereen. Jon is given permission to lead a group of Night's Watchmen to Craster's Keep. Bran and company are taken hostage.",
+              "title": "Oathkeeper",
+              "url": "http://www.imdb.com/title/tt2972428/?ref_=ttep_ep4"
+            },
+            {
+              "episodeDate": {
+                "$date": "2014-05-03T21:00:00.000Z"
+              },
+              "episodeNumber": 5,
+              "imdbRating": 7.5,
+              "seasonNumber": 4,
+              "summary": "Tommen is crowned King of the Seven Kingdoms. Cercei builds her case against Tyrion. Sansa and Lord Baelish arrive at the Eyrie. The Night's Watch attacks Craster's Keep.",
+              "title": "First of His Name",
+              "url": "http://www.imdb.com/title/tt3060856/?ref_=ttep_ep5"
+            },
+            {
+              "episodeDate": {
+                "$date": "2014-05-10T21:00:00.000Z"
+              },
+              "episodeNumber": 6,
+              "imdbRating": 9.0,
+              "seasonNumber": 4,
+              "summary": "Tyrion's trial has come. Yara and her troops storm the Dreadfort to free Theon. Daenerys meets Hizdar zo Loraq. Stannis makes a deal with the Iron Bank of Braavos.",
+              "title": "The Laws of Gods and Men",
+              "url": "http://www.imdb.com/title/tt3060910/?ref_=ttep_ep6"
+            },
+            {
+              "episodeDate": {
+                "$date": "2014-05-17T21:00:00.000Z"
+              },
+              "episodeNumber": 7,
+              "imdbRating": 8.0,
+              "seasonNumber": 4,
+              "summary": "Tyrion tries to find a champion. Daenerys sleeps with Daario. The Hound becomes wounded. Jon's advice is ignored at Castle Black. Brienne and Podrick receive a tip on Arya's whereabouts.",
+              "title": "Mockingbird",
+              "url": "http://www.imdb.com/title/tt3060876/?ref_=ttep_ep7"
+            },
+            {
+              "episodeDate": {
+                "$date": "2014-05-31T21:00:00.000Z"
+              },
+              "episodeNumber": 8,
+              "imdbRating": 9.0,
+              "seasonNumber": 4,
+              "summary": "Theon helps Ramsay seize Moat Cailin. The wildlings attack Mole's Town. Sansa comes up with a story to protect Lord Baelish. Daenerys finds out a secret about Ser Jorah. Oberyn Martell faces Ser Gregor Clegane.",
+              "title": "The Mountain and the Viper",
+              "url": "http://www.imdb.com/title/tt3060782/?ref_=ttep_ep8"
+            },
+            {
+              "episodeDate": {
+                "$date": "2014-06-07T21:00:00.000Z"
+              },
+              "episodeNumber": 9,
+              "imdbRating": 8.6,
+              "seasonNumber": 4,
+              "summary": "The battle between the Night's Watch and the Wildlings has come.",
+              "title": "The Watchers on the Wall",
+              "url": "http://www.imdb.com/title/tt3060858/?ref_=ttep_ep9"
+            },
+            {
+              "episodeDate": {
+                "$date": "2014-06-14T21:00:00.000Z"
+              },
+              "episodeNumber": 10,
+              "imdbRating": 8.8,
+              "seasonNumber": 4,
+              "summary": "The Night's Watch story continues, with surprising developments. Daenerys experiences new consequences. Brienne and Podrick have an unexpected encounter. Bran achieves a goal, while Tyrion makes an important discovery.",
+              "title": "The Children",
+              "url": "http://www.imdb.com/title/tt3060860/?ref_=ttep_ep10"
+            }
+          ],
+          "seasonEnd": {
+            "$date": "2014-06-14T21:00:00.000Z"
+          },
+          "seasonNumber": 4,
+          "seasonStart": {
+            "$date": "2014-04-05T21:00:00.000Z"
+          },
+          "url": "http://www.imdb.com/title/tt0944947/episodes?season=4\u0026ref_=tt_eps_sn_4"
+        },
+        {
+          "episodes": [
+            {
+              "episodeDate": {
+                "$date": "2015-04-11T21:00:00.000Z"
+              },
+              "episodeNumber": 1,
+              "imdbRating": 7.9,
+              "seasonNumber": 5,
+              "summary": "Cersei and Jaime adjust to a world without Tywin. Tyrion and Varys arrive at Pentos. In Meereen, a new enemy emerges. Jon is caught between two kings.",
+              "title": "The Wars to Come",
+              "url": "http://www.imdb.com/title/tt3658012/?ref_=ttep_ep1"
+            },
+            {
+              "episodeDate": {
+                "$date": "2015-04-18T21:00:00.000Z"
+              },
+              "episodeNumber": 2,
+              "imdbRating": 7.8,
+              "seasonNumber": 5,
+              "summary": "Arya arrives in Braavos. Jamie takes on a secret mission. Ellaria Sand seeks revenge for Oberyn's death. Stannis makes Jon a generous offer as the Night's Watch elects a new Lord Commander. Daenerys is faced with a difficult decision.",
+              "title": "The House of Black and White",
+              "url": "http://www.imdb.com/title/tt3846626/?ref_=ttep_ep2"
+            },
+            {
+              "episodeDate": {
+                "$date": "2015-04-25T21:00:00.000Z"
+              },
+              "episodeNumber": 3,
+              "imdbRating": 7.9,
+              "seasonNumber": 5,
+              "summary": "Tommen and Margaery wed. Arya has trouble adapting to her new life. Littlefinger reveals his plans to Sansa. Jon gives his first orders as Lord Commander. Tyrion and Varys arrive in Volantis.",
+              "title": "High Sparrow",
+              "url": "http://www.imdb.com/title/tt3866836/?ref_=ttep_ep3"
+            },
+            {
+              "episodeDate": {
+                "$date": "2015-05-02T21:00:00.000Z"
+              },
+              "episodeNumber": 4,
+              "imdbRating": 8.0,
+              "seasonNumber": 5,
+              "summary": "Jorah Mormont sets sail alongside his prisoner, Tyrion. Cersei makes a move against the Tyrells. Jaime and Bronn sneak into Dorne. Ellaria and the Sand Snakes make their plans. Melisandre tempts Jon. The Harpies attack.",
+              "title": "Sons of the Harpy",
+              "url": "http://www.imdb.com/title/tt3866838/?ref_=ttep_ep4"
+            },
+            {
+              "episodeDate": {
+                "$date": "2015-05-09T21:00:00.000Z"
+              },
+              "episodeNumber": 5,
+              "imdbRating": 8.0,
+              "seasonNumber": 5,
+              "summary": "Daenerys arrests the heads of Meereen's great families. Jon makes a difficult decision. Theon is forced to face Sansa. Stannis rides south. Tyrion and Jorah enter the ruins of Old Valyria.",
+              "title": "Kill the Boy",
+              "url": "http://www.imdb.com/title/tt3866840/?ref_=ttep_ep5"
+            },
+            {
+              "episodeDate": {
+                "$date": "2015-05-16T21:00:00.000Z"
+              },
+              "episodeNumber": 6,
+              "imdbRating": 7.2,
+              "seasonNumber": 5,
+              "summary": "Arya is put to the test. Tyrion and Jorah are captured by slavers. Loras Tyrell is judged by the Sparrows. Jaime and Bronn face the Sand Snakes. Sansa marries Ramsay Bolton.",
+              "title": "Unbowed, Unbent, Unbroken",
+              "url": "http://www.imdb.com/title/tt3866842/?ref_=ttep_ep6"
+            },
+            {
+              "episodeDate": {
+                "$date": "2015-05-23T21:00:00.000Z"
+              },
+              "episodeNumber": 7,
+              "imdbRating": 8.5,
+              "seasonNumber": 5,
+              "summary": "Jon heads east as trouble begins to stir for Sam and Gilly at Castle Black. Sansa asks Theon for help. Tyrion and Jorah are sold as slaves. Cersei savors her triumph over the Tyrells as new plots are developed in the shadows.",
+              "title": "The Gift",
+              "url": "http://www.imdb.com/title/tt3866846/?ref_=ttep_ep7"
+            },
+            {
+              "episodeDate": {
+                "$date": "2015-05-30T21:00:00.000Z"
+              },
+              "episodeNumber": 8,
+              "imdbRating": 9.8,
+              "seasonNumber": 5,
+              "summary": "Tyrion advises Daenerys. Sansa forces Theon to tell her a secret. Cersei remains stubborn. Arya meets her first target. Jon and Tormund meet with the Wildling Elders.",
+              "title": "Hardhome",
+              "url": "http://www.imdb.com/title/tt3866850/?ref_=ttep_ep8"
+            },
+            {
+              "episodeDate": {
+                "$date": "2015-06-06T21:00:00.000Z"
+              },
+              "episodeNumber": 9,
+              "imdbRating": 9.0,
+              "seasonNumber": 5,
+              "summary": "Jon and the Wildlings return to Castle Black. Jamie meets with Doran Martell. Stannis makes a hard choice. Arya runs into Ser Meryn Trant. Daenerys attends the grand reopening of the fighting pits.",
+              "title": "The Dance of Dragons",
+              "url": "http://www.imdb.com/title/tt3866826/?ref_=ttep_ep9"
+            },
+            {
+              "episodeDate": {
+                "$date": "2015-06-13T21:00:00.000Z"
+              },
+              "episodeNumber": 10,
+              "imdbRating": 8.1,
+              "seasonNumber": 5,
+              "summary": "Stannis arrives at Winterfell. Tyrion runs Meereen as Daario and Jorah go after Daenerys. Jaime and Myrcella leave Dorne. Jon sends Sam and Gilly to Oldtown. Arya challenges the many faced god. Cersei confesses her sins.",
+              "title": "Mother's Mercy",
+              "url": "http://www.imdb.com/title/tt3866862/?ref_=ttep_ep10"
+            }
+          ],
+          "seasonEnd": {
+            "$date": "2015-06-13T21:00:00.000Z"
+          },
+          "seasonNumber": 5,
+          "seasonStart": {
+            "$date": "2015-04-11T21:00:00.000Z"
+          },
+          "url": "http://www.imdb.com/title/tt0944947/episodes?season=5\u0026ref_=tt_eps_sn_5"
+        },
+        {
+          "episodes": [
+            {
+              "episodeNumber": 1,
+              "seasonNumber": 6,
+              "title": "Episode #6.1",
+              "url": "http://www.imdb.com/title/tt3658014/?ref_=ttep_ep1"
+            },
+            {
+              "episodeNumber": 2,
+              "seasonNumber": 6,
+              "title": "Episode #6.2",
+              "url": "http://www.imdb.com/title/tt4077554/?ref_=ttep_ep2"
+            },
+            {
+              "episodeNumber": 3,
+              "seasonNumber": 6,
+              "title": "Episode #6.3",
+              "url": "http://www.imdb.com/title/tt4131606/?ref_=ttep_ep3"
+            },
+            {
+              "episodeNumber": 4,
+              "seasonNumber": 6,
+              "title": "Episode #6.4",
+              "url": "http://www.imdb.com/title/tt4283016/?ref_=ttep_ep4"
+            },
+            {
+              "episodeNumber": 5,
+              "seasonNumber": 6,
+              "title": "Episode #6.5",
+              "url": "http://www.imdb.com/title/tt4283028/?ref_=ttep_ep5"
+            },
+            {
+              "episodeNumber": 6,
+              "seasonNumber": 6,
+              "title": "Episode #6.6",
+              "url": "http://www.imdb.com/title/tt4283054/?ref_=ttep_ep6"
+            },
+            {
+              "episodeNumber": 7,
+              "seasonNumber": 6,
+              "title": "Episode #6.7",
+              "url": "http://www.imdb.com/title/tt4283060/?ref_=ttep_ep7"
+            },
+            {
+              "episodeNumber": 8,
+              "seasonNumber": 6,
+              "title": "Episode #6.8",
+              "url": "http://www.imdb.com/title/tt4283074/?ref_=ttep_ep8"
+            },
+            {
+              "episodeNumber": 9,
+              "seasonNumber": 6,
+              "title": "Episode #6.9",
+              "url": "http://www.imdb.com/title/tt4283088/?ref_=ttep_ep9"
+            },
+            {
+              "episodeNumber": 10,
+              "seasonNumber": 6,
+              "title": "Episode #6.10",
+              "url": "http://www.imdb.com/title/tt4283094/?ref_=ttep_ep10"
+            }
+          ],
+          "seasonNumber": 6,
+          "url": "http://www.imdb.com/title/tt0944947/episodes?season=6\u0026ref_=tt_eps_sn_6"
+        }
+      ],
+      "seriesStart": {
+        "$date": "2011-04-16T21:00:00.000Z"
+      },
+      "title": "Game of Thrones"
+    },
+    {
+      "_class": "com.vlasovartem.pmdb.entity.Series",
+      "_id": "tt4422836",
+      "actors": [
+        "Jake McDorman",
+        "Jennifer Carpenter",
+        "Hill Harper"
+      ],
+      "creators": [
+        "Craig Sweeny"
+      ],
+      "finished": false,
+      "genres": [
+        "Drama",
+        "Sci-Fi",
+        "Thriller"
+      ],
+      "imdbRating": 8.0,
+      "imdbUrl": "http://www.imdb.com/title/tt4422836/?ref_=fn_tv_tt_1",
+      "nextEpisode": {
+        "episodeDate": {
+          "$date": "2015-12-14T22:00:00.000Z"
+        },
+        "episodeNumber": 11,
+        "seasonNumber": 1,
+        "title": "This Is Your Brian on Drugs",
+        "url": "http://www.imdb.com/title/tt5145990/?ref_=ttep_ep11"
+      },
+      "plot": "A man gains the ability to use the full extent of his brain's capabilities. A television adaptation of the 2011 film, 'Limitless'.",
+      "posterUrl": "http://ia.media-imdb.com/images/M/MV5BMTA4ODE4NjA5ODleQTJeQWpwZ15BbWU4MDUxMTQ0NTYx._V1_SX214_AL_.jpg",
+      "seasons": [
+        {
+          "episodes": [
+            {
+              "episodeDate": {
+                "$date": "2015-09-21T21:00:00.000Z"
+              },
+              "episodeNumber": 1,
+              "imdbRating": 8.5,
+              "seasonNumber": 1,
+              "summary": "A man named Brian Finch develops superhuman abilities after taking a mysterious drug called NZT in the series premiere, which finds him landing on the FBI's radar as he works to clear his name of an NZT-related murder.",
+              "title": "Pilot",
+              "url": "http://www.imdb.com/title/tt4927052/?ref_=ttep_ep1"
+            },
+            {
+              "episodeDate": {
+                "$date": "2015-09-28T21:00:00.000Z"
+              },
+              "episodeNumber": 2,
+              "imdbRating": 8.3,
+              "seasonNumber": 1,
+              "summary": "Brian risks his new FBI job when he disobeys orders to stay out of the investigation into a renowned journalist's murder.",
+              "title": "Badge! Gun!",
+              "url": "http://www.imdb.com/title/tt4981310/?ref_=ttep_ep2"
+            },
+            {
+              "episodeDate": {
+                "$date": "2015-10-05T21:00:00.000Z"
+              },
+              "episodeNumber": 3,
+              "imdbRating": 8.1,
+              "seasonNumber": 1,
+              "summary": "When Brian helps Agents Harris and Boyle investigate the murder of a retired FBI agent, they're shocked to find a link to the elusive head of a notorious drug cartel.",
+              "title": "The Legend of Marcos Ramos",
+              "url": "http://www.imdb.com/title/tt4981316/?ref_=ttep_ep3"
+            },
+            {
+              "episodeDate": {
+                "$date": "2015-10-12T21:00:00.000Z"
+              },
+              "episodeNumber": 4,
+              "imdbRating": 8.1,
+              "seasonNumber": 1,
+              "summary": "Brian's loyalty to the FBI is tested when Sands, Senator Edward Morra's representative, demands he steal the FBI's secret files on NZT.",
+              "title": "Page 44",
+              "url": "http://www.imdb.com/title/tt4981318/?ref_=ttep_ep4"
+            },
+            {
+              "episodeDate": {
+                "$date": "2015-10-19T21:00:00.000Z"
+              },
+              "episodeNumber": 5,
+              "imdbRating": 8.0,
+              "seasonNumber": 1,
+              "summary": "Brian learns a shocking secret about Rebecca's late father but worries that telling her will land him in legal trouble.",
+              "title": "Personality Crisis",
+              "url": "http://www.imdb.com/title/tt4967110/?ref_=ttep_ep5"
+            },
+            {
+              "episodeDate": {
+                "$date": "2015-10-26T22:00:00.000Z"
+              },
+              "episodeNumber": 6,
+              "imdbRating": 8.7,
+              "seasonNumber": 1,
+              "summary": "Brian's physical and mental health begin to deteriorate again, Morra demands a high price in exchange for another inoculation.",
+              "title": "Side Effects May Include...",
+              "url": "http://www.imdb.com/title/tt5060054/?ref_=ttep_ep6"
+            },
+            {
+              "episodeDate": {
+                "$date": "2015-11-02T22:00:00.000Z"
+              },
+              "episodeNumber": 7,
+              "imdbRating": 8.3,
+              "seasonNumber": 1,
+              "summary": "Brian takes a day off (a la Ferris Bueller) but it all goes wrong when he is kidnapped by the CIA who needs his NZT skills.",
+              "title": "Brian Finch's Black Op",
+              "url": "http://www.imdb.com/title/tt5054260/?ref_=ttep_ep7"
+            },
+            {
+              "episodeDate": {
+                "$date": "2015-11-09T22:00:00.000Z"
+              },
+              "episodeNumber": 8,
+              "imdbRating": 8.3,
+              "seasonNumber": 1,
+              "summary": "When Naz is detained on suspicion of funding terrorism, Brian and Rebecca's efforts to clear her name lead them to Naz's daughter, Ava (Michelle Veintimilla), who reveals a family secret Naz is keeping from the FBI.",
+              "title": "When Pirates Pirate Pirates",
+              "url": "http://www.imdb.com/title/tt5130944/?ref_=ttep_ep8"
+            },
+            {
+              "episodeDate": {
+                "$date": "2015-11-16T22:00:00.000Z"
+              },
+              "episodeNumber": 9,
+              "imdbRating": 8.7,
+              "seasonNumber": 1,
+              "summary": "As Brian urges Naz for his own personal \"Headquarters\", he offers the capture of the FBI's 10 Most Wanted criminals as a bargaining chip.",
+              "title": "Headquarters!",
+              "url": "http://www.imdb.com/title/tt5130960/?ref_=ttep_ep9"
+            },
+            {
+              "episodeDate": {
+                "$date": "2015-11-23T22:00:00.000Z"
+              },
+              "episodeNumber": 10,
+              "imdbRating": 8.2,
+              "seasonNumber": 1,
+              "summary": "Boyle's old friend from the service claims someone hacked his prosthetic arm and used it to murder his wife and frame him, so Boyle asks Brian to help prove his innocence.",
+              "title": "Arm-aggedon",
+              "url": "http://www.imdb.com/title/tt5145984/?ref_=ttep_ep10"
+            },
+            {
+              "episodeDate": {
+                "$date": "2015-12-14T22:00:00.000Z"
+              },
+              "episodeNumber": 11,
+              "seasonNumber": 1,
+              "title": "This Is Your Brian on Drugs",
+              "url": "http://www.imdb.com/title/tt5145990/?ref_=ttep_ep11"
+            },
+            {
+              "episodeNumber": 12,
+              "seasonNumber": 1,
+              "title": "Episode #1.12",
+              "url": "http://www.imdb.com/title/tt5145994/?ref_=ttep_ep12"
+            },
+            {
+              "episodeNumber": 13,
+              "seasonNumber": 1,
+              "title": "Episode #1.13",
+              "url": "http://www.imdb.com/title/tt5145996/?ref_=ttep_ep13"
+            },
+            {
+              "episodeNumber": 14,
+              "seasonNumber": 1,
+              "title": "Episode #1.14",
+              "url": "http://www.imdb.com/title/tt5146002/?ref_=ttep_ep14"
+            },
+            {
+              "episodeNumber": 15,
+              "seasonNumber": 1,
+              "title": "Episode #1.15",
+              "url": "http://www.imdb.com/title/tt5146004/?ref_=ttep_ep15"
+            },
+            {
+              "episodeNumber": 16,
+              "seasonNumber": 1,
+              "title": "Episode #1.16",
+              "url": "http://www.imdb.com/title/tt5146000/?ref_=ttep_ep16"
+            },
+            {
+              "episodeNumber": 17,
+              "seasonNumber": 1,
+              "title": "Episode #1.17",
+              "url": "http://www.imdb.com/title/tt5146006/?ref_=ttep_ep17"
+            },
+            {
+              "episodeNumber": 18,
+              "seasonNumber": 1,
+              "title": "Episode #1.18",
+              "url": "http://www.imdb.com/title/tt5146012/?ref_=ttep_ep18"
+            },
+            {
+              "episodeNumber": 19,
+              "seasonNumber": 1,
+              "title": "Episode #1.19",
+              "url": "http://www.imdb.com/title/tt5146014/?ref_=ttep_ep19"
+            },
+            {
+              "episodeNumber": 20,
+              "seasonNumber": 1,
+              "title": "Episode #1.20",
+              "url": "http://www.imdb.com/title/tt5146018/?ref_=ttep_ep20"
+            },
+            {
+              "episodeNumber": 21,
+              "seasonNumber": 1,
+              "title": "Episode #1.21",
+              "url": "http://www.imdb.com/title/tt5146024/?ref_=ttep_ep21"
+            },
+            {
+              "episodeNumber": 22,
+              "seasonNumber": 1,
+              "title": "Episode #1.22",
+              "url": "http://www.imdb.com/title/tt5146026/?ref_=ttep_ep22"
+            }
+          ],
+          "seasonNumber": 1,
+          "seasonStart": {
+            "$date": "2015-09-21T21:00:00.000Z"
+          },
+          "url": "http://www.imdb.com/title/tt4422836/episodes?season=1\u0026ref_=tt_eps_sn_1"
+        }
+      ],
+      "seriesStart": {
+        "$date": "2015-09-21T21:00:00.000Z"
+      },
+      "title": "Limitless"
+    },
+    {
+      "_class": "com.vlasovartem.pmdb.entity.Series",
+      "_id": "tt3487382",
+      "actors": [
+        "Ioan Gruffudd",
+        "Alana De La Garza",
+        "Joel David Moore"
+      ],
+      "creators": [
+        "Matthew Miller"
+      ],
+      "finished": true,
+      "genres": [
+        "Drama",
+        "Sci-Fi"
+      ],
+      "imdbRating": 8.3,
+      "imdbUrl": "http://www.imdb.com/title/tt3487382/?ref_=fn_tv_tt_1",
+      "plot": "A 200-year-old man works in the New York City Morgue trying to find a key to unlock the curse of his immortality.",
+      "posterUrl": "http://ia.media-imdb.com/images/M/MV5BMTQzMTUwMjQ3Nl5BMl5BanBnXkFtZTgwMTY2MDE5MjE@._V1_SX214_AL_.jpg",
+      "seasons": [
+        {
+          "episodes": [
+            {
+              "episodeDate": {
+                "$date": "2014-09-21T21:00:00.000Z"
+              },
+              "episodeNumber": 1,
+              "imdbRating": 8.7,
+              "seasonNumber": 1,
+              "summary": "Henry Morgan, an immortal, searches for the man who caused a subway train accident. Meanwhile, a mysterious call informs Henry that someone knows his secret.",
+              "title": "Pilot",
+              "url": "http://www.imdb.com/title/tt3776146/?ref_=ttep_ep1"
+            },
+            {
+              "episodeDate": {
+                "$date": "2014-09-22T21:00:00.000Z"
+              },
+              "episodeNumber": 2,
+              "imdbRating": 8.6,
+              "seasonNumber": 1,
+              "summary": "After Henry pegs the case of a would-be bridge jumper as a homicide while the police label it a suicide, he and Jo go on a rogue investigation for proof.",
+              "title": "Look Before You Leap",
+              "url": "http://www.imdb.com/title/tt3776148/?ref_=ttep_ep2"
+            },
+            {
+              "episodeDate": {
+                "$date": "2014-09-29T21:00:00.000Z"
+              },
+              "episodeNumber": 3,
+              "imdbRating": 8.5,
+              "seasonNumber": 1,
+              "summary": "Henry is interested in aging and how to die, but New York's wealthy elderly are chasing a way to turn back the clock.",
+              "title": "Fountain of Youth",
+              "url": "http://www.imdb.com/title/tt3776150/?ref_=ttep_ep3"
+            },
+            {
+              "episodeDate": {
+                "$date": "2014-10-06T21:00:00.000Z"
+              },
+              "episodeNumber": 4,
+              "imdbRating": 8.8,
+              "seasonNumber": 1,
+              "summary": "The death of Gloria Carlyle, the elegant, seemingly ruthless matriarch of one of New York's wealthiest and oldest families, brings a world of hurt down on her family.",
+              "title": "The Art of Murder",
+              "url": "http://www.imdb.com/title/tt3776152/?ref_=ttep_ep4"
+            },
+            {
+              "episodeDate": {
+                "$date": "2014-10-13T21:00:00.000Z"
+              },
+              "episodeNumber": 5,
+              "imdbRating": 8.4,
+              "seasonNumber": 1,
+              "summary": "What looks like a drug overdose death of a reformed junkie-turned community activist results in Henry and Jo tracking a murderer.",
+              "title": "The Pugilist Break",
+              "url": "http://www.imdb.com/title/tt3916448/?ref_=ttep_ep5"
+            },
+            {
+              "episodeDate": {
+                "$date": "2014-10-20T21:00:00.000Z"
+              },
+              "episodeNumber": 6,
+              "imdbRating": 9.0,
+              "seasonNumber": 1,
+              "summary": "When a human heart is delivered fresh out of a body to the homicide division, Henry and Jo end up in the middle of a Jack the Ripper copycat murder investigation. But it doesn't stop there@.",
+              "title": "The Frustrating Thing About Psychopaths",
+              "url": "http://www.imdb.com/title/tt4025942/?ref_=ttep_ep6"
+            },
+            {
+              "episodeDate": {
+                "$date": "2014-10-27T22:00:00.000Z"
+              },
+              "episodeNumber": 7,
+              "imdbRating": 8.6,
+              "seasonNumber": 1,
+              "summary": "Dr. Tyler Forester, founder of a free medical clinic and the son of a Wall Street billionaire, is awarded one of the city's highest honors for his humanitarian efforts.",
+              "title": "New York Kids",
+              "url": "http://www.imdb.com/title/tt4106266/?ref_=ttep_ep7"
+            },
+            {
+              "episodeDate": {
+                "$date": "2014-11-10T22:00:00.000Z"
+              },
+              "episodeNumber": 8,
+              "imdbRating": 8.9,
+              "seasonNumber": 1,
+              "summary": "Henry and Jo become immersed in the world of a dominatrix, who doesn't dole out pain for kinky pleasures but for therapeutic purposes. Meanwhile, Abe reacquaints himself with his own form of pain and pleasure - his former wife.",
+              "title": "The Ecstasy of Agony",
+              "url": "http://www.imdb.com/title/tt4152092/?ref_=ttep_ep8"
+            },
+            {
+              "episodeDate": {
+                "$date": "2014-11-17T22:00:00.000Z"
+              },
+              "episodeNumber": 9,
+              "imdbRating": 8.6,
+              "seasonNumber": 1,
+              "summary": "A man dies when his car catches fires and incinerates him. The various suspects center around the world of Jazz and concerns the true author of one of its greatest standards.",
+              "title": "6 A.M.",
+              "url": "http://www.imdb.com/title/tt4168910/?ref_=ttep_ep9"
+            },
+            {
+              "episodeDate": {
+                "$date": "2014-12-01T22:00:00.000Z"
+              },
+              "episodeNumber": 10,
+              "imdbRating": 8.7,
+              "seasonNumber": 1,
+              "summary": "When all the ingredients for a sensational, scandalous murder investigation are combined -- a fairytale romance gone wrong, a jealous mentor and lover, an anxious, wealthy father of the ",
+              "title": "The Man in the Killer Suit",
+              "url": "http://www.imdb.com/title/tt4152158/?ref_=ttep_ep10"
+            },
+            {
+              "episodeDate": {
+                "$date": "2014-12-08T22:00:00.000Z"
+              },
+              "episodeNumber": 11,
+              "imdbRating": 9.4,
+              "seasonNumber": 1,
+              "summary": "Henry's mysterious anonymous caller confronts him by framing him for a murder. With the police closing in he is faced with the prospect of having to either leave town or confess his true nature to everyone.",
+              "title": "Skinny Dipper",
+              "url": "http://www.imdb.com/title/tt4176654/?ref_=ttep_ep11"
+            },
+            {
+              "episodeDate": {
+                "$date": "2015-01-05T22:00:00.000Z"
+              },
+              "episodeNumber": 12,
+              "imdbRating": 8.7,
+              "seasonNumber": 1,
+              "summary": "Henry returns to work to investigate the murder of a young investor, who happens to be the son of one of Abe's wartime Army buddies. Abe and his Army buddies decide to play detective and solve the case.",
+              "title": "The Wolves of Deep Brooklyn",
+              "url": "http://www.imdb.com/title/tt4180372/?ref_=ttep_ep12"
+            },
+            {
+              "episodeDate": {
+                "$date": "2015-01-12T22:00:00.000Z"
+              },
+              "episodeNumber": 13,
+              "imdbRating": 8.8,
+              "seasonNumber": 1,
+              "summary": "Jo and Henry pursue the killer of a jewelry store burglar who has a connection with Jo's dead husband.",
+              "title": "Diamonds Are Forever",
+              "url": "http://www.imdb.com/title/tt4180366/?ref_=ttep_ep13"
+            },
+            {
+              "episodeDate": {
+                "$date": "2015-02-02T22:00:00.000Z"
+              },
+              "episodeNumber": 14,
+              "imdbRating": 9.1,
+              "seasonNumber": 1,
+              "summary": "A murder opens the door to a hoard of Nazi secrets and the return of an old enemy.",
+              "title": "Hitler on the Half-Shell",
+              "url": "http://www.imdb.com/title/tt4180374/?ref_=ttep_ep14"
+            },
+            {
+              "episodeDate": {
+                "$date": "2015-02-09T22:00:00.000Z"
+              },
+              "episodeNumber": 15,
+              "imdbRating": 9.0,
+              "seasonNumber": 1,
+              "summary": "Henry and Jo investigate the murder of an exiled king; Abe discovers something about his bloodline.",
+              "title": "The King of Columbus Circle",
+              "url": "http://www.imdb.com/title/tt4180376/?ref_=ttep_ep15"
+            },
+            {
+              "episodeDate": {
+                "$date": "2015-02-23T22:00:00.000Z"
+              },
+              "episodeNumber": 16,
+              "imdbRating": 9.0,
+              "seasonNumber": 1,
+              "summary": "A young woman is found dead made up as someone from the 1970s. The victim was fantasy partner of a lonely man and the case leads Morgan back to the woman he had previously met as a dominatrix, and is now a respectable college professor.",
+              "title": "Memories of Murder",
+              "url": "http://www.imdb.com/title/tt4180382/?ref_=ttep_ep16"
+            },
+            {
+              "episodeDate": {
+                "$date": "2015-03-02T22:00:00.000Z"
+              },
+              "episodeNumber": 17,
+              "imdbRating": 8.9,
+              "seasonNumber": 1,
+              "summary": "A member of a secret \"hack-tivist\" group is murdered; Abe remembers his days as an activist.",
+              "title": "Social Engineering",
+              "url": "http://www.imdb.com/title/tt4180380/?ref_=ttep_ep17"
+            },
+            {
+              "episodeDate": {
+                "$date": "2015-03-23T22:00:00.000Z"
+              },
+              "episodeNumber": 18,
+              "imdbRating": 9.1,
+              "seasonNumber": 1,
+              "summary": "The owner of a treasure hunting salvage company is killed; a wealthy entrepreneur pursues Jo.",
+              "title": "Dead Men Tell Long Tales",
+              "url": "http://www.imdb.com/title/tt4180378/?ref_=ttep_ep18"
+            },
+            {
+              "episodeDate": {
+                "$date": "2015-03-30T21:00:00.000Z"
+              },
+              "episodeNumber": 19,
+              "imdbRating": 8.9,
+              "seasonNumber": 1,
+              "summary": "While Jo and Isaac are at a punk rock club, a mummified body is found in the wall.",
+              "title": "Punk Is Dead",
+              "url": "http://www.imdb.com/title/tt4180384/?ref_=ttep_ep19"
+            },
+            {
+              "episodeDate": {
+                "$date": "2015-04-06T21:00:00.000Z"
+              },
+              "episodeNumber": 20,
+              "imdbRating": 9.0,
+              "seasonNumber": 1,
+              "summary": "A human foot in a blood-soaked ballet slipper is found in a bin at a theater.",
+              "title": "Best Foot Forward",
+              "url": "http://www.imdb.com/title/tt4180386/?ref_=ttep_ep20"
+            },
+            {
+              "episodeDate": {
+                "$date": "2015-04-20T21:00:00.000Z"
+              },
+              "episodeNumber": 21,
+              "imdbRating": 9.5,
+              "seasonNumber": 1,
+              "summary": "Henry tries to find out what really happened to Abigail after she left him.",
+              "title": "The Night in Question",
+              "url": "http://www.imdb.com/title/tt4180388/?ref_=ttep_ep21"
+            },
+            {
+              "episodeDate": {
+                "$date": "2015-05-04T21:00:00.000Z"
+              },
+              "episodeNumber": 22,
+              "imdbRating": 9.6,
+              "seasonNumber": 1,
+              "summary": "Jo is all that stands in the way of Henry's and Adam's impending clash.",
+              "title": "The Last Death of Henry Morgan",
+              "url": "http://www.imdb.com/title/tt4180390/?ref_=ttep_ep22"
+            }
+          ],
+          "seasonEnd": {
+            "$date": "2015-05-04T21:00:00.000Z"
+          },
+          "seasonNumber": 1,
+          "seasonStart": {
+            "$date": "2014-09-21T21:00:00.000Z"
+          },
+          "url": "http://www.imdb.com/title/tt3487382/episodes?season=1\u0026ref_=tt_eps_sn_1"
+        }
+      ],
+      "seriesEnd": {
+        "$date": "2015-05-04T21:00:00.000Z"
+      },
+      "seriesStart": {
+        "$date": "2014-09-21T21:00:00.000Z"
+      },
+      "title": "Forever"
+    }
+  ]
+}

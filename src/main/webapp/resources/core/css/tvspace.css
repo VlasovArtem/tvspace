@@ -237,6 +237,9 @@ html, body {
     font-size: smaller;
     color: grey;
 }
+#series .empty-result {
+    margin-left: 25%;
+}
 
 /* Tracking block */
 .tracking-series-block {
@@ -323,7 +326,23 @@ html, body {
     font-size: larger;
 }
 .hide-finished {
+    position: relative;
     padding-top: 10px;
+}
+.hide-finished > table {
+    width: 100%;
+}
+.hide-finished > table td {
+    vertical-align: middle;
+}
+.hide-finished > table tr > td:first-child {
+    width: 60%;
+}
+.hide-finished > table tr > td:last-child {
+    float: left;
+}
+.hide-finished > table td > input[type=checkbox] {
+    margin-top: 0;
 }
 .sort {
     padding-left: 0;

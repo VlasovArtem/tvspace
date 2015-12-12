@@ -15,18 +15,20 @@ import java.util.Optional;
 public class AuthenticatedUserPrincipalUtil {
     public static Optional<TvSpaceUserDetails> getAuthenticationPrincipal() {
         Optional<Authentication> authentication = getAuthentication();
-            if(authentication.isPresent()) {
-                if(authentication.get().isAuthenticated()) {
-                    if(authentication.get().getPrincipal() instanceof TvSpaceUserDetails) {
-                        return Optional.of((TvSpaceUserDetails) authentication.get().getPrincipal());
-                    }
+        if(authentication.isPresent()) {
+            if(authentication.get().isAuthenticated()) {
+                if(authentication.get().getPrincipal() instanceof TvSpaceUserDetails) {
+                    return Optional.of((TvSpaceUserDetails) authentication.get().getPrincipal());
                 }
             }
+        }
         return Optional.empty();
     }
     public static boolean containAuthorities(UserRole... roles) {
         Optional<Authentication> authentication = getAuthentication();
-        return authentication.isPresent() && authentication.get().getAuthorities().stream().anyMatch(p -> Arrays.asList(roles).contains(UserRole.valueOf(p.getAuthority())));
+        return authentication.isPresent() && authentication.get().getAuthorities().stream().anyMatch(p ->
+                !"ROLE_ANONYMOUS".equals(p.getAuthority())
+                        && Arrays.asList(roles).contains(UserRole.valueOf(p.getAuthority())));
     }
 
     public static String getAuthenticationId () {
@@ -39,7 +41,9 @@ public class AuthenticatedUserPrincipalUtil {
 
     public static boolean isAuthenticated() {
         Optional<Authentication> authentication = getAuthentication();
-        return authentication.isPresent() && authentication.get().isAuthenticated();
+        return authentication.isPresent()
+                && authentication.get().isAuthenticated()
+                && containAuthorities(UserRole.ADMIN, UserRole.USER);
     }
 
     private static Optional<Authentication> getAuthentication() {
