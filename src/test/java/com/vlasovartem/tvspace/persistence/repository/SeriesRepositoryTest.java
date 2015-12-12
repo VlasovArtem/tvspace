@@ -135,10 +135,10 @@ public class SeriesRepositoryTest {
                 .NEXT_EPISODE_DATE_PROPERTY, Sort.Direction.DESC.name()), hasSize(0));
     }
 
-    @Test
-    @WithMockUser(username = "vlasovartem")
-    public void findSeriesTest () {
-        assertThat(seriesRepository.findSeries("Adventure" , 2011, "game", true, true, "title", "DESC"),
-                hasSize(1));
-    }
+//    @Test
+//    @WithMockUser(username = "vlasovartem")
+//    public void findSeriesTest () {
+//        assertThat(seriesRepository.findSeries("Adventure" , 2011, "game", true, true, "title", "DESC"),
+//                hasSize(1));
+//    }
 }
