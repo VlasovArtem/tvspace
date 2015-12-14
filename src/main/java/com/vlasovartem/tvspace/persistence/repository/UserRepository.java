@@ -3,6 +3,7 @@ package com.vlasovartem.tvspace.persistence.repository;
 import com.vlasovartem.tvspace.entity.User;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.data.mongodb.repository.Query;
+import org.springframework.stereotype.Repository;
 
 /**
  * Created by artemvlasov on 07/12/15.

@@ -1,0 +1,40 @@
+{
+  "users": [
+    {
+      "_class": "com.vlasovartem.tvspace.entity.User",
+      "_id": {
+        "$oid": "566725ab0364e7312e89b6b3"
+      },
+      "deleted": false,
+      "email": "testname@gmail.com",
+      "name": "Test name",
+      "password": "$2a$10$JiEPsoPJydTBtVqB15hQc.eiNOeH5kzDREjRJmJRbS97GBkpy6l8S",
+      "role": "ADMIN",
+      "userSeries": [
+        {
+          "seriesId": "tt2193021",
+          "watchedEpisode": 22,
+          "watchedSeason": 4
+        },
+        {
+          "seriesId": "tt0944947",
+          "watchedEpisode": 1,
+          "watchedSeason": 6
+        }
+      ],
+      "username": "testusername"
+    },
+    {
+      "_class": "com.vlasovartem.tvspace.entity.User",
+      "_id": {
+        "$oid": "566725ab0364e7312e89b6b5"
+      },
+      "deleted": true,
+      "email": "testmail1@gmail.com",
+      "name": "Test name1",
+      "password": "$2a$10$JiEPsoPJydTBtVqB15hQc.eiNOeH5kzDREjRJmJRbS97GBkpy6l8S",
+      "role": "USER",
+      "username": "testusername1"
+    }
+  ]
+}

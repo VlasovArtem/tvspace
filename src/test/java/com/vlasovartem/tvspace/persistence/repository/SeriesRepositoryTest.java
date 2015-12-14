@@ -2,22 +2,29 @@ package com.vlasovartem.tvspace.persistence.repository;
 
 import com.lordofthejars.nosqlunit.annotation.UsingDataSet;
 import com.lordofthejars.nosqlunit.core.LoadStrategyEnum;
+import com.lordofthejars.nosqlunit.mongodb.MongoDbConfigurationBuilder;
+import com.lordofthejars.nosqlunit.mongodb.MongoDbRule;
 import com.vlasovartem.tvspace.WithMockUser;
 import com.vlasovartem.tvspace.config.AppInitializer;
+import com.vlasovartem.tvspace.config.ServiceConfig;
 import com.vlasovartem.tvspace.config.ServletContextConfig;
 import com.vlasovartem.tvspace.config.TestAppConfig;
 import com.vlasovartem.tvspace.config.security.SecurityConfig;
 import com.vlasovartem.tvspace.service.SeriesService;
+import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Sort;
+import org.springframework.test.annotation.DirtiesContext;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.springframework.test.context.web.WebAppConfiguration;
 
 import java.util.Set;
 
+import static com.lordofthejars.nosqlunit.mongodb.MongoDbConfigurationBuilder.*;
 import static org.hamcrest.Matchers.hasSize;
 import static org.junit.Assert.*;
 
@@ -25,10 +32,17 @@ import static org.junit.Assert.*;
  * Created by artemvlasov on 10/12/15.
  */
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(classes = {TestAppConfig.class})
+@ContextConfiguration(classes = {
+        TestAppConfig.class,
+        SecurityConfig.class,
+        ServiceConfig.class})
 @ActiveProfiles("test")
+@WebAppConfiguration
 @UsingDataSet(locations = "series-data-test.json", loadStrategy = LoadStrategyEnum.CLEAN_INSERT)
 public class SeriesRepositoryTest {
+
+    @Rule
+    public MongoDbRule remoteMongoDbRule = new MongoDbRule(mongoDb().databaseName("testpmdb").build());
 
     @Autowired
     private SeriesRepository seriesRepository;
@@ -135,10 +149,17 @@ public class SeriesRepositoryTest {
                 .NEXT_EPISODE_DATE_PROPERTY, Sort.Direction.DESC.name()), hasSize(0));
     }
 
-//    @Test
-//    @WithMockUser(username = "vlasovartem")
-//    public void findSeriesTest () {
-//        assertThat(seriesRepository.findSeries("Adventure" , 2011, "game", true, true, "title", "DESC"),
-//                hasSize(1));
-//    }
+    @Test
+    @WithMockUser(username = "vlasovartem")
+    public void findSeriesTest () {
+        assertThat(seriesRepository.findSeries("Adventure" , 2011, "game", true, true, "title", "DESC"),
+                hasSize(1));
+    }
+
+    @Test
+    @WithMockUser(username = "vlasovartem")
+    public void findSeriesWithoutMatchesSeriesIdsTest () {
+        assertThat(seriesRepository.findSeries("Drama" , 2015, "limitless", true, true, "title", "DESC"),
+                hasSize(0));
+    }
 }

@@ -1,6 +1,5 @@
 package com.vlasovartem.tvspace;
 
-import com.vlasovartem.tvspace.config.security.TvSpaceUserDetails;
 import com.vlasovartem.tvspace.config.security.TvSpaceUserDetailsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -16,18 +15,14 @@ import org.springframework.util.Assert;
  */
 public class WithMockUserSecurityContextFactory implements WithSecurityContextFactory<WithMockUser> {
 
-    private TvSpaceUserDetailsService userDetails;
-
     @Autowired
-    public WithMockUserSecurityContextFactory(TvSpaceUserDetailsService userDetails) {
-        this.userDetails = userDetails;
-    }
+    private TvSpaceUserDetailsService userDetailsService;
 
     @Override
     public SecurityContext createSecurityContext(WithMockUser withMockUser) {
         String username = withMockUser.username();
         Assert.hasLength(username, "value() must be non empty String");
-        UserDetails principal = userDetails.loadUserByUsername(username);
+        UserDetails principal = userDetailsService.loadUserByUsername(username);
         Authentication authentication = new UsernamePasswordAuthenticationToken(principal, principal.getPassword(), principal.getAuthorities());
         SecurityContext context = SecurityContextHolder.createEmptyContext();
         context.setAuthentication(authentication);
