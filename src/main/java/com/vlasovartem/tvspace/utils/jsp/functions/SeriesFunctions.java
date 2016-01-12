@@ -13,6 +13,8 @@ import java.util.List;
 import java.util.Objects;
 import java.util.stream.Collectors;
 
+import static java.util.Objects.*;
+
 /**
  * Created by artemvlasov on 05/12/15.
  */
@@ -24,7 +26,7 @@ public class SeriesFunctions {
      * @return String that join with help of specified delimiter
      */
     public static String joining(List<String> strings) {
-        if(Objects.nonNull(strings))
+        if(nonNull(strings))
             return strings.stream().collect(Collectors.joining(", "));
         return null;
     }
@@ -35,7 +37,7 @@ public class SeriesFunctions {
      * @return true if episode date is equals to today date or date is after today, otherwise return false
      */
     public static boolean checkNextEpisode(LocalDate episodeDate) {
-        return Objects.nonNull(episodeDate) &&
+        return nonNull(episodeDate) &&
                 (episodeDate.isAfter(LocalDate.now()) || episodeDate.isEqual(LocalDate.now()));
     }
 
@@ -46,7 +48,7 @@ public class SeriesFunctions {
      * @return true if list of user series is contains series id, otherwise false.
      */
     public static boolean checkUserSeries (String seriesId, List<UserSeries> userSeries) {
-        return Objects.nonNull(userSeries) && Objects.nonNull(seriesId) && userSeries.stream().anyMatch(us -> seriesId.equals(us.getSeriesId()));
+        return nonNull(userSeries) && nonNull(seriesId) && userSeries.stream().anyMatch(us -> seriesId.equals(us.getSeriesId()));
     }
 
     /**
@@ -56,7 +58,7 @@ public class SeriesFunctions {
      * @return {@link UserSeries} if series id has any matches in user series id, otherwise null
      */
     public static UserSeries findUserSeries (String seriesId, List<UserSeries> userSeries) {
-        if(Objects.nonNull(userSeries) && Objects.nonNull(seriesId))
+        if(nonNull(userSeries) && nonNull(seriesId))
             return userSeries.stream().filter(us -> seriesId.equals(us.getSeriesId())).findFirst().orElse(null);
         return null;
     }
@@ -73,8 +75,8 @@ public class SeriesFunctions {
      */
     public static int findSeasonToSelect(Series series, List<UserSeries> userSeries) {
         UserSeries us = findUserSeries(series.getId(), userSeries);
-        if(Objects.isNull(us)) {
-            if(Objects.nonNull(series.getNextEpisode())) {
+        if(isNull(us)) {
+            if(nonNull(series.getNextEpisode())) {
                 return series.getNextEpisode().getSeasonNumber();
             }
             return series.getSeasons().size();
@@ -93,23 +95,23 @@ public class SeriesFunctions {
      */
     public static int findSeasonEpisodeToSelect(Series series, int seasonNumber, List<UserSeries> userSeries) {
         UserSeries us = findUserSeries(series.getId(), userSeries);
-        if(Objects.isNull(us)) {
-            if(Objects.nonNull(series.getNextEpisode())) {
+        if(isNull(us)) {
+            if(nonNull(series.getNextEpisode())) {
                 return series.getNextEpisode().getEpisodeNumber();
             } else {
                 Episode episodeFromLastSeason = series.getSeasons().stream()
                         .filter(s -> s.getSeasonNumber() == seasonNumber).findFirst().get().getEpisodes().stream()
-                        .filter(e -> Objects.nonNull(e.getEpisodeDate())
+                        .filter(e -> nonNull(e.getEpisodeDate())
                                 && (e.getEpisodeDate().isAfter(LocalDate.now())
                                 || e.getEpisodeDate().equals(LocalDate.now()))).findFirst().orElse(null);
-                if(Objects.isNull(episodeFromLastSeason) && seasonNumber != 1) {
+                if(isNull(episodeFromLastSeason) && seasonNumber != 1) {
                     Episode episodeFromPreviousSeason = series.getSeasons().stream()
                             .filter(s -> s.getSeasonNumber() == seasonNumber - 1).findFirst().get().getEpisodes()
                             .stream()
-                            .filter(e -> Objects.nonNull(e.getEpisodeDate())
+                            .filter(e -> nonNull(e.getEpisodeDate())
                                     && (e.getEpisodeDate().isAfter(LocalDate.now())
                                     || e.getEpisodeDate().equals(LocalDate.now()))).findFirst().orElse(null);
-                    if(Objects.isNull(episodeFromPreviousSeason)) {
+                    if(isNull(episodeFromPreviousSeason)) {
                         return 1;
                     } else {
                         return episodeFromPreviousSeason.getEpisodeNumber();
@@ -131,17 +133,33 @@ public class SeriesFunctions {
      * @return number of episodes
      */
     public static int findSeasonEpisodeLength(Series series, int seasonNumber) {
-        return series.getSeasons().stream().filter(s -> s.getSeasonNumber() == seasonNumber).findFirst().get().getEpisodes()
-                .size();
-    }
-    
-    public static ObjectNode seriesSeasonMap(Series series) {
-        ObjectNode nodes = JsonNodeFactory.instance.objectNode();
-        for (Season season : series.getSeasons().stream()
-                .sorted(Comparator.comparingInt(Season::getSeasonNumber))
-                .collect(Collectors.toList())) {
-            nodes.put(String.valueOf(season.getSeasonNumber()), season.getEpisodes().size());
+        Season season = series.getSeasons().stream().filter(s -> s.getSeasonNumber() == seasonNumber).findFirst()
+                .orElse(null);
+        if(nonNull(season) && nonNull(season.getEpisodes())) {
+            return season.getEpisodes().size();
         }
-        return nodes;
+        return 0;
+    }
+
+    /**
+     * Create series map with season nubmer as key and the amout of episodes as value.
+     * @param series series object
+     * @return ObjectNode in format key/value
+     */
+    public static ObjectNode seriesSeasonMap(Series series) {
+        if(nonNull(series) && nonNull(series.getSeasons())) {
+            ObjectNode nodes = JsonNodeFactory.instance.objectNode();
+            for (Season season : series.getSeasons().stream()
+                    .sorted(Comparator.comparingInt(Season::getSeasonNumber))
+                    .collect(Collectors.toList())) {
+                if(nonNull(season.getEpisodes())) {
+                    nodes.put(String.valueOf(season.getSeasonNumber()), season.getEpisodes().size());
+                } else {
+                    nodes.put(String.valueOf(season.getSeasonNumber()), 0);
+                }
+            }
+            return nodes;
+        }
+        return null;
     }
 }

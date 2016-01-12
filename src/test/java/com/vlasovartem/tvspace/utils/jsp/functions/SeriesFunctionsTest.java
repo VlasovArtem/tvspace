@@ -1,8 +1,11 @@
 package com.vlasovartem.tvspace.utils.jsp.functions;
 
-import com.vlasovartem.tvspace.entity.*;
-import org.hamcrest.Matchers;
-import org.junit.Assert;
+import com.fasterxml.jackson.databind.node.JsonNodeFactory;
+import com.fasterxml.jackson.databind.node.ObjectNode;
+import com.vlasovartem.tvspace.entity.Episode;
+import com.vlasovartem.tvspace.entity.Season;
+import com.vlasovartem.tvspace.entity.Series;
+import com.vlasovartem.tvspace.entity.UserSeries;
 import org.junit.Test;
 
 import java.time.LocalDate;
@@ -13,7 +16,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 import static com.vlasovartem.tvspace.utils.jsp.functions.SeriesFunctions.*;
-import static org.hamcrest.Matchers.*;
+import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.*;
 
 /**
@@ -97,9 +100,77 @@ public class SeriesFunctionsTest {
     }
 
     @Test
-    public void findSeasonToSelectWithoutUserSeriesAndNextEpisode() {
+    public void findSeasonToSelectWithoutUserSeriesAndNextEpisodeTest () {
         Series series = new Series();
         series.setSeasons(Collections.singletonList(new Season()));
         assertThat(findSeasonToSelect(series, null), is(1));
+    }
+
+    @Test
+    public void findSeasonEpisodeLengthTest () {
+        int searchSeason = 4;
+        int amountOfEpisodes = 4;
+        Series series = new Series();
+        series.setSeasons(createSeasons(4));
+        assertThat(findSeasonEpisodeLength(series, searchSeason), is(amountOfEpisodes));
+    }
+
+    @Test
+    public void seriesSeasonMapTest () {
+        ObjectNode preparedNode = JsonNodeFactory.instance.objectNode();
+        preparedNode.put("1", 1).put("2", 2).put("3", 3).put("4", 4);
+        Series series = new Series();
+        series.setSeasons(createSeasons(4));
+        assertEquals(seriesSeasonMap(series), preparedNode);
+    }
+
+    @Test
+    public void seriesSeasonMapWithSeriesNullTest () {
+        assertNull(seriesSeasonMap(null));
+    }
+
+    @Test
+    public void findSeasonEpisodeToSelectWithUserSeriesTest () {
+        Series series = new Series();
+        int userWatchedSeason = 3;
+        int userWatchedEpisode = 1;
+        series.setId("123");
+        List<UserSeries> userSeries = Collections.singletonList(new UserSeries("123", userWatchedSeason, userWatchedEpisode));
+        assertThat(findSeasonEpisodeToSelect(series, userWatchedSeason, userSeries), is(userWatchedEpisode));
+    }
+
+    @Test
+    public void findSeasonEpisodeToSelectWithNextEpisodeTest () {
+        Series series = new Series();
+        Episode nextEpisode = new Episode();
+        int nextEpisodeNumber = 3;
+        nextEpisode.setEpisodeNumber(nextEpisodeNumber);
+        series.setNextEpisode(nextEpisode);
+        assertThat(findSeasonEpisodeToSelect(series, 3, null), is(nextEpisodeNumber));
+    }
+
+    private List<Season> createSeasons (int numberOfSeasons) {
+        if(numberOfSeasons > 0) {
+            List<Season> seasons = new ArrayList<>(numberOfSeasons);
+            for (int i = 0; i < numberOfSeasons; i++) {
+                Season season = new Season();
+                season.setSeasonNumber(i + 1);
+                season.setEpisodes(createEpisodes(i + 1));
+                seasons.add(season);
+            }
+            return seasons;
+        }
+        return null;
+    }
+
+    private List<Episode> createEpisodes(int numberOfEpisodes) {
+        if(numberOfEpisodes > 0) {
+            List<Episode> episodes = new ArrayList<>(numberOfEpisodes);
+            for (int i = 0; i < numberOfEpisodes; i++) {
+                episodes.add(new Episode());
+            }
+            return episodes;
+        }
+        return null;
     }
 }
